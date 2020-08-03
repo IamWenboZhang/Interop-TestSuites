@@ -1,0 +1,4815 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Reporting</title>
+    <style type="text/css">
+      table
+      {
+      width: 100%;
+      background-color: #f8f8f8;
+      border: 1px solid #505050;
+      border-collapse: collapse;
+      }
+      tbody tr td
+      {
+      border: 1px solid #505050;
+      }
+      .TableCellHighlighted
+      {
+      font-size: 1.1em;
+      background-color: #e0e0e0;
+      border: 1px solid #909090;
+      }
+    .Unverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .Verified
+    {
+        background-color: green;
+        display: none;
+    }
+    .NotToVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .DerivedUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .DerivedVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .DerivedPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .FinalUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .FinalVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .FinalPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .RSExcluded
+    {
+        background-color: red;
+    }
+    </style>
+    <script type="text/javascript">   
+    function ToggleAll(className, parent, func)
+    {
+        var children = (parent !=null ? parent : document.body).getElementsByTagName('*');
+        var pattern = new RegExp("(^|\\s)" + className + "(\\s|$)");
+        for (var i = 0, length = children.length; i < length; i++)
+        {
+            var child = children[i];
+            var elementClassName = child.className;
+            if (elementClassName.length == 0)
+                continue;
+            if (elementClassName == className || elementClassName.match(pattern))
+                func(child);
+        }
+    }
+    function Toggle(item)
+    {
+        var visible = (item.style.display != "none");
+        if (visible)
+            item.style.display = "none";
+        else
+            item.style.display = "table-row";
+    }
+    function Show(item)
+    {
+        item.style.display = "table-row";
+    }
+    function Hide(item)
+    {
+        item.style.display = "none";
+    }
+    </script>
+</head>
+<body>
+    <noscript>Please enable Javascript to view the details</noscript>
+        <table>
+        <caption><h3>Report For Log ms-oxwsmsg_log.xml</h3></caption>
+        <tr>
+            <td>
+                Target Protocol: MS-OXWSMSG;</td>
+            <td>
+                Log File: ms-oxwsmsg_log.xml
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFConfigProperties
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                CommonConfigurationFileName</td>
+            <td>
+                 ExchangeCommonConfiguration.deployment.ptfconfig</td>
+        </tr>
+        <tr>
+            <td>
+                Sender</td>
+            <td>
+                 MSOXWSMSG_User01</td>
+        </tr>
+        <tr>
+            <td>
+                SenderPassword</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                Recipient1</td>
+            <td>
+                 MSOXWSMSG_User02</td>
+        </tr>
+        <tr>
+            <td>
+                Recipient1Password</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                Recipient2</td>
+            <td>
+                 MSOXWSMSG_User03</td>
+        </tr>
+        <tr>
+            <td>
+                Recipient2Password</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                RoomName</td>
+            <td>
+                 MSOXWSMSG_Room01</td>
+        </tr>
+        <tr>
+            <td>
+                Subject</td>
+            <td>
+                 TestMessage</td>
+        </tr>
+        <tr>
+            <td>
+                Reference</td>
+            <td>
+                 reference</td>
+        </tr>
+        <tr>
+            <td>
+                Domain</td>
+            <td>
+                 contoso.com</td>
+        </tr>
+        <tr>
+            <td>
+                SutComputerName</td>
+            <td>
+                 SUT01</td>
+        </tr>
+        <tr>
+            <td>
+                UserName</td>
+            <td>
+                 user01</td>
+        </tr>
+        <tr>
+            <td>
+                Password</td>
+            <td>
+                 OPs3Y2Q4+y5S)</td>
+        </tr>
+        <tr>
+            <td>
+                SutVersion</td>
+            <td>
+                 ExchangeServer2019</td>
+        </tr>
+        <tr>
+            <td>
+                ServiceUrl</td>
+            <td>
+                 [TransportType]://[SutComputerName].[Domain]/[AppendingURL]</td>
+        </tr>
+        <tr>
+            <td>
+                AppendingURL</td>
+            <td>
+                 EWS/Exchange.asmx</td>
+        </tr>
+        <tr>
+            <td>
+                TransportType</td>
+            <td>
+                 HTTP</td>
+        </tr>
+        <tr>
+            <td>
+                WaitTime</td>
+            <td>
+                 1000</td>
+        </tr>
+        <tr>
+            <td>
+                RetryCount</td>
+            <td>
+                 35</td>
+        </tr>
+        <tr>
+            <td>
+                R183Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R1428001Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R73008Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R73009Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R73010Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                ClientName</td>
+            <td>
+                 WENBO</td>
+        </tr>
+        <tr>
+            <td>
+                ClientOS</td>
+            <td>
+                 Microsoft Windows NT 6.3.9600.0</td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFTestResult
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                TestsExecuted</td>
+            <td>
+                25 (100.00%)</td>
+        </tr>
+            <tr>
+                <td>
+                    TimeStamp</td>
+                <td>
+                    2020/8/3 9:11:18</td>
+            </tr>
+        <tr>
+            <td>
+                TestsPassed</td>
+            <td>
+                25 (100.00%)</td>
+        </tr>
+        <tr>
+            <td>
+                CoveredRequirements
+            </td>
+            <td>
+                146
+            </td>
+        </tr>
+    </table>
+<hr /><table cellpadding="2" cellspacing="2">
+    <caption><h3>Global Requirement Coverage Statistics<br/>
+                  <font color="#FF0000"></font></h3>
+                  <h4><br/>This report is only for requirement with scope value = 'Server+Both'</h4></caption>
+    <col />
+    <thead><tr><th colspan="2">Requirement Type</th><th colspan="5">Count/Percent</th></tr></thead>
+    <col />
+    <tbody>
+    <tr>
+        <td colspan="7">
+        <h3>
+            Checked Requirements:  138 (73.40%)
+        </h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of normative, in-scope requirements
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Checkable requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            188
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Completely checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            138 (73.40%)
+            </a >
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Partially checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            0 (0.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Unchecked requirements
+        </td>
+        
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            50 (26.60%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of derived requirements
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            33
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Checked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            12 (36.36%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Unchecked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            21 (63.64%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td align="center" class="TableCellHighlighted" colspan="7">
+            <a name="jump-detail">Details:</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td style="width: 12%;">
+            Req ID
+        </td>
+        <td>
+            Description
+        </td>
+         <td>
+            Doc Sect
+        </td>
+	      <td>
+            Scope
+        </td>
+        <td style="width: 10%;">
+            Status
+        </td>
+        <td style="width: 13%;">
+            Time Stamp
+        </td>
+        <td style="width: 10%;">
+            Log Files
+        </td>
+    </tr>
+    
+    
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R304</td>
+            <td>
+                [In t:ApprovalRequestDataType Complex Type] The IsUndecidedApprovalRequest element specifies a value that indicates whether this approval request is awaiting a moderator to approve or reject the request.</td>
+            <td>
+                2.2.4.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R25</td>
+            <td>
+                [In t:MessageType Complex Type] The Sender element is t:SingleRecipientType ([MS-OXWSCDATA] section 2.2.4.71) type.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R168</td>
+            <td>
+                [In t:MailboxTypeType Simple Type] The value &quot;Mailbox&quot; specifies a mail-enabled directory service object.</td>
+            <td>
+                2.2.5.18</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R188</td>
+            <td>
+                [In t:NonEmptyStringType Simple Type] The NonEmptyStringType simple type specifies a string that MUST have a minimum of one character.</td>
+            <td>
+                2.2.5.20</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R29</td>
+            <td>
+                [In t:MessageType Complex Type] ToRecipients element is t:ArrayOfRecipientsType ([MS-OXWSCDATA] section 2.2.4.11) type.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R39</td>
+            <td>
+                [In t:MessageType Complex Type] IsReadReceiptRequested element Specifies a Boolean value that indicates whether the sender of a message requests a read receipt.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R43</td>
+            <td>
+                [In t:MessageType Complex Type] IsDeliveryReceiptRequested element Specifies a Boolean value that indicates whether the sender of the message has requested a delivery receipt.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R59</td>
+            <td>
+                [In t:MessageType Complex Type] IsRead element Specifies a Boolean value that indicates whether the message has been read.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R62</td>
+            <td>
+                [In t:MessageType Complex Type] IsResponseRequested element Specifies a Boolean value that indicates whether a response to an email has been requested.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R4</td>
+            <td>
+                [In Transport] The protocol SHOULD use secure communications via HTTPS, as defined in [RFC2818].</td>
+            <td>
+                2.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R300</td>
+            <td>
+                [In t:ApprovalRequestDataType Complex Type] The ApprovalRequestDataType complex type represents an approval request message.&lt;6&gt;</td>
+            <td>
+                2.2.4.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R313</td>
+            <td>
+                [In t:ArrayOfVotingOptionDataType Complex Type] The ArrayOfVotingOptionDataType complex type specifies an array of voting options.&lt;7&gt;</td>
+            <td>
+                2.2.4.2</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73003</td>
+            <td>
+                [In t:MessageType Complex Type] [ApprovalRequestData] Specifies the approval state of an approval request message.&lt;8&gt;</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73005</td>
+            <td>
+                [In t:MessageType Complex Type] [VotingInformation] Specifies voting information on messages that include voting buttons or voting response messages. &lt;9&gt;</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73007</td>
+            <td>
+                [In t:MessageType Complex Type] [ReminderMessageData] Specifies the data in a reminder message. &lt;10&gt;</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R318</td>
+            <td>
+                [In t:ReminderMessageDataType Complex Type] The ReminderMessageDataType complex type specifies a reminder message.&lt;11&gt;</td>
+            <td>
+                2.2.4.4</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R331</td>
+            <td>
+                [In t:VotingInformationType Complex Type] The VotingInformationType complex type specifies voting information.&lt;12&gt; </td>
+            <td>
+                2.2.4.5</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R338</td>
+            <td>
+                [In t:VotingOptionDataType  Complex Type]The VotingOptionDataType complex type specifies the voting option on a message.&lt;13&gt;</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R346</td>
+            <td>
+                [In t:SendPromptType Simple Type] The SendPromptType simple type specifies the prompt behavior associated with a voting option.&lt;15&gt;</td>
+            <td>
+                2.2.5.2</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1188</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;IncludeMimeContent&quot; with type &quot;xs:boolean&quot; specifies whether the MIME content of an item is returned in a response.</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1193</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;FilterHtmlContent&quot; with type &quot;xs:boolean&quot; Specifies whether HTML content filtering is enabled.</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R1</td>
+           
+<td>
+                [In Transport] This protocol uses SOAP 1.1.
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R3001</td>
+           
+<td>
+                [In Transport] The protocol MUST support SOAP over HTTP, as specified in [RFC2616]. 
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R301</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type] The ApprovalRequestDataType schema is &lt;xs:complexType name=&quot;ApprovalRequestDataType&quot;&gt;
+	  &lt;xs:sequence&gt;
+	    &lt;xs:element name=&quot;IsUndecidedApprovalRequest&quot; type=&quot;xs:boolean&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;ApprovalDecision&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;ApprovalDecisionMaker&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;
+	    xs:element name=&quot;ApprovalDecisionTime&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot;/&gt;
+	  &lt;/xs:sequence&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R303</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type] The IsUndecidedApprovalRequest element is xs:boolean ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R307</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type]The ApprovalDecision element is xs:int ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R308</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type] The ApprovalDecision element specifies the approval decision on the approval request message.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R309</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type]The ApprovalDecisionMaker element is xs:string ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R310</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type] The ApprovalDecisionMaker element specifies the display name of the moderator who approved or rejected the request.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R311</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type]The ApprovalDecisionTime element is xs:dateTime ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R312</td>
+            
+<td>
+                [In t:ApprovalRequestDataType Complex Type] The ApprovalDecisionTime element specifies the time at which a moderator approved or rejected the request.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R314</td>
+            
+<td>
+                [In t:ArrayOfVotingOptionDataType  Complex Type] The ArrayOfVotingOptionDataType  schema is &lt;xs:complexType name=&quot;ArrayOfVotingOptionDataType&quot;&gt;
+	  &lt;xs:sequence&gt;
+	    &lt;xs:element name=&quot;VotingOptionData&quot; type=&quot;t:VotingOptionDataType&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+	  &lt;/xs:sequence&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R316</td>
+            
+<td>
+                [In t:ArrayOfVotingOptionDataType  Complex Type] The VotingOptionData element is t:VotingOptionDataType (section 2.2.4.6) type.
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R317</td>
+            
+<td>
+                [In t:ArrayOfVotingOptionDataType  Complex Type] The VotingOptionData element specifies the voting options on a message.
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R22</td>
+           
+<td>
+                [In t:MessageType Complex Type] The MessageType complex type extends the ItemType complex type ([MS-OXWSCORE] section 2.2.4.24).
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R23</td>
+           
+<td>
+                [In t:MessageType Complex Type] The MessageType schema is &lt;xs:complexType name=&quot;MessageType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:ItemType&quot;
+    &gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;Sender&quot;
+          type=&quot;t:SingleRecipientType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ToRecipients&quot;
+          type=&quot;t:ArrayOfRecipientsType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;CcRecipients&quot;
+          type=&quot;t:ArrayOfRecipientsType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;BccRecipients&quot;
+          type=&quot;t:ArrayOfRecipientsType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IsReadReceiptRequested&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IsDeliveryReceiptRequested&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ConversationIndex&quot;
+          type=&quot;xs:base64Binary&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ConversationTopic&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;From&quot;
+          type=&quot;t:SingleRecipientType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;InternetMessageId&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IsRead&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IsResponseRequested&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;References&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ReplyTo&quot;
+          type=&quot;t:ArrayOfRecipientsType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ReceivedBy&quot;
+          type=&quot;t:SingleRecipientType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ReceivedRepresenting&quot;
+          type=&quot;t:SingleRecipientType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ApprovalRequestData&quot;
+           type=&quot;t:ApprovalRequestDataType&quot; 
+           minOccurs=&quot;0&quot;
+          /&gt;
+         &lt;xs:element name=&quot;VotingInformation&quot;
+           type=&quot;t:VotingInformationType&quot; 
+           minOccurs=&quot;0&quot;
+          /&gt;
+         &lt;xs:element name=&quot;ReminderMessageData&quot; 
+           type=&quot;t:ReminderMessageDataType&quot; 
+           minOccurs=&quot;0&quot;
+          /&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R26</td>
+           
+<td>
+                [In t:MessageType Complex Type] The Sender element Specifies the sender of a message.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R27</td>
+           
+<td>
+                [In t:MessageType Complex Type] [Sender element]This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R28</td>
+           
+<td>
+                [In t:MessageType Complex Type] [Sender element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R30</td>
+           
+<td>
+                [In t:MessageType Complex Type] ToRecipients element Specifies a collection of recipients of an email.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R31</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ToRecipients element] This element is required for sending a message.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:57</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R32</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ToRecipients element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R184</td>
+           
+<td>
+                [In t:MessageType Complex Type] CcRecipients element is t:ArrayOfRecipientsType type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R33</td>
+           
+<td>
+                [In t:MessageType Complex Type] CcRecipients element Specifies a collection of recipients that receive a carbon copy (Cc) of an email.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R34</td>
+           
+<td>
+                [In t:MessageType Complex Type] [CcRecipients element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R35</td>
+           
+<td>
+                [In t:MessageType Complex Type] [CcRecipients element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R185</td>
+           
+<td>
+                [In t:MessageType Complex Type] BccRecipients element is t:ArrayOfRecipientsType type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R36</td>
+           
+<td>
+                [In t:MessageType Complex Type] BccRecipients element Specifies a collection of recipients that receive a blind carbon copy (Bcc) of an email.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R37</td>
+           
+<td>
+                [In t:MessageType Complex Type] [BccRecipients element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R38</td>
+           
+<td>
+                [In t:MessageType Complex Type] [BccRecipients element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R186</td>
+           
+<td>
+                [In t:MessageType Complex Type] IsReadReceiptRequested element is xs:boolean ([XMLSCHEMA2] sec 3.2.2) type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R40</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsReadReceiptRequested element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R41</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsReadReceiptRequested element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R42</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsReadReceiptRequested element] A text value of &quot;true&quot; indicates that a read receipt is requested from the recipient of the message.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R187</td>
+           
+<td>
+                [In t:MessageType Complex Type] IsDeliveryReceiptRequested element is xs:boolean type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R45</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsDeliveryReceiptRequested element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R46</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsDeliveryReceiptRequested element] A text value of &quot;true&quot; indicates that a delivery receipt has been requested from the recipient of the message.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R188</td>
+           
+<td>
+                [In t:MessageType Complex Type] ConversationIndex element is xs:base64Binary ([XMLSCHEMA2] sec 3.2.16) type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R48</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ConversationIndex element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R49</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ConversationIndex element] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:17</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R189</td>
+           
+<td>
+                [In t:MessageType Complex Type] ConversationTopic element is xs:string ([XMLSCHEMA2] sec 3.2.1) type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R51</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ConversationTopic element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R52</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ConversationTopic element] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:20</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R190</td>
+           
+<td>
+                [In t:MessageType Complex Type] From element is t:SingleRecipientType type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R53</td>
+           
+<td>
+                [In t:MessageType Complex Type] From element Specifies the addressee from whom the message was sent.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R54</td>
+           
+<td>
+                [In t:MessageType Complex Type] [From element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R55</td>
+           
+<td>
+                [In t:MessageType Complex Type] [From element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R191</td>
+           
+<td>
+                [In t:MessageType Complex Type] InternetMessageId element is xs:string type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R57</td>
+           
+<td>
+                [In t:MessageType Complex Type] [InternetMessageId element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R58</td>
+           
+<td>
+                [In t:MessageType Complex Type] [InternetMessageId element] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R192</td>
+           
+<td>
+                [In t:MessageType Complex Type] IsRead element is xs:boolean type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R60</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsRead element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R61</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsRead element]The text value of &quot;true&quot; indicates that the message has been read.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R193</td>
+           
+<td>
+                [In t:MessageType Complex Type] IsResponseRequested element is xs:boolean type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R63</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsResponseRequested element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R64</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsResponseRequested element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R65</td>
+           
+<td>
+                [In t:MessageType Complex Type] [IsResponseRequested element] A text value of &quot;true&quot; indicates that a response has been requested.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R194</td>
+           
+<td>
+                [In t:MessageType Complex Type] References element is xs:string type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R66</td>
+           
+<td>
+                [In t:MessageType Complex Type] References element Specifies the Usenet header that is used to correlate replies with their original message.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R67</td>
+           
+<td>
+                [In t:MessageType Complex Type] [References element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R68</td>
+           
+<td>
+                [In t:MessageType Complex Type] [References element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R195</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReplyTo element is t:ArrayOfRecipientsType type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R69</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReplyTo element Specifies a collection of addresses to send replies to. 
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R70</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ReplyTo element] This element is optional.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:14</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R71</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ReplyTo element] This is a read/write element.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R196</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReceivedBy element is t:SingleRecipientType type.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:28</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R72</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReceivedBy element Identifies the delegate in a delegate access scenario.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:28</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R72001</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ReceivedBy element] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:26</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R197</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReceivedRepresenting element is t:SingleRecipientType
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:28</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R73</td>
+           
+<td>
+                [In t:MessageType Complex Type] ReceivedRepresenting element Identifies the principal in a delegate access scenario.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:28</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R73001</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ReceivedRepresenting element] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:29</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73002</td>
+            
+<td>
+                [In t:MessageType Complex Type] The type of child element ApprovalRequestData is t:ApprovalRequestDataType (section 2.2.4.1).
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R73008</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ApprovalRequestData] This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:33</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73004</td>
+            
+<td>
+                [In t:MessageType Complex Type] The type of child element VotingInformation is t:VotingInformationType (section 2.2.4.5).
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R73009</td>
+           
+<td>
+                [In t:MessageType Complex Type] [VotingInformation]This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:36</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R73006</td>
+            
+<td>
+                [In t:MessageType Complex Type] The type of child element ReminderMessageData is t:ReminderMessageDataType ( section 2.2.4.4).
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R73010</td>
+           
+<td>
+                [In t:MessageType Complex Type] [ReminderMessageData]This element is read-only.
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:39</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R319</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The ReminderMessageDataType  schema is &lt;xs:complexType name=&quot;ReminderMessageDataType&quot;&gt;
+	  &lt;xs:sequence&gt;
+	    &lt;xs:element name=&quot;ReminderText&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;Location&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;StartTime&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;EndTime&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;AssociatedCalendarItemId&quot; type=&quot;t:ItemIdType&quot; minOccurs=&quot;0&quot;/&gt;
+	  &lt;/xs:sequence&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R321</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The ReminderText element is xs:string ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R322</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The ReminderText element specifies the reminder message text.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R323</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The Location element is xs:string type.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R324</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The Location element specifies the location of the reminder&#39;s associated event.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R325</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The StartTime element is xs:dateTime ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R326</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The StartTime element specifies the start time of the reminder&#39;s associated event.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R327</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The EndTime element is xs:dateTime type.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R328</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The EndTime element specifies the end time of the reminder&#39;s associated event.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R329</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The AssociatedCalendarItemId element is t:ItemIdType ([MS-OXWSCORE] section 2.2.4.25) type.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R330</td>
+            
+<td>
+                [In t:ReminderMessageDataType Complex Type] The AssociatedCalendarItemId element specifies the item id of the reminder&#39;s associated event.
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R332</td>
+            
+<td>
+                [In t:VotingInformationType Complex Type]The VotingInformationType schema is  &lt;xs:complexType name=&quot;VotingInformationType&quot;&gt;
+	  &lt;xs:sequence&gt;
+	    &lt;xs:element name=&quot;UserOptions&quot; type=&quot;t:ArrayOfVotingOptionDataType&quot; minOccurs=&quot;0&quot;/&gt;
+	    &lt;xs:element name=&quot;VotingResponse&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;
+	  &lt;/xs:sequence&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R334</td>
+            
+<td>
+                [In t:VotingInformationType Complex Type]The UserOptions element is t:ArrayOfVotingOptionDataType (section 2.2.4.2) type.
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R335</td>
+            
+<td>
+                [In t:VotingInformationType Complex Type] The UserOptions element specifies the list of voting options.
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R336</td>
+            
+<td>
+                [In t:VotingInformationType Complex Type]The VotingResponse element is xs:string ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R337</td>
+            
+<td>
+                [In t:VotingInformationType Complex Type]The VotingResponse element specifies voting response.
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R339</td>
+            
+<td>
+                [In t:VotingOptionDataType  Complex Type]The VotingOptionDataType  schema is &lt;xs:complexType name=&quot;VotingOptionDataType&quot;&gt;
+	  &lt;xs:sequence&gt;
+	    &lt;xs:element name=&quot;DisplayName&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;
+	   &lt;xs:element name=&quot;SendPrompt&quot; type=&quot;t:SendPromptType&quot; minOccurs=&quot;0&quot;/&gt;
+	  &lt;/xs:sequence&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R341</td>
+            
+<td>
+                [In t:VotingOptionDataType  Complex Type]The DisplayName element is xs:string ([XMLSCHEMA2]) type.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R342</td>
+            
+<td>
+                [In t:VotingOptionDataType  Complex Type]The DisplayName element specifies the display name for the voting choice.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R343</td>
+            
+<td>
+                [In t:VotingOptionDataType  Complex Type]The SendPrompt element is t:SendPromptType (section 2.2.5.2) type.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R344</td>
+            
+<td>
+                [In t:VotingOptionDataType  Complex Type]The SendPrompt element indicates the prompt behavior when the user selects this voting choice.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R80</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] The value &quot;SaveOnly&quot; means when used in the CreateItemType complex type ([MS-OXWSCORE] section 3.1.4.2.3.2), the email message item is saved in the folder that is specified by the TargetFolderIdType complex type ([MS-OXWSFOLD] section 2.2.4.16).
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:25</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R81</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] [when &quot;SaveOnly&quot; used in CreateItem Type element] Messages can be sent later by using the SendItem operation (section 3.1.4.7) on an ExchangeServiceBinding object.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:30</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R82</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] [when &quot;SaveOnly&quot; used in CreateItem Type element] In this case, an item identifier is returned.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R83</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] The value &quot;SendOnly&quot; means when used in the CreateItemType complex type, the email message item is sent.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:26</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R203</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] The value &quot;SendOnly&quot; means when used in the CreateItemType complex type, the email message item [is sent] but no copy is saved.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:25</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R84</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] [When &quot;SendOnly&quot; used in CreateItem Type element] In this case, an item identifier is not returned.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:34</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R85</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] The value &quot;SendAndSaveCopy&quot; means when used in the CreateItemType complex type, the email message item is sent.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:33</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R204</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] The value &quot;SendAndSaveCopy&quot; means when used in the CreateItemType complex type, the email message item [is sent] and a copy is saved in the TargetFolderIdType complex type.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:31</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R86</td>
+           
+<td>
+                [In t:MessageDispositionType Simple Type] [When &quot;SendAndSaveCopy&quot; used in CreateItem Type element] In this case, an item identifier is not returned.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:30</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R347</td>
+            
+<td>
+                [In t:SendPromptType Simple Type]The schema is	&lt;xs:simpleType name=&quot;SendPromptType&quot;&gt;
+	  &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+	    &lt;xs:enumeration value=&quot;None&quot;/&gt;
+	    &lt;xs:enumeration value=&quot;Send&quot;/&gt;
+	    &lt;xs:enumeration value=&quot;VotingOption&quot;/&gt;
+	  &lt;/xs:restriction&gt;
+	&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R349</td>
+            
+<td>
+                [In t:SendPromptType Simple Type]The value &quot;None&quot; means no prompt behavior is specified.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R350</td>
+            
+<td>
+                [In t:SendPromptType Simple Type]The value &quot;Send&quot; means the response is sent immediately when the user chooses a voting option.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSMSG_R351</td>
+            
+<td>
+                [In t:SendPromptType Simple Type]The value &quot;VotingOption&quot; means the user is prompted to confirm their choice before sending a response.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R202</td>
+           
+<td>
+                [In CopyItem] The following is the WSDL port type specification of the CopyItem operation. &lt;wsdl:operation name=&quot;CopyItem&quot;&gt;
+    &lt;wsdl:input message=&quot;tns:CopyItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:CopyItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:48</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R166</td>
+           
+<td>
+                [In CopyItem] The following is the WSDL binding specification of the CopyItem operation. &lt;wsdl:operation name=&quot;CopyItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/CopyItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;CopyItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:CopyItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:48</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R168</td>
+           
+<td>
+                [In CopyItem] The protocol client sends a CopyItemSoapIn request WSDL message, and the protocol server responds with a CopyItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:48</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R169</td>
+           
+<td>
+                [In CopyItem] If the CreateItem WSDL operation request is successful, the server returns a CreateItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.2.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the CreateItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:48</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R170</td>
+           
+<td>
+                [In CopyItem] [A successful CopyItem operation request returns a CopyItemResponse element] The ResponseCode element, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the CreateItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:48</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R170001</td>
+           
+<td>
+                [In CopyItem] If the CreateItem WSDL operation is not successful, it returns a CreateItemResponse element with the ResponseClass attribute of the CreateItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:50</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R170002</td>
+           
+<td>
+                [In CopyItem] [A unsuccessful CopyItem operation request returns a CopyItemResponse element] The ResponseCode element of the CreateItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:50</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R107</td>
+           
+<td>
+                [In CreateItem] The following is the WSDL port type specification of the CreateItem operation.
+&lt;wsdl:operation name=&quot;CreateItem&quot;&gt;
+     &lt;wsdl:input message=&quot;tns:CreateItemSoapIn&quot; /&gt;
+     &lt;wsdl:output message=&quot;tns:CreateItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R109</td>
+           
+<td>
+                [In CreateItem] The following is the WSDL binding specification of the CreateItem operation. &lt;wsdl:operation name=&quot;CreateItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;CreateItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:CreateItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R111</td>
+           
+<td>
+                [In CreateItem] The protocol client sends a CreateItemSoapIn request WSDL message, and the protocol server responds with a CreateItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R112</td>
+           
+<td>
+                [In CreateItem]If the CreateItem WSDL operation request is successful, the server returns a CreateItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.2.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the CreateItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R113</td>
+           
+<td>
+                [In CreateItem] [A successful CreateItem operation request returns a CreateItemResponse element] The ResponseCode element, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the CreateItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R113001</td>
+           
+<td>
+                [In CreateItem] If the CreateItem WSDL operation is not successful, it returns a CreateItemResponse element with the ResponseClass attribute of the CreateItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:16</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R113002</td>
+           
+<td>
+                [In CreateItem] [A unsuccessful CreateItem operation request returns a CreateItemResponse element] The ResponseCode element of the CreateItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:16</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R148</td>
+           
+<td>
+                [In DeleteItem] The following is the WSDL port type specification of the DeleteItem operation. &lt;wsdl:operation name=&quot;DeleteItem&quot;&gt;
+    &lt;wsdl:input message=&quot;tns:DeleteItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:DeleteItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R150</td>
+           
+<td>
+                [In DeleteItem] The following is the WSDL binding specification of the DeleteItem operation. &lt;wsdl:operation name=&quot;DeleteItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;DeleteItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:DeleteItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R152</td>
+           
+<td>
+                [In DeleteItem] The protocol client sends a DeleteItemSoapIn request WSDL message, and the protocol server responds with a DeleteItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R153</td>
+           
+<td>
+                [In DeleteItem] If the DeleteItem WSDL operation request is successful, the server returns a DeleteItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.3.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the DeleteItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R154</td>
+           
+<td>
+                [In DeleteItem] [A successful DeleteItem operation request returns a DeleteItemResponse element] The ResponseCode element, as specified by [MS-OXWSCDATA] section 2.2.4.67, of the DeleteItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R154001</td>
+           
+<td>
+                [In DeleteItem] If the DeleteItem WSDL operation request is not successful, it returns a DeleteItemResponse element with the ResponseClass attribute of the DeleteItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:38</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R154002</td>
+           
+<td>
+                [In DeleteItem] [A unsuccessful DeleteItem operation request returns a DeleteItemResponse element] The ResponseCode element of the DeleteItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:38</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R116</td>
+           
+<td>
+                [In GetItem] The following is the WSDL port type specification of the GetItem operation.&lt;wsdl:operation name=&quot;GetItem&quot;&gt;
+    &lt;wsdl:input message=&quot;tns:GetItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:GetItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R118</td>
+           
+<td>
+                [In GetItem] The following is the WSDL binding specification of the GetItem operation. &lt;wsdl:operation name=&quot;GetItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/GetItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;GetItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:GetItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R127</td>
+           
+<td>
+                [In GetItem] [The BaseShape child element in ItemShape element] Set this element[BaseShape element] to IdOnly to return only the item ID.
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:21</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R198</td>
+           
+<td>
+                [In GetItem] [The BaseShape child element in ItemShape element] Set it[BaseShape element] to AllProperties to return all of the properties used by the server to construct a message.
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R133</td>
+           
+<td>
+                [In GetItem] The protocol client sends a GetItemSoapIn request WSDL message, and the protocol server responds with a GetItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R134</td>
+           
+<td>
+                [In GetItem] If the GetItem WSDL operation request is successful, the server returns a GetItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.4.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the GetItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R135</td>
+           
+<td>
+                [In GetItem] [A successful GetItem operation request returns a GetItemResponse element] The ResponseCode element, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the GetItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R135001</td>
+           
+<td>
+                [In GetItem] If the GetItem WSDL operation request is not successful, it returns a GetItemResponse element with the ResponseClass attribute of the GetItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:38</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R135002</td>
+           
+<td>
+                [In GetItem] [A unsuccessful GetItem operation request returns a GetItemResponse element] The ResponseCode element of the GetItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:38</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R157</td>
+           
+<td>
+                [In MoveItem] The following is the WSDL port type specification of the MoveItem operation. &lt;wsdl:operation name=&quot;MoveItem&quot;&gt;
+    &lt;wsdl:input message=&quot;tns:MoveItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:MoveItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:51</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R159</td>
+           
+<td>
+                [In MoveItem] The following is the WSDL binding specification of the MoveItem operation. &lt;wsdl:operation name=&quot;MoveItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/MoveItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;MoveItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:MoveItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:51</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R161</td>
+           
+<td>
+                [In MoveItem] The protocol client sends a MoveItemSoapIn request WSDL message, and the protocol server responds with a MoveItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:54</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R162</td>
+           
+<td>
+                [In MoveItem] If the MoveItem WSDL operation request is successful, the server returns a MoveItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.7.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the MoveItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:54</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R163</td>
+           
+<td>
+                [In MoveItem] [A successful MoveItem operation request returns a MoveItemResponse element] The ResponseCode element, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the MoveItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:54</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R163001</td>
+           
+<td>
+                [In MoveItem] If the MoveItem WSDL operation request is not successful, it returns a MoveItemResponse element with the ResponseClass attribute of the MoveItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:55</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R163002</td>
+           
+<td>
+                [In MoveItem] [A unsuccessful MoveItem operation request returns a MoveItemResponse element] The ResponseCode element of the MoveItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:55</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R173</td>
+           
+<td>
+                [In SendItem] The following is the WSDL port type specification of the SendItem operation. &lt;wsdl:operation name=&quot;SendItem &quot;&gt;
+    &lt;wsdl:input message=&quot;tns:SendItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:SendItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:26</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R175</td>
+           
+<td>
+                [In SendItem] The following is the WSDL binding specification of the SendItem operation. &lt;wsdl:operation name=&quot;SendItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/SendItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:SendItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:SendItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:SendItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;SendItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:SendItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:26</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R177</td>
+           
+<td>
+                [In SendItem] The protocol client sends a SendItemSoapIn request WSDL message, and the protocol server responds with a SendItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:56</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R178</td>
+           
+<td>
+                [In SendItem] A successful SendItem operation request returns a SendItemResponse element with the ResponseClass attribute of the SendItemResponseMessage element set to &quot;Success&quot;.
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:56</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R179</td>
+           
+<td>
+                [In SendItem] [A successful SendItem operation request returns a SendItemResponse element] The ResponseCode element of the SendItemResponse element is set to &quot;NoError&quot;.
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:56</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R137</td>
+           
+<td>
+                [In UpdateItem] The following is the WSDL port type specification of the operation. &lt;wsdl:operation name=&quot;UpdateItem&quot;&gt;
+    &lt;wsdl:input message=&quot;tns:UpdateItemSoapIn&quot; /&gt;
+    &lt;wsdl:output message=&quot;tns:UpdateItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:45</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R139</td>
+           
+<td>
+                [In UpdateItem] The following is the WSDL binding specification of the UpdateItem operation. &lt;wsdl:operation name=&quot;UpdateItem&quot;&gt;
+    &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/UpdateItem&quot; /&gt;
+    &lt;wsdl:input&gt;
+        &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+        &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+    &lt;/wsdl:input&gt;
+    &lt;wsdl:output&gt;
+        &lt;soap:body parts=&quot;UpdateItemResult&quot; use=&quot;literal&quot; /&gt;
+        &lt;soap:header message=&quot;tns:UpdateItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:45</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R143</td>
+           
+<td>
+                [In UpdateItem] The protocol client sends an UpdateItemSoapIn request WSDL message, and the protocol server responds with an UpdateItemSoapOut response WSDL message.
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:45</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R144</td>
+           
+<td>
+                [In UpdateItem] If the UpdateItem WSDL operation request is successful, the server returns an UpdateItemResponse element, as specified in [MS-OXWSCORE] section 3.1.4.9.2.2, with the ResponseClass attribute, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the UpdateItemResponseMessage element, as specified in [MS-OXWSCDATA] section 2.2.4.12, set to &quot;Success&quot;. 
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:45</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R145</td>
+           
+<td>
+                [In UpdateItem] [A successful UpdateItem operation request returns an UpdateItemResponse element] The ResponseCode element, as specified in [MS-OXWSCDATA] section 2.2.4.67, of the UpdateItemResponseMessage element is set to &quot;NoError&quot;. 
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:45</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R145001</td>
+           
+<td>
+                [In UpdateItem] If the UpdateItem WSDL operation request is not successful, it returns an UpdateItemResponse element with the ResponseClass attribute of the UpdateItemResponseMessage element set to &quot;Error&quot;. 
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:17</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSMSG_R145002</td>
+           
+<td>
+                [In UpdateItem] [A unsuccessful UpdateItem operation request returns an UpdateItemResponse element] The ResponseCode element of the UpdateItemResponseMessage element is set to one of the common errors defined in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:33:17</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R163</td>
+           
+<td>
+                [In t:MailboxTypeType Simple Type] The type [MailboxTypeType] is defined as follow:
+&lt;xs:simpleType name=&quot;MailboxTypeType&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+        &lt;xs:enumeration value=&quot;Unknown&quot;/&gt;
+        &lt;xs:enumeration value=&quot;OneOff&quot;/&gt;
+        &lt;xs:enumeration value=&quot;Contact&quot;/&gt;
+        &lt;xs:enumeration value=&quot;Mailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;PrivateDL&quot;/&gt;
+        &lt;xs:enumeration value=&quot;PublicDL&quot;/&gt;
+        &lt;xs:enumeration value=&quot;PublicFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;GroupMailbox&quot;/&gt;
+    &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.18
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R189</td>
+           
+<td>
+                [In t:NonEmptyStringType Simple Type] The type [NonEmptyStringType] is defined as follow:
+&lt;xs:simpleType name=&quot;NonEmptyStringType&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+        &lt;xs:minLength value=&quot;1&quot;/&gt;
+    &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.20
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1033</td>
+           
+<td>
+                [In t:ArrayOfRecipientsType Complex Type] The type [ArrayOfRecipientsType] is defined as follow:
+ &lt;xs:complexType name=&quot;ArrayOfRecipientsType&quot;&gt;
+  &lt;xs:choice
+    maxOccurs=&quot;unbounded&quot;
+    minOccurs=&quot;0&quot;
+  &gt;
+    &lt;xs:element name=&quot;Mailbox&quot;
+      type=&quot;t:EmailAddressType&quot;
+     /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.11
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1147</td>
+           
+<td>
+                [In t:EmailAddessType Complex Type] The type [EmailAddressType] is defined as follow:
+&lt;xs:complexType name=&quot;EmailAddressType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:BaseEmailAddressType&quot;
+    &gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;Name&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;EmailAddress&quot;
+          type=&quot;t:NonEmptyStringType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;RoutingType&quot;
+          type=&quot;t:NonEmptyStringType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;MailboxType&quot;
+          type=&quot;t:MailboxTypeType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;ItemId&quot;
+          type=&quot;t:ItemIdType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;OriginalDisplayName&quot; 
+          type=&quot;xs:string&quot; 
+          minOccurs=&quot;0&quot;/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.31
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1190</td>
+           
+<td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;BodyType&quot; with type &quot;t:BodyTypeResponseType(section 2.2.3.1)&quot; specifies the requested body text format for the Body property that is returned in a response.
+            </td>
+<td>
+                2.2.4.44
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:42</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1197</td>
+           
+<td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;AdditionalProperties&quot; with type &quot;t:NonEmptyArrayOfPathsToElementType&quot; specifies a set of requested additional properties to return in a response.
+            </td>
+<td>
+                2.2.4.44
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:32:43</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1292</td>
+           
+<td>
+                [In t:SingleRecipientType Complex Type] The type [SingleRecipientType] is defined as follow:
+ &lt;xs:complexType name=&quot;SingleRecipientType&quot;&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:element name=&quot;Mailbox&quot;
+      type=&quot;t:EmailAddressType&quot;
+     /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.71
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1428001</td>
+           
+<td>
+                [In Appendix C: Product Behavior]&lt;52&gt; Section 2.2.4.31:  Exchange 2010 and above return the MailboxType element in the GetItem operation.
+            </td>
+<td>
+                8
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:31:23</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R305</td>
+            <td>
+                [In t:IsUndecidedApprovalRequest Complex Type] [IsUndecidedApprovalRequest element] A text value of &quot;true&quot; indicates that this approval request is awaiting a moderator to approve.</td>
+            <td>
+                2.2.4.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R306</td>
+            <td>
+                [In t:ApprovalRequestDataType Complex Type]  [IsUndecidedApprovalRequest element] A text value of &quot;false&quot; indicates that this approval request is awaiting a moderator to reject the request.</td>
+            <td>
+                2.2.4.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R2512</td>
+            <td>
+                [In t:MessageType Complex Type] When the Mailbox element of Sender element include an MailboxType element of t:MailboxTypeType, the value &quot;Mailbox&quot; of t:MailboxTypeType specifies a mail-enabled directory service object.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R2516</td>
+            <td>
+                [In t:MessageType Complex Type] When the Mailbox element of Sender element include an EmailAddress element of t:NonEmptyStringType, the t:NonEmptyStringType simple type specifies a string that MUST have a minimum of one character.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R2912</td>
+            <td>
+                [In t:MessageType Complex Type]When the Mailbox element of ToRecipients element include an MailboxType element of t:MailboxTypeType, the value &quot;Mailbox&quot; of t:MailboxTypeType specifies a mail-enabled directory service object.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R2916</td>
+            <td>
+                [In t:MessageType Complex Type] When the Mailbox element of ToRecipients element include an EmailAddress element of t:NonEmptyStringType, the t:NonEmptyStringType simple type specifies a string that MUST have a minimum of one character.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:31:22</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R4200</td>
+            <td>
+                [In t:MessageType Complex Type] [IsReadReceiptRequested element] A text value of &quot;false&quot; indicates that a read receipt is not requested from the recipient of the message.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R4600</td>
+            <td>
+                [In t:MessageType Complex Type] [IsDeliveryReceiptRequested element] A text value of &quot;false&quot; indicates that a delivery receipt has not been requested from the recipient of the message.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R6100</td>
+            <td>
+                [In t:MessageType Complex Type] [IsRead element]The text value of &quot;false&quot; indicates that the message has not been read.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSMSG_R6500</td>
+            <td>
+                [In t:MessageType Complex Type] [IsResponseRequested element] A text value of &quot;false&quot; indicates that a response has not been requested.</td>
+            <td>
+                2.2.4.3</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:33:11</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R183</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does uses secure communications via HTTPS, as defined in [RFC2818]. (The Exchange 2007 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R360</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the ApprovalRequestDataType complex type. (&lt;6&gt; Section 2.2.4.1: Exchange 2007, Exchange 2010, and the initial release of Exchange 2013 do not support the ovalRequestDataTypAppre complex type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R361</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the ApprovalRequestDataType complex type. (This type was introduced in Microsoft Exchange Server 2013 Service Pack 1 (SP1).)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R362</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the ArrayOfVotingOptionDataType complex type. (&lt;7&gt; Section 2.2.4.2: Exchange 2007, Exchange 2010, and the initial release of Exchange 2013 do not support the ArrayOfVotingOptionDataType  complex type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R363</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the ArrayOfVotingOptionDataType complex type. (This type was introduced in Microsoft Exchange Server 2013 Service Pack 1 (SP1).)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R364</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the ApprovalRequestData element. (&lt;8&gt; Section 2.2.4.3: Exchange 2007, Exchange 2010, and the initial release of Exchange 2013 do not support the ApprovalRequestData element. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R365</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the ApprovalRequestData element. (This type was introduced in Microsoft Exchange Server 2013 Service Pack 1 (SP1).)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R182003</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the VotingInformation element. (&lt;9&gt; Section 2.2.4.3:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the VotingInformation element. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R182004</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the VotingInformation element. (This element was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R182005</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the ReminderMessageData element. (&lt;10&gt; Section 2.2.4.3:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the ReminderMessageData element. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R182006</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the ReminderMessageData element. (This element was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R366</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the ReminderMessageDataType complex type. (&lt;11&gt; Section 2.2.4.4:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the ReminderMessageDataType complex type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R367</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the ReminderMessageDataType complex type. (This type was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R368</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the VotingInformationType complex type. (&lt;12&gt; Section 2.2.4.5:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the VotingInformationType complex type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R369</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the VotingInformationType complex type. (This type was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R370</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the VotingOptionDataType complex type. (&lt;13&gt; Section 2.2.4.6:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the VotingOptionDataType complex type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R371</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the VotingOptionDataType complex type. (This type was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R374</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the SendPromptType simple type. (&lt;15&gt; Section 2.2.5.2:  Exchange 2007,Exchange 2010, and the initial release of Exchange 2013 do not support the SendPromptType simple type. )</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSMSG_R375</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does introduce the SendPromptType complex type. (This type was introduced in Exchange 2013 SP1.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSCDATA_R21188</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] [IncludeMimeContent is] True, specifies the MIME content of an item is returned in a response.</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:32:39</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSCDATA_R21189</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] otherwise [IncludeMimeContent is] false, specifies [the MIME content of an item is not returned in a response].</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:32:39</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSCDATA_R21193</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] [FilterHtmlContent is] True, specifies HTML content filtering is enabled.</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:32:41</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSCDATA_R21194</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] otherwise [FilterHtmlContent is] false, specifies [HTML content filtering is not enabled].</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 7:32:41</td>
+            <td>
+                ms-oxwsmsg_log.xml</td>
+        </tr>
+    </tbody>
+    </table><br />
+    <br/>
+    
+    <br/>
+    
+    <br/>
+    
+      </body>
+  </html>

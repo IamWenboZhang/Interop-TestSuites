@@ -1,0 +1,2732 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Reporting</title>
+    <style type="text/css">
+      table
+      {
+      width: 100%;
+      background-color: #f8f8f8;
+      border: 1px solid #505050;
+      border-collapse: collapse;
+      }
+      tbody tr td
+      {
+      border: 1px solid #505050;
+      }
+      .TableCellHighlighted
+      {
+      font-size: 1.1em;
+      background-color: #e0e0e0;
+      border: 1px solid #909090;
+      }
+    .Unverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .Verified
+    {
+        background-color: green;
+        display: none;
+    }
+    .NotToVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .DerivedUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .DerivedVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .DerivedPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .FinalUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .FinalVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .FinalPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .RSExcluded
+    {
+        background-color: red;
+    }
+    </style>
+    <script type="text/javascript">   
+    function ToggleAll(className, parent, func)
+    {
+        var children = (parent !=null ? parent : document.body).getElementsByTagName('*');
+        var pattern = new RegExp("(^|\\s)" + className + "(\\s|$)");
+        for (var i = 0, length = children.length; i < length; i++)
+        {
+            var child = children[i];
+            var elementClassName = child.className;
+            if (elementClassName.length == 0)
+                continue;
+            if (elementClassName == className || elementClassName.match(pattern))
+                func(child);
+        }
+    }
+    function Toggle(item)
+    {
+        var visible = (item.style.display != "none");
+        if (visible)
+            item.style.display = "none";
+        else
+            item.style.display = "table-row";
+    }
+    function Show(item)
+    {
+        item.style.display = "table-row";
+    }
+    function Hide(item)
+    {
+        item.style.display = "none";
+    }
+    </script>
+</head>
+<body>
+    <noscript>Please enable Javascript to view the details</noscript>
+        <table>
+        <caption><h3>Report For Log ms-oxwsbtrf_log.xml</h3></caption>
+        <tr>
+            <td>
+                Target Protocol: MS-OXWSBTRF;</td>
+            <td>
+                Log File: ms-oxwsbtrf_log.xml
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFConfigProperties
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                CommonConfigurationFileName</td>
+            <td>
+                 ExchangeCommonConfiguration.deployment.ptfconfig</td>
+        </tr>
+        <tr>
+            <td>
+                UserName</td>
+            <td>
+                 MSOXWSBTRF_User01</td>
+        </tr>
+        <tr>
+            <td>
+                UserPassword</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                MailboxCulture</td>
+            <td>
+                 en-US</td>
+        </tr>
+        <tr>
+            <td>
+                Domain</td>
+            <td>
+                 contoso.com</td>
+        </tr>
+        <tr>
+            <td>
+                SutComputerName</td>
+            <td>
+                 SUT01</td>
+        </tr>
+        <tr>
+            <td>
+                Password</td>
+            <td>
+                 OPs3Y2Q4+y5S)</td>
+        </tr>
+        <tr>
+            <td>
+                SutVersion</td>
+            <td>
+                 ExchangeServer2019</td>
+        </tr>
+        <tr>
+            <td>
+                ServiceUrl</td>
+            <td>
+                 [TransportType]://[SutComputerName].[Domain]/[AppendingURL]</td>
+        </tr>
+        <tr>
+            <td>
+                AppendingURL</td>
+            <td>
+                 EWS/Exchange.asmx</td>
+        </tr>
+        <tr>
+            <td>
+                TransportType</td>
+            <td>
+                 HTTP</td>
+        </tr>
+        <tr>
+            <td>
+                WaitTime</td>
+            <td>
+                 1000</td>
+        </tr>
+        <tr>
+            <td>
+                RetryCount</td>
+            <td>
+                 35</td>
+        </tr>
+        <tr>
+            <td>
+                R6Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R2111Enabled</td>
+            <td>
+                 false</td>
+        </tr>
+        <tr>
+            <td>
+                MS-OXWSBTRF_Supported</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                ClientName</td>
+            <td>
+                 WENBO</td>
+        </tr>
+        <tr>
+            <td>
+                ClientOS</td>
+            <td>
+                 Microsoft Windows NT 6.3.9600.0</td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFTestResult
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                TestsExecuted</td>
+            <td>
+                6 (100.00%)</td>
+        </tr>
+            <tr>
+                <td>
+                    TimeStamp</td>
+                <td>
+                    2020/8/3 9:11:15</td>
+            </tr>
+        <tr>
+            <td>
+                TestsPassed</td>
+            <td>
+                6 (100.00%)</td>
+        </tr>
+        <tr>
+            <td>
+                CoveredRequirements
+            </td>
+            <td>
+                65
+            </td>
+        </tr>
+    </table>
+<hr /><table cellpadding="2" cellspacing="2">
+    <caption><h3>Global Requirement Coverage Statistics<br/>
+                  <font color="#FF0000"></font></h3>
+                  <h4><br/>This report is only for requirement with scope value = 'Server+Both'</h4></caption>
+    <col />
+    <thead><tr><th colspan="2">Requirement Type</th><th colspan="5">Count/Percent</th></tr></thead>
+    <col />
+    <tbody>
+    <tr>
+        <td colspan="7">
+        <h3>
+            Checked Requirements:  65 (87.84%)
+        </h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of normative, in-scope requirements
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Checkable requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            74
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Completely checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            65 (87.84%)
+            </a >
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Partially checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            0 (0.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Unchecked requirements
+        </td>
+        
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            9 (12.16%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of derived requirements
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            5
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Checked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            0 (0.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Unchecked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            5 (100.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td align="center" class="TableCellHighlighted" colspan="7">
+            <a name="jump-detail">Details:</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td style="width: 12%;">
+            Req ID
+        </td>
+        <td>
+            Description
+        </td>
+         <td>
+            Doc Sect
+        </td>
+	      <td>
+            Scope
+        </td>
+        <td style="width: 10%;">
+            Status
+        </td>
+        <td style="width: 13%;">
+            Time Stamp
+        </td>
+        <td style="width: 10%;">
+            Log Files
+        </td>
+    </tr>
+    
+    
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R3</td>
+            <td>
+                [In Transport]The protocol SHOULD use secure communications via HTTPS, as defined in [RFC2818].</td>
+            <td>
+                2.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R38</td>
+            <td>
+                [In ExportItems]The following is the WSDL binding specification of the operation.&lt;1&gt;
+&lt;wsdl:operation name=&quot;ExportItems&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/ExportItems&quot; /&gt;
+   &lt;wsdl:input&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;ManagementRole&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+       &lt;soap:body parts=&quot;ExportItemsResult&quot; use=&quot;literal&quot; /&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;</td>
+            <td>
+                3.1.4.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R2105</td>
+            <td>
+                [In tns:ExportItemsSoapIn Message]The part ManagementRole with Element/type t:ManagementRole ([MS-OXWSCDATA] section 2.2.3.7): specifies the SOAP header that identifies the caller&#39;s role. &lt;2&gt; .</td>
+            <td>
+                3.1.4.1.1.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R1</td>
+           
+<td>
+                [In Transport]The SOAP version used for this protocol is SOAP 1.1, as specified in [SOAP1.1].
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2006</td>
+           
+<td>
+                [In Transport]The protocol [MS-OXWSBTRF] MUST support SOAP over HTTP, as specified in [RFC2616].
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R36001</td>
+           
+<td>
+                [In ExportItems]The following is the WSDL port type definition of the operation.
+&lt;wsdl:operation name=&quot;ExportItems&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:ExportItemsSoapIn&quot;/&gt;
+   &lt;wsdl:output message=&quot;tns:ExportItemsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R51</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message]The ExportItemsSoapOut WSDL message specifies the SOAP message that represents a response that contains exported items.
+&lt;wsdl:message name=&quot;ExportItemsSoapOut&quot;&gt;
+  &lt;wsdl:part name=&quot;ExportItemsResult&quot; element=&quot;tns:ExportItemsResponse&quot;/&gt;
+  &lt;wsdl:part name=&quot;ServerVersion&quot; element=&quot;t:ServerVersionInfo&quot;/&gt;
+&lt;/wsdl:message&gt;
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R251</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message]The Element/type of ExportItemsResult is tns:ExportItemsResponse (section 3.1.4.1.2.2).
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R252</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message][The part ExportItemsResult] specifies the SOAP body of the response.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R253</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message]The type of ServerVersion is ServerVersion ([MS-OXWSCDATA] section 2.2.3.10).
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R254</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message][The part ServerVersion] specifies the SOAP header that identifies the server version for the response.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2107</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message]If the request is successful, the ExportItems operation returns an ExportItemsResponse element with the ResponseClass attribute of the ExportItemsResponseMessage element set to &quot;Success&quot;.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2108</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message][If the request is successful]The ResponseCode element of the ExportItemsResponseMessage element is set to &quot;NoError&quot;.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2109</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message]If the request is unsuccessful, the ExportItems operation returns an ExportItemsResponse element with the ResponseClass attribute of the ExportItemsResponseMessage element set to &quot;Error&quot;.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:50</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2110</td>
+           
+<td>
+                [In tns:ExportItemsSoapOut Message][If the request is unsuccessful]The ResponseCode element of the ExportItemsResponseMessage element is set to a value of the ResponseCodeType simple type, as specified in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:50</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R165</td>
+           
+<td>
+                [In ExportItemsResponse Element]This element [ExportItemsResponse] MUST be present.
+            </td>
+<td>
+                3.1.4.1.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R63</td>
+           
+<td>
+                [In ExportItemsResponse Element][The schema of ExportItemsResponse is:]&lt;xs:element name=&quot;ExportItemsResponse&quot;
+  type=&quot;m:ExportItemsResponseType&quot;/&gt;
+            </td>
+<td>
+                3.1.4.1.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R167</td>
+            
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type]The ExportItemsResponseMessageType complex type extends the ResponseMessageType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.67.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R70</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type][The schema of ExportItemsResponseMessageType is:]
+&lt;xs:complexType name=&quot;ExportItemsResponseMessageType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:ResponseMessageType&quot;
+    &gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;ItemId&quot;
+          type=&quot;t:ItemIdType&quot;
+          minOccurs=&quot;0&quot;
+          maxOccurs=&quot;1&quot;
+         /&gt;
+        &lt;xs:element name=&quot;Data&quot;
+          type=&quot;xs:base64Binary&quot;
+          minOccurs=&quot;0&quot;
+          maxOccurs=&quot;1&quot;
+         /&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R168</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type]The type of ItemId is t:ItemIdType ([MS-OXWSCORE] section 2.2.4.25).
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R169</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type][ItemId] specifies the item identifier of a single exported item.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R170</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type]This element [ItemId] MUST be present if the export operation is successful.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R171</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type]The type of Data is xs:base64Binary ([XMLSCHEMA2]).
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R172</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type][Data] specifies the data of a single exported item.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R173</td>
+           
+<td>
+                [In m:ExportItemsResponseMessageType Complex Type] This element[Data] MUST be present if the export operation is successful.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R175</td>
+            
+<td>
+                [In ExportItemsResponseType Complex Type]The ExportItemsResponseType complex type extends the BaseResponseMessageType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.18.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R75</td>
+           
+<td>
+                [In ExportItemsResponseType Complex Type][The schema of ExportItemsResponseType is:]
+&lt;xs:complexType name=&quot;ExportItemsResponseType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:BaseResponseMessageType&quot;
+     /&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R179</td>
+           
+<td>
+                [In ExportItemsType Complex Type][ItemIds] specifies the item identifier array of the items to export.
+            </td>
+<td>
+                3.1.4.1.3.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R182</td>
+           
+<td>
+                [In t:NonEmptyArrayOfItemIdsType Complex Type][ItemId] specifies the item identifier of an item to export from a mailbox.
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R86</td>
+           
+<td>
+                [In UploadItems]The following is the WSDL port type definition of the operation.
+&lt;wsdl:operation name=&quot;UploadItems&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:UploadItemsSoapIn&quot;/&gt;
+   &lt;wsdl:output message=&quot;tns:UploadItemsSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R87</td>
+           
+<td>
+                [In UploadItems]The following is the WSDL binding specification of the operation.
+&lt;wsdl:operation name=&quot;UploadItems&quot;&gt;
+  &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/UploadItems&quot; /&gt;
+  &lt;wsdl:input&gt;
+    &lt;soap:header message=&quot;tns:UploadItemsSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+    &lt;soap:header message=&quot;tns:UploadItemsSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+    &lt;soap:header message=&quot;tns:UploadItemsSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+    &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+  &lt;/wsdl:input&gt;
+  &lt;wsdl:output&gt;
+    &lt;soap:body parts=&quot;UploadItemsResult&quot; use=&quot;literal&quot; /&gt;
+    &lt;soap:header message=&quot;tns:UploadItemsSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+  &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R101</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]The UploadItemsSoapOut WSDL message specifies the SOAP message that represents a response that contains the results of an attempt to upload items into a mailbox.
+[In tns:UploadItemsSoapOut Message]&lt;wsdl:message name=&quot;UploadItemsSoapOut&quot;&gt;
+  &lt;wsdl:part name=&quot;UploadItemsResult&quot; element=&quot;tns:UploadItemsResponse&quot;/&gt;
+  &lt;wsdl:part name=&quot;ServerVersion&quot; element=&quot;t:ServerVersionInfo&quot;/&gt;
+&lt;/wsdl:message&gt;
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R247</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]The Element/type of UploadItemsResult is
+UploadItemsResponse (section 3.1.4.2.2.2).
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R248</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]The UploadItemsResult part specifies the SOAP body of the response to an UploadItems operation request.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R249</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]The Element/type of ServerVersion is ServerVersion ([MS-OXWSCDATA] section 2.2.3.10).
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R250</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]The ServerVersion part specifies the SOAP header that identifies the server version for the response.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2007</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]If the request [UploadItems request] is successful, the UploadItems operation returns an UploadItemsResponse element with the ResponseClass attribute of the UploadItemsResponseMessage element set to &quot;Success&quot;.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2008</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message][If the UploadItems request is successful]The ResponseCode element of the UploadItemsResponseMessage element is set to &quot;NoError&quot;.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2009</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message]If the request [UploadItems request] is unsuccessful, the UploadItems operation returns an UploadItemsResponse element with the ResponseClass attribute of the UploadItemsResponseMessage element set to &quot;Error&quot;.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:16:01</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2010</td>
+           
+<td>
+                [In tns:UploadItemsSoapOut Message][If the request UploadItems request is unsuccessful]The ResponseCode element of the UploadItemsResponseMessage element is set to a value of the ResponseCodeType simple type, as specified in [MS-OXWSCDATA] section 2.2.5.24.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:16:01</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R246</td>
+           
+<td>
+                [In Elements]This element [UploadItemsResponse] MUST be present.
+            </td>
+<td>
+                3.1.4.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R11301</td>
+           
+<td>
+                [In UploadItemsResponse Element] This element [UploadItemsResponse Element] MUST be present.
+            </td>
+<td>
+                3.1.4.2.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R114</td>
+           
+<td>
+                [In UploadItemsResponse Element] [The schema of UploadItemsResponse is:]
+&lt;xs:element name=&quot;UploadItemsResponse&quot;
+  type=&quot;m:UploadItemsResponseType&quot;/&gt;
+            </td>
+<td>
+                3.1.4.2.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R195</td>
+           
+<td>
+                [In t:NonEmptyArrayOfUploadItemsType Complex Type][Item] specifies the array of items to upload in to a mailbox.
+            </td>
+<td>
+                3.1.4.2.3.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R198</td>
+            
+<td>
+                [In m:UploadItemsResponseMessageType Complex Type]The UploadItemsResponseMessageType complex type extends the ResponseMessageType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.67.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R127</td>
+           
+<td>
+                [In m:UploadItemsResponseMessageType Complex Type][The schema of UploadItemsResponseMessageType is:]
+&lt;xs:complexType name=&quot;UploadItemsResponseMessageType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension base=&quot;m:ResponseMessageType&quot;&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;ItemId&quot;  type=&quot;t:ItemIdType&quot; minOccurs=&quot;0&quot;/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R199</td>
+           
+<td>
+                [In m:UploadItemsResponseMessageType Complex Type]The Type of ItemId is t:ItemIdType ([MS-OXWSCORE] section 2.2.4.25).
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R200</td>
+           
+<td>
+                [In m:UploadItemsResponseMessageType Complex Type]The ItemId element specifies the item identifier of an item that was uploaded into a mailbox.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:22</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R201</td>
+           
+<td>
+                [In m:UploadItemsResponseMessageType Complex Type]Only a single instance of this element [ItemId] can be present.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R203</td>
+            
+<td>
+                [In m:UploadItemsResponseType Complex Type]The UploadItemsResponseType complex type extends the BaseResponseMessageType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.18.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R131</td>
+           
+<td>
+                [In m:UploadItemsResponseType Complex Type][The schema of UploadItemsResponseType is:]
+&lt;xs:complexType name=&quot;UploadItemsResponseType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension base=&quot;m:BaseResponseMessageType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R207</td>
+           
+<td>
+                [In m:UploadItemsType Complex Type][The element Items] specifies the collection of items to upload into a mailbox.
+            </td>
+<td>
+                3.1.4.2.3.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R211</td>
+           
+<td>
+                [In m:UploadItemType Complex Type][ParentFolderId] specifies the target folder in which to place the upload item.
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:23</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R214</td>
+           
+<td>
+                [In m:UploadItemType Complex Type][ItemId] specifies the item identifier of the upload item.
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:22</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R222</td>
+           
+<td>
+                [In m:UploadItemType Complex Type]If it [IsAssociated] is present, it indicates that the item is a folder associated item.
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R226</td>
+           
+<td>
+                [In CreateActionType Simple Type]The Value of CreateNew specifies that a new copy of the original item is uploaded to the mailbox.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R228</td>
+           
+<td>
+                [In CreateActionType Simple Type][CreateNew]The &lt;ItemId&gt; element that is returned in the UploadItemsResponseMessageType complex type, as specified in section 3.1.4.2.3.2, MUST contain the new item identifier.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:12</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R229</td>
+           
+<td>
+                [In CreateActionType Simple Type]The Value of Update specifies that the upload will update an item that is already present in the mailbox.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:23</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R242</td>
+            
+<td>
+                [In CreateActionType Simple Type][Update] otherwise [the &lt;ItemId&gt; element in the UploadItemType is not specified], a SOAP fault MUST be returned.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R231</td>
+           
+<td>
+                [In CreateActionType Simple Type][Update] if the target item is not in the original folder specified by the &lt;ParentFolderId&gt; element in the UploadItemType complex type, an ErrorItemNotFound error code MUST be returned in the UploadItemsResponseMessageType complex type.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:16:01</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2321</td>
+           
+<td>
+                [In CreateActionType Simple Type][UpdateOrCreate]If the criteria for a successful update are met, the target item is updated.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:34</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSBTRF_R234</td>
+            
+<td>
+                [In CreateActionType Simple Type][UpdateOrCreate] otherwise[the &lt;ItemId&gt; element in the UploadItemType complex type is not specified], an SOAP fault MUST be returned.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R235</td>
+           
+<td>
+                [In CreateActionType Simple Type][UpdateOrCreate]If the target item is not in the original folder specified by the &lt;ParentFolderId&gt; element in the UploadItemType complex type, a new copy of the original item is uploaded to the mailbox associated with the folder specified by the &lt;ParentFolderId&gt; element.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:36</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSBTRF_R2351</td>
+           
+<td>
+                [In CreateActionType Simple Type][UpdateOrCreate][If the target item is not in the original folder specified by the &lt;ParentFolderId&gt; element in the UploadItemType complex type]The &lt;ItemId&gt; element that is returned in the UploadItemsResponseMessageType complex type, as specified in section 3.1.4.2.3.2, MUST contain the new item identifier.
+            </td>
+<td>
+                3.1.4.2.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:36</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R191</td>
+           
+<td>
+                [In t:ResponseClassType Simple Type] The type [ResponseClassType] is defined as follow:
+&lt;xs:simpleType name=&quot;ResponseClassType&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+    &lt;xs:enumeration value=&quot;Error&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Success&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Warning&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.23
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R197</td>
+           
+<td>
+                [In m:ResponseCodeType Simple Type] The type [ResponseCodeType] is defined as follow:
+&lt;xs:simpleType name=&quot;ResponseCodeType&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+        &lt;xs:enumeration value=&quot;NoError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccessModeSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccountDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAddDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAddressSpaceNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADSessionFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAffectedTaskOccurrencesRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveFolderPathCreation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxNotEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAvailabilityConfigNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorBatchProcessingStopped&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotMoveOrCopyOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUpdateDeletedItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUseIdForOccurrenceId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUseIdForRecurringMasterId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarDurationIsTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarEndDateIsEarlierThanStartDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarFolderIsInvalidForCalendarView&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidAttributeValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidDayForTimeChangePattern&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidDayForWeeklyRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidPropertyState&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidPropertyValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidTimeZone&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsNotOrganizer&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForTentative&quot;/&gt;
+        &lt;xs:enumeration
+             value=&quot;ErrorCalendarOccurrenceIndexIsOutOfRecurrenceRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarOccurrenceIsDeletedFromRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarOutOfRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarMeetingRequestIsOutOfDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarViewRangeTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCallerIsInvalidADAccount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveCalendarContactTaskFolderException&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveItemsInPublicFolders&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveItemsInArchiveMailbo&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateCalendarItemInNonCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateContactInNonContactFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreatePostItemInNonMailFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateTaskInNonTaskFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDeleteObject&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDisableMandatoryExtension&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotGetSourceFolderPath&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotGetExternalEcpUrl&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotOpenFileAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDeleteTaskOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotEmptyFolder&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorCannotSetCalendarPermissionOnNonCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorCannotSetNonCalendarPermissionOnCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotSetPermissionUnknownEntries&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotSpecifySearchFolderAsSourceFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotUseFolderIdForItemId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotUseItemIdForFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorChangeKeyRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorChangeKeyRequiredForWriteOperations&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientDisconnected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientIntentInvalidStateDefinition&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientIntentNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorConnectionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContainsFilterWrongType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContentConversionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContentIndexingNotEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCorruptData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateItemAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateManagedFolderPartialCompletion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateSubfolderAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCrossMailboxMoveCopy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCrossSiteRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDataSizeLimitExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDataSourceOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateCannotAddOwner&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateMissingConfiguration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateNoUser&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateValidationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteDistinguishedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteItemsFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteUnifiedMessagingPromptFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDistinguishedUserNotSupported&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDistributionListMemberNotExist&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateInputFolderNames&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateUserIdsSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorEmailAddressMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorEventNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededConnectionCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededSubscriptionCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededFindCountLimit&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExpiredSubscription&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExtensionNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderCorrupt&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderPropertRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSave&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSaveFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSavePropertyError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFreeBusyGenerationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorGetServerSecurityDescriptorFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImContactLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImGroupDisplayNameAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImGroupLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonateUserDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonationDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIncorrectSchemaVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIncorrectUpdatePropertyCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIndividualMailboxLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInsufficientResources&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInternalServerError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInternalServerTransientError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAccessLevel&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidArgument&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentSubfilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentSubfilterTextFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAuthorizationContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidChangeKey&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidClientSecurityContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidCompleteDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidContactEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidContactEmailIndex&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidCrossForestCredentials&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidDelegatePermission&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidDelegateUserId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExcludesRestriction&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExpressionTypeForSubFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExtendedProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExtendedPropertyValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFolderTypeForOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFractionalPagingParameters&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFreeBusyViewType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdEmpty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMalformed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMalformedEwsLegacyIdFormat&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMonikerTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdNotAnItemAttachmentId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdReturnedByResolveNames&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdStoreObjectIdTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdTooManyAttachmentLevels&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdXml&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImContactId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImDistributionGroupSmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImGroupId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIndexedPagingParameters&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidInternetHeaderChildNodes&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationArchiveItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCreateItemAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCreateItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationAcceptItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationDeclineItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCancelItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationExpandDL&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationRemoveItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationSendItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidLogonType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderQuota&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderSize&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidMergedFreeBusyInterval&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidNameForNameResolution&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidNetworkServiceContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOofParameter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPagingMaxRows&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidParentFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPercentCompleteValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPermissionSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhoneCallId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhoneNumber&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserInfo&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyAppend&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyDelete&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyForExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyForOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertySet&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyUpdateSentMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidProxySecurityContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPullSubscriptionId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPushSubscriptionUrl&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipients&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterComparison&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterOrder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterTextFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidReferenceItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRestriction&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagTypeMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagInvisible&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagIdGuid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagInheritance&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRoutingType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidScheduledOofDuration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSchemaVersionForMailboxVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSecurityDescriptor&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSendItemSaveSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSerializedAccessToken&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidServerVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSIPUri&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterTypeNotAttendeeType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterTypeNotRecipientType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubscription&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubscriptionRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSyncStateData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidTimeInterval&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserOofSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserPrincipalName&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserSid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserSidMissingUPN&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidValueForProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidWatermark&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIPGatewayNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIrresolvableConflict&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemCorrupt&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemPropertyRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemSave&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemSavePropertyError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLegacyMailboxFreeBusyViewTypeNotMerged&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocalServerObjectNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLogonAsNetworkServiceFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxConfiguration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxDataArrayEmpty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxDataArrayTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxHoldNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxLogonFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxMoveInProgress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxStoreUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailRecipientNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailTipsDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFolderAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFoldersRootFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMeetingSuggestionGenerationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageDispositionRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageSizeExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentConversionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentInvalid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentInvalidBase64String&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingArgument&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingEmailAddressForManagedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationReferenceItemId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingItemForCreateItemAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingManagedFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingRecipients&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingUserIdInformation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoreThanOneAccessModeSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoveCopyFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoveDistinguishedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMultiLegacyMailboxAccess&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionMultipleResults&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionNoMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionNoResults&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoApplicableProxyCASServersAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoCalendar&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToKerberosRequirements&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToSSLRequirements&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToVersionMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoFolderClassOverride&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoFreeBusyAccess&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNonExistentMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNonPrimarySmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPropertyTagForCustomProperties&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPublicFolderReplicaAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPublicFolderServerAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoRespondingCASInDestinationSite&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotDelegate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotEnoughMemory&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorObjectTypeChanged&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOccurrenceCrossingBoundary&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOccurrenceTimeSpanTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOperationNotAllowedWithPublicFolderRoot&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorParentFolderIdRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorParentFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPasswordChangeRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPasswordExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPhoneNumberNotDialable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPropertyUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPromptPublishingOperationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPropertyValidationFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxiedSubscriptionCallFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyCallFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyGroupSidLimitExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyRequestNotAllowed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyRequestProcessingFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyTokenExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderMailboxDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderOperationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderRequestProcessingFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderServerNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderSyncException&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorQueryFilterTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorQuotaExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorReadEventsFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorReadReceiptNotPending&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecurrenceEndDateTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecurrenceHasNoOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRemoveDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequestAborted&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequestStreamTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequiredPropertyMissing&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResolveNamesInvalidFolderType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResolveNamesOnlyOneContactsFolderAllowed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResponseSchemaValidation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRestrictionTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRestrictionTooComplex&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResultSetTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExchangeImpersonationHeaderData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSavedItemFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSchemaValidation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchFolderNotInitialized&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendAsDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendMeetingCancellationsRequired&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorSendMeetingInvitationsOrCancellationsRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendMeetingInvitationsRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSentMeetingRequestUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSentTaskRequestUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorServerBusy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorStaleObject&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubmissionQuotaExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionDelegateAccessNotSupported&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionUnsubscribed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSyncFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotLinkedToSharePoint&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxUrlValidationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotAuthorizedOwner&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxActiveToPendingDelete&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxFailedSendingNotifications&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxErrorUnknown&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeIntervalTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeoutExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeZone&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorToFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTokenSerializationDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUpdatePropertyMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingDialPlanNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingReportDataNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingPromptNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingServerNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnableToGetUserOofSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnableToRemoveImContactFromGroup&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedSubFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedCulture&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedMapiPropertyType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedMimeConversion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPathForQuery&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPathForSortGroup&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPropertyDefinition&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedQueryFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedTypeForConversion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUpdateDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserNotUnifiedMessagingEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorValueOutOfRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVoiceMailNotImplemented&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVirusDetected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVirusMessageDeleted&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWebRequestInInvalidState&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWin32InteropError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWorkingHoursSaveFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWorkingHoursXmlMalformed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWrongServerVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWrongServerVersionDelegate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationSharingFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateSOAPHeader&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSharingSynchronizationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSharingNoExternalEwsAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFreeBusyDLLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidGetSharingFolderRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotAllowedExternalSharingByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserNotAllowedByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPermissionNotAllowedByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOrganizationNotFederated&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxFailover&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExternalSharingInitiator&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingPermanentError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingTransientError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingNoSuchDomain&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserWithoutFederatedProxyAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOrganizationRelationshipForFreeBusy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFederatedOrganizationId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExternalSharingSubscriber&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSharingData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSharingMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotSupportedSharingMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorApplyConversationActionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInboxRulesValidationError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOutlookRuleBlobExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRulesOverQuota&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNewEventStreamConnectionOpened&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissedNotificationEvents&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateLegacyDistinguishedName&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidClientAccessTokenRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoSpeechDetected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUMServerUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecipientNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecognizerNotInstalled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSpeechGrammarError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagementRoleHeader&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesRequestTimedOut&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesInvalidRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxScopeNotAllowedWithoutQueryString&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxSearchFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhotoSize&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchQueryHasTooManyKeywords&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchTooManyMailboxes&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDiscoverySearchesDisabled&quot;/&gt;
+    &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+
+            </td>
+<td>
+                2.2.5.24
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1036</td>
+           
+<td>
+                	&lt;xs:complexType name=&quot;ArrayOfResponseMessagesType&quot;&gt;
+	  &lt;xs:choice
+	    maxOccurs=&quot;unbounded&quot;
+	  &gt;
+	    &lt;xs:element name=&quot;CreateItemResponseMessage&quot;
+	      type=&quot;m:ItemInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;DeleteItemResponseMessage&quot;
+	      type=&quot; m:DeleteItemResponseMessageType &quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetItemResponseMessage&quot;
+	      type=&quot;m:ItemInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UpdateItemResponseMessage&quot;
+	      type=&quot;m:UpdateItemResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UpdateItemInRecoverableItemsResponseMessage&quot; 
+	     type=&quot;m:UpdateItemInRecoverableItemsResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;SendItemResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;DeleteFolderResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;EmptyFolderResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;CreateFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;FindFolderResponseMessage&quot;
+	      type=&quot;m:FindFolderResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UpdateFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;MoveFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;CopyFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;CreateFolderPathResponseMessage&quot; 
+	     type=&quot;m:FolderInfoResponseMessageType&quot;
+	    /&gt;
+	    &lt;xs:element name=&quot;CreateAttachmentResponseMessage&quot;
+	      type=&quot;m:AttachmentInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;DeleteAttachmentResponseMessage&quot;
+	      type=&quot;m:DeleteAttachmentResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetAttachmentResponseMessage&quot;
+	      type=&quot;m:AttachmentInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UploadItemsResponseMessage&quot;
+	      type=&quot;m:UploadItemsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ExportItemsResponseMessage&quot;
+	      type=&quot;m:ExportItemsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;MarkAllItemsAsReadResponseMessage&quot; 
+	       type=&quot;m:ResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetClientAccessTokenResponseMessage&quot; 
+	       type=&quot;m:GetClientAccessTokenResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetAppManifestsResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetClientExtensionResponseMessage&quot; 
+	       type=&quot;m:ResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;SetClientExtensionResponseMessage&quot; 
+	       type=&quot;m:ResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetOMEConfigurationResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+		&lt;xs:element name=&quot;SetOMEConfigurationResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;FindItemResponseMessage&quot;
+	      type=&quot;m:FindItemResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;MoveItemResponseMessage&quot;
+	      type=&quot;m:ItemInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ArchiveItemResponseMessage&quot; type=&quot;m:ItemInfoResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;CopyItemResponseMessage&quot;
+	      type=&quot;m:ItemInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ResolveNamesResponseMessage&quot;
+	      type=&quot;m:ResolveNamesResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ExpandDLResponseMessage&quot;
+	      type=&quot;m:ExpandDLResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetServerTimeZonesResponseMessage&quot;
+	      type=&quot;m:GetServerTimeZonesResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetEventsResponseMessage&quot;
+	      type=&quot;m:GetEventsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetStreamingEventsResponseMessage&quot;
+	      type=&quot;m:GetStreamingEventsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;SubscribeResponseMessage&quot;
+	      type=&quot;m:SubscribeResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UnsubscribeResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetChannelEventsResponseMessage&quot;
+	      type=&quot;m:GetChannelEventsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ChannelSubscribeResponseMessage&quot; 
+	      type=&quot;m:ChannelSubscribeResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ChannelUnsubscribeResponseMessage&quot; 
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;SendNotificationResponseMessage&quot;
+	      type=&quot;m:SendNotificationResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;SyncFolderHierarchyResponseMessage&quot;
+	      type=&quot;m:SyncFolderHierarchyResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;SyncFolderItemsResponseMessage&quot;
+	      type=&quot;m:SyncFolderItemsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;CreateManagedFolderResponseMessage&quot;
+	      type=&quot;m:FolderInfoResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ConvertIdResponseMessage&quot;
+	      type=&quot;m:ConvertIdResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetSharingMetadataResponseMessage&quot;
+	      type=&quot;m:GetSharingMetadataResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;RefreshSharingFolderResponseMessage&quot;
+	      type=&quot;m:RefreshSharingFolderResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetSharingFolderResponseMessage&quot;
+	      type=&quot;m:GetSharingFolderResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;CreateUserConfigurationResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;DeleteUserConfigurationResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetUserConfigurationResponseMessage&quot;
+	      type=&quot;m:GetUserConfigurationResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;UpdateUserConfigurationResponseMessage&quot;
+	      type=&quot;m:ResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetRoomListsResponse&quot;
+	      type=&quot;m:GetRoomListsResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;GetRoomsResponse&quot;
+	      type=&quot;m:GetRoomsResponseMessageType&quot;   
+	     /&gt;
+	    &lt;xs:element name=&quot;GetRemindersResponse&quot; 
+	       type=&quot;m:GetRemindersResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;PerformReminderActionResponse&quot; 
+	       type=&quot;m:PerformReminderActionResponseMessageType&quot;
+	     /&gt;
+	    &lt;xs:element name=&quot;ApplyConversationActionResponseMessage&quot;
+	      type=&quot;m:ApplyConversationActionResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;FindMailboxStatisticsByKeywordsResponseMessage&quot; type=&quot;m:FindMailboxStatisticsByKeywordsResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetSearchableMailboxesResponseMessage&quot; type=&quot;m:GetSearchableMailboxesResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;SearchMailboxesResponseMessage&quot; type=&quot;m:SearchMailboxesResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetDiscoverySearchConfigurationResponseMessage&quot; type=&quot;m:GetDiscoverySearchConfigurationResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;GetHoldOnMailboxesResponseMessage&quot; type=&quot;m:GetHoldOnMailboxesResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;SetHoldOnMailboxesResponseMessage&quot; type=&quot;m:SetHoldOnMailboxesResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;GetNonIndexableItemStatisticsResponseMessage&quot; type=&quot;m:GetNonIndexableItemStatisticsResponseMessageType&quot;/&gt;
+	      &lt;!-- GetNonIndexableItemDetails response --&gt;
+	      &lt;xs:element name=&quot;GetNonIndexableItemDetailsResponseMessage&quot; type=&quot;m:GetNonIndexableItemDetailsResponseMessageType&quot;/&gt;
+	    &lt;xs:element name=&quot;FindPeopleResponseMessage&quot; type=&quot;m:FindPeopleResponseMessageType&quot;/&gt;
+	
+	    &lt;xs:element name=&quot;GetPasswordExpirationDateResponse&quot; type=&quot;m:GetPasswordExpirationDateResponseMessageType&quot;
+	    /&gt;
+	      &lt;xs:element name=&quot;GetPersonaResponseMessage&quot; type=&quot;m:GetPersonaResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;GetConversationItemsResponseMessage&quot; type=&quot;m:GetConversationItemsResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;GetUserRetentionPolicyTagsResponseMessage&quot; type=&quot;m:GetUserRetentionPolicyTagsResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;GetUserPhotoResponseMessage&quot; type=&quot;m:GetUserPhotoResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;MarkAsJunkResponseMessage&quot; type=&quot;m:MarkAsJunkResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;UpdateMailboxAssociationResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;UpdateGroupMailboxResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;PostModernGroupItemResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;LikeItemResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+	      &lt;xs:element name=&quot;GetUnifiedGroupUnseenDataResponseMessage&quot; type=&quot;m:GetUnifiedGroupUnseenDataResponseMessageType&quot;/&gt;
+	  &lt;/xs:choice&gt;
+	&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.12
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1091</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] The BaseResponseMessageType complex type MUST NOT be sent in a SOAP message because it is an abstract type.
+            </td>
+<td>
+                2.2.4.18
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1092</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] The type [BaseResponseMessageType] is defined as follow:
+&lt;xs:complexType name=&quot;BaseResponseMessageType&quot;&gt;
+ &lt;xs:sequence&gt;
+  &lt;xs:element name=&quot;ResponseMessages&quot;
+   type=&quot;m:ArrayOfResponseMessagesType&quot;
+   /&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.16
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1094</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] There MUST be only one ResponseMessages element in a response.
+            </td>
+<td>
+                2.2.4.18
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1284</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] This attribute [ResponseClass] MUST be present.
+            </td>
+<td>
+                2.2.4.67
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1434</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] The type [ResponseMessageType] is defined as follow:
+&lt;xs:complexType name=&quot;ResponseMessageType&quot;&gt;
+ &lt;xs:sequence
+  minOccurs=&quot;0&quot;
+ &gt;
+  &lt;xs:element name=&quot;MessageText&quot;
+   type=&quot;xs:string&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;ResponseCode&quot;
+   type=&quot;m:ResponseCodeType&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;DescriptiveLinkKey&quot;
+   type=&quot;xs:int&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;MessageXml&quot;
+   minOccurs=&quot;0&quot;
+  &gt;
+   &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+     &lt;xs:any
+      process_contents=&quot;lax&quot;
+      minOccurs=&quot;0&quot;
+      maxOccurs=&quot;unbounded&quot;
+      /&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name=&quot;ResponseClass&quot;
+     type=&quot;t:ResponseClassType&quot;
+     use=&quot;required&quot;
+     /&gt;
+   &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.67
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1436</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] [ResponseClass:] The following values are valid for this attribute: Success
+, Warning
+, Error.
+            </td>
+<td>
+                2.2.4.67
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1339</td>
+           
+<td>
+                [In t:ServerVersionInfo Element] &lt;xs:element name=&quot;t:ServerVersionInfo&quot;&gt;
+ &lt;xs:complexType&gt;
+  &lt;xs:attribute name=&quot;MajorVersion&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MinorVersion&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MajorBuildNumber&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MinorBuildNumber&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;Version&quot;
+   type=&quot;xs:string&quot;
+   use=&quot;optional&quot;
+   /&gt;
+ &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+            </td>
+<td>
+                2.2.3.10
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 7:15:11</td>
+            <td>
+                ms-oxwsbtrf_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSBTRF_R6</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does use secure communications via HTTPS, as defined in [RFC2818]. (Exchange Server 2010 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSBTRF_R2111</td>
+            <td>
+                [In Appendix C: Product Behavior]Implementation does not implement the ManagementRole part. &lt;wsdl:operation name=&quot;ExportItems&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/ExportItems&quot; /&gt;
+   &lt;wsdl:input&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+       &lt;soap:body parts=&quot;ExportItemsResult&quot; use=&quot;literal&quot; /&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+(&lt;1&gt; Section 3.1.4.1:  Exchange 2010 does not implement the ManagementRole part.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSBTRF_R3838</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does implement the ManagementRole part. &lt;wsdl:operation name=&quot;ExportItems&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/ExportItems&quot; /&gt;
+   &lt;wsdl:input&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapIn&quot; part=&quot;ManagementRole&quot; use=&quot;literal&quot;/&gt;
+       &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+       &lt;soap:body parts=&quot;ExportItemsResult&quot; use=&quot;literal&quot; /&gt;
+       &lt;soap:header message=&quot;tns:ExportItemsSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+(Microsoft Exchange 2013 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSBTRF_R2112</td>
+            <td>
+                [In Appendix C: Product Behavior]Implementation does not implement the Management part. (&lt;2&gt; Section 3.1.4.1.1.1:  Exchange 2010 does not implement the ManagementRole part.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSBTRF_R2113</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does implement the ManagementRole part. (Microsoft Exchange 2013 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+    </tbody>
+    </table><br />
+    <br/>
+    
+    <br/>
+    
+    <br/>
+    
+      </body>
+  </html>

@@ -478,9 +478,9 @@ namespace Microsoft.Protocols.TestSuites.MS_OXWSMTGS
             acceptItem.ReferenceItemId.Id = request.ItemId.Id;
             if (Common.IsRequirementEnabled(1284, this.Site))
             {
-                acceptItem.ProposedStart = DateTime.Now;
+                acceptItem.ProposedStart = DateTime.UtcNow;
                 acceptItem.ProposedStartSpecified = true;
-                acceptItem.ProposedEnd = DateTime.Now.AddHours(1);
+                acceptItem.ProposedEnd = DateTime.UtcNow.AddHours(1);
                 acceptItem.ProposedEndSpecified = true;
             }
 

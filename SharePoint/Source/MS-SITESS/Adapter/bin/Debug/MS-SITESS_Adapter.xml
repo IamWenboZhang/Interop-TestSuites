@@ -1,0 +1,1266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS-SITESS_Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter">
+            <summary>
+            This partial class provides the methods to verify requirements.
+            </summary>
+            <summary>
+            Adapter class of MS-SITESS.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyCommonReqs">
+            <summary>
+            Verify whether the transport used by this test suite is HTTP or HTTPS, and the soap version is soap 1.1 or soap 1.2.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyCreateWeb(Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebResponseCreateWebResult)">
+            <summary>
+            Verify CreateWeb related requirements.
+            </summary>
+            <param name="createWebResult">The result of CreateWeb.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyExportSolution(System.String)">
+            <summary>
+            Verify ExportSolution related requirements.
+            </summary>
+            <param name="exportSolutionResultURL">The result of the export operation.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyExportWeb(System.Int32)">
+            <summary>
+            Verify ExportWeb related requirements.
+            </summary>
+            <param name="exportWebResult">The result of ExportWeb.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyExportWorkflowTemplate(System.String)">
+            <summary>
+            Verify ExportWorkflowTemplate related requirements.
+            </summary>
+            <param name="exportWorkflowTemplateResult">The result of ExportWorkflowTemplate.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyGetSite(System.String)">
+            <summary>
+            Verify GetSite related requirements.
+            </summary>
+            <param name="getSiteResult">The result of GetSite.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyGetSiteTemplates(Microsoft.Protocols.TestSuites.MS_SITESS.Template[])">
+            <summary>
+            Verify GetSiteTemplates related requirements.
+            </summary>
+            <param name="templateList">SiteTemplates list.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyGetUpdatedFormDigest(System.String)">
+            <summary>
+            Verify GetUpdatedFormDigest related requirements.
+            </summary>
+            <param name="getUpdateFormDigestResult">The result of GetUpdatedFormDigest.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyGetUpdatedFormDigestInformation(Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation)">
+            <summary>
+            Verify GetUpdatedFormDigest related requirements.
+            </summary>
+            <param name="getUpdatedFormDigestInfoResult">The result of GetUpdatedFormDigestInformation.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyImportWeb(System.Int32)">
+            <summary>
+            Verify ImportWeb related requirements.
+            </summary>
+            <param name="importWebResult">The result of ImportWeb.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyDeleteWeb">
+            <summary>
+            Verify VerifyDeleteWeb related requirements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.ValidArrayOfStringComplexType">
+            <summary>
+            A method used to validate the ArrayOfString complex type. 
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.VerifyIsScriptSafeUrl(System.Boolean[])">
+            <summary>
+            Verify IsScriptSafeUrl related requirements.
+            </summary>
+            <param name="isScriptSafeUrlResult">The result of IsScriptSafeUrl.</param>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.service">
+            <summary>
+            Instance of the web service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.transportProtocol">
+            <summary>
+            Represents the transport protocol of the web service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Overrides IAdapter's Initialize(),to set testSite.DefaultProtocolDocShortName.
+            </summary>
+            <param name="testSite">Transfer ITestSite into adapter,Make adapter can use ITestSite's function.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.ExportSolution(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to export the content related to a site to the solution gallery.
+            </summary>
+            <param name="solutionFileName">The name of the solution file that will be created. </param>
+            <param name="title">The name of the solution.</param>
+            <param name="description">Detailed information that describes the solution.</param>
+            <param name="fullReuseExportMode">Specify the scope of data that needs to be exported. </param>
+            <param name="includeWebContent">Specify whether the solution needs to include the contents of all lists and document libraries in the site. </param>
+            <returns>The result of ExportSolution operation which contains the site-collection relative URL of the created solution file.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.ExportWeb(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            This operation is used to export the content related to a site into one or more content migration package files.
+            </summary>
+            <param name="jobName">Specifies the operation. </param>
+            <param name="webUrl">The URL of the site to export.</param>
+            <param name="dataPath">The full path of the location on the server where the content migration package file(s) are saved. </param>
+            <param name="includeSubwebs">Specifies whether to include the subsite. </param>
+            <param name="includeUserSecurity">Specifies whether to include access control list (ACL), security group and membership group information.</param>
+            <param name="overWrite">Specifies whether to overwrite the content migration package file(s) if they exist. </param>
+            <param name="cabSize">Indicates the suggested size in megabytes for the content migration package file(s). </param>
+            <returns>The result of ExportWeb operation that contains an error code which indicates whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.ExportWorkflowTemplate(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This operation is used to export a workflow template as a site solution to the specified document library.
+            </summary>
+            <param name="solutionFileName">The name of the solution file that will be created.</param>
+            <param name="title">The name of the solution.</param>
+            <param name="description">Detailed information that describes the solution.</param>
+            <param name="workflowTemplateName">The name of the workflow template that is to be exported.</param>
+            <param name="destinationListUrl">The server-relative URL of the document library in which the solution file needs to be created. </param>
+            <returns>The result of ExportWorkflowTemplate operation which contains the site-relative URL of the created solution file.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.GetSite(System.String)">
+            <summary>
+            This operation is used to retrieve information about the site collection.
+            </summary>
+            <param name="siteUrl">Specifies the absolute URL (Uniform Resource Locator) of a site collection or of a location within a site collection. </param>
+            <returns>The result of GetSite operation that represents information about the site collection.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.GetSiteTemplates(System.UInt32,Microsoft.Protocols.TestSuites.MS_SITESS.Template[]@)">
+            <summary>
+            This operation is used to retrieve information about the collection of available site templates.
+            </summary>
+            <param name="lcid">Specifies the language code identifier (LCID).</param>
+            <param name="templateList">SiteTemplates list.</param>
+            <returns>The result of GetSiteTemplates operation which contains an error code to indicate whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.GetUpdatedFormDigest">
+            <summary>
+            This operation is used to request renewal of an expired security validation, also known as a message digest. 
+            </summary>
+            <returns>The result of GetUpdatedFormDigest operation which contains a security validation token generated by the server.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.GetUpdatedFormDigestInformation(System.String)">
+            <summary>
+            This operation is used to request renewal of an expired security validation token, also known as a message digest, and the new security validation token’s expiration time.
+            </summary>
+            <param name="url">Specify a page URL with which the returned security validation token information is associated.</param>
+            <returns>The result of GetUpdatedFormDigestInformation operation that contains a security validation token generated by the protocol server, the security validation token’s expiration time in seconds, and other information.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.ImportWeb(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to import a site from one or more content migration package files to a specified URL.
+            </summary>
+            <param name="jobName">Specifies the operation.</param>
+            <param name="webUrl">The URL of the resulting Web site. </param>
+            <param name="dataFiles">The URLs of the content migration package files on the server that the server imports to create the resulting Web site.</param>
+            <param name="logPath">The URL where the server places files describing the progress or status of the operation. </param>
+            <param name="includeUserSecurity">Specifies whether or not to include ACL, security group and membership group information in the resulting Web site. </param>
+            <param name="overWrite">Specifies whether or not to overwrite existing files at the location specified by logPath. </param>
+            <returns>The result of ImportWeb operation that contains an error code which indicates whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.CreateWeb(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to create a new subsite of the current site 
+            </summary>
+            <param name="url">The site-relative URL of the subsite to be created.</param>
+            <param name="title">The display name of the subsite to be created.</param>
+            <param name="description">Description of the subsite to be created.</param>
+            <param name="templateName">The name of an available site template to be used for the subsite to be created. </param>
+            <param name="language">An LCID that specifies the language of the user interface of the subsite to be created. </param>
+            <param name="languageSpecified">Whether language specified</param>
+            <param name="locale">An LCID that specifies the display format for numbers, dates, times, and currencies in the subsite to be created.</param>
+            <param name="localeSpecified">Whether locale specified.</param>
+            <param name="collationLocale">An LCID that specifies the collation order to use in the subsite to be created. </param>
+            <param name="collationLocaleSpecified">Whether collationLocale specified.</param>
+            <param name="uniquePermissions">Specifies whether the subsite to be created uses its own set of permissions or parent site.</param>
+            <param name="uniquePermissionsSpecified">Whether uniquePermissions specified.</param>
+            <param name="anonymous">Whether the anonymous authentication is to be allowed for the subsite to be created. </param>
+            <param name="anonymousSpecified">Whether anonymous specified.</param>
+            <param name="presence">Whether the online presence information is to be enabled for the subsite to be created.</param>
+            <param name="presenceSpecified">Whether presence specified.</param>
+            <returns>The result of CreateWeb operation that contains the fully qualified URL to the subsite which was successfully created.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.DeleteWeb(System.String)">
+            <summary>
+            Delete an existing subsite of the current site. 
+            </summary>
+            <param name="url">The site-relative URL of the subsite to be deleted.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.IsScriptSafeUrl(System.String[])">
+            <summary>
+            This operation is used to validate whether the specified URLs are valid script safe URLs for the current site.
+            </summary>
+            <param name="urls">An array of string contains all URLs that need to be validated. </param>
+            <returns>An array of boolean contains results for validating the URLs </returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.InitializeWebService(Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption)">
+            <summary>
+            This operation is used to initialize sites service with authority information.
+            </summary>
+            <param name="userAuthentication">This parameter used to assign the authentication information of web service.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.MS_SITESSAdapter.SetLoginUser(Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption)">
+            <summary>
+            Select associated user account to login the server according to different user authentications. 
+            </summary>
+            <param name="userAuthentication">Assign the authentication information of web service.</param>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.TransportType">
+            <summary>
+            Used to specify the transport type for soap messages.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.TransportType.HTTP">
+            <summary>
+            Indicate the soap transport over http.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.TransportType.HTTPS">
+            <summary>
+            Indicate the soap transport over https.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption">
+            <summary>
+            This enum indicate the option of authentication information client used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption.Authenticated">
+            <summary>
+            Specify Adapter use an authenticated account.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption.Unauthenticated">
+            <summary>
+            Specify Adapter use an unauthenticated account.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper">
+            <summary>
+            The class provides the methods to assist MS-SITESSAdapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.testsite">
+            <summary>
+            An object provides logging, assertions, and SUT adapters for test code onto its execution context.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.validationInfo">
+            <summary>
+            The results of XML Schema validation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.ValidationInfo">
+            <summary>
+            Gets the results of XML Schema validation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Initialize this helper class with ITestSite.
+            </summary>
+            <param name="testSiteInstance">An object provides logging, assertions, and SUT adapters for test code onto its execution context.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.SiteResultDeserialize(System.String)">
+            <summary>
+            Deserialize an xml string to a Site object.
+            </summary>
+            <param name="getSiteResult">The xml string returned from the GetSite operation.</param>
+            <returns>The deserialized Site object.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.CompareStringArrays(System.String[],System.String[])">
+            <summary>
+            Compare two string array's elements.
+            </summary>
+            <param name="str1">The first string array to be compared.</param>
+            <param name="str2">The second string array to be compared.</param>
+            <returns> If the elements are same, return true, otherwise, return false.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.DeserializeWebProperties(System.String,System.Char,System.Char)">
+            <summary>
+            Deserialize web properties returned by the GetWebProperties method.
+            </summary>
+            <param name="prop">Web properties string value.</param>
+            <param name="itemSpliter">The char value for item split.</param>
+            <param name="keySpliter">The char value for key and value split.</param>
+            <returns>A Dictionary instance contains web properties.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.MessageValidation(System.String,System.String)">
+            <summary>
+            Validate whether an xml message follows the schema.
+            </summary>
+            <param name="message">The xml message.</param>
+            <param name="schema">The schema of the message.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.AdapterHelper.Schema_ValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            The callback method that will handle XML schema validation events.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args"> A ValidationEventArgs containing the event data.</param>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.Constants">
+            <summary>
+            Constants used in the SITESS.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SutComputerName">
+            <summary>
+            The computer name of SUT.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SiteCollectionPath">
+            <summary>
+            The site collection path in the related URL.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SiteCollectionUrl">
+            <summary>
+            The URL of site collection which is used by this test suites.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SiteName">
+            <summary>
+            The name of the site created for this test suite.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SiteUrl">
+            <summary>
+            The URL of the site created for this test suite.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.Domain">
+            <summary>
+            The domain name is used to login server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.UserName">
+            <summary>
+            The user name is used to login server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.Password">
+            <summary>
+            The password is used to login server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.TransportType">
+            <summary>
+            Indicate the transport type! It should be http or https, case insensitive.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ServiceUrl">
+            <summary>
+            The URL of the protocol service endpoint.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SutVersion">
+            <summary>
+            The name of the server product installed on the SUT machine, which contains the system under test(SUT).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SoapVersion">
+            <summary>
+            The version of SOAP protocol used to encode and decode requests/responses.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.UnauthorizedUserDomain">
+            <summary>
+            Unauthenticated domain.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.UnauthorizedUserName">
+            <summary>
+            Unauthenticated user name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.UnauthorizedUserPassword">
+            <summary>
+            Unauthenticated password.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ValidLCID">
+            <summary>
+            A valid LCID specifies the language package which is installed on the server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.NotInstalledLCID">
+            <summary>
+            A valid LCID specifies the language package which is not installed on the server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.DefaultLCID">
+            <summary>
+            An LCID that specifies the language in which the server was originally installed. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ExpireTimePeriodBySecond">
+            <summary>
+            A time period in seconds after which the security validation (also named form digest) will expire, which is used to help prevent security attacks where a user unknowingly posts data to a server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.DefaultExpireTimePeriod">
+            <summary>
+            The default expire time of security validation is 30 minutes for Microsoft product.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SoapServiceTimeOut">
+            <summary>
+            A time period in seconds for a synchronous XML Web service request to wait the MS-SITESS web service to response.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ExportWaitTime">
+            <summary>
+            A time period in seconds to wait the server to generate all the exported files and log file for the ExportWeb, ExportSolution and ExportWorkflowTemplate operations.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ImportWebWaitTime">
+            <summary>
+            A time period in seconds to wait the server to generate the result in the log file for the ImportWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ExportRepeatTime">
+            <summary>
+            The maximum number of retries if the server could not generate the expected result in the preconfigured time period for some unknown reasons, for example, limit of server resources. If the server still does not complete this sequence after repeating, the operation is considered as failed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ImportWebRepeatTime">
+            <summary>
+            The maximum number of retries if the server could not generate the status code for the ImportWeb operation in the preconfigured time period for some unknown reasons, for example, limit of server resources. If the server still does not complete this sequence after repeating, the operation is considered as failed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.NormalSubsiteUrl">
+            <summary>
+            The URL of a sub site to be exported on which should be no file uploaded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SpecialSubsiteUrl">
+            <summary>
+            The URL of a sub site to be exported on which the special file “Testdata.txt” should be uploaded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.NonExistentImportUrl">
+            <summary>
+            A random string that corresponds to the name of a non-existent computer in the test environment.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.NonExistentSiteName">
+            <summary>
+            A random string that corresponds to the name of a non-existent sub site under the site of this test suite.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ValidLibraryName">
+            <summary>
+            The name of the document library used as the store location.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.InvalidLibraryName">
+            <summary>
+            The name of the document library which cannot be used as the store location. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SolutionGalleryName">
+            <summary>
+            TThe store location of the exported workflow. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WorkflowTemplateName">
+            <summary>
+            The name of a declarative workflow template on the server, which is a definition of operations, the sequence of operations, constraints, and timing for a specific process, and can be used to create a new workflow.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.InvalidWorkflowTemplateName">
+            <summary>
+            The name of the workflow template which does not exist.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.DataPath">
+            <summary>
+            The full path of the location on the server where the exported files for the ExportWeb and ExportWorkflowTemplate operations are saved.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WebPageUrl">
+            <summary>
+            The URL for an uploaded web page contains a form to be posted. The value of the property is case sensitive.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WindowsSharePointServices3">
+            <summary>
+            Windows SharePoint Services 3.0 SP3.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointFoundation2010">
+            <summary>
+            Microsoft SharePoint Foundation 2010 SP1.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointFoundation2013">
+            <summary>
+            Microsoft SharePoint Foundation 2013 Preview.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointServer2007">
+            <summary>
+            Microsoft Office SharePoint Server 2007 SP3.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointServer2010">
+            <summary>
+            Microsoft SharePoint Server 2010 SP1.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointServer2013">
+            <summary>
+            Microsoft SharePoint Server 2013 Preview.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SharePointServer2016">
+            <summary>
+            Microsoft SharePoint Server 2016 Preview.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyLanguage">
+            <summary>
+            The name of the property which specifies the language code identifier (LCID) for the display language of the specified subsite got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyLocale">
+            <summary>
+            The name of the property which specifies the locale value of the specified sub site got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyCurrentUser">
+            <summary>
+            The name of the property which specifies the current user name login on the specified sub site got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyUserNameInPermissions">
+            <summary>
+            The name of the property which specifies the user name in the collection of permissions for the specified sub site got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyDefaultLanguage">
+            <summary>
+            The name of the property which specifies the server's default language got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyAnonymous">
+            <summary>
+            The name of the property which specifies the level of access for anonymous users on the specified sub site got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SubSitePropertyPresence">
+            <summary>
+            The name of the property which specifies the presence property on the specified sub site got by SUT control adapter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ExportJobName">
+            <summary>
+            JobName for ExportWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ImportJobName">
+            <summary>
+            JobName for ImportWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SntExtension">
+            <summary>
+            Extension for log file for ExportWeb and ImportWeb operations.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.CmpExtension">
+            <summary>
+            Extension for content migration package files exported by the ExportWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WspExtension">
+            <summary>
+            Extension for solution files exported by the ExportSolution and ExportWorkflowTemplate operations.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WebTitle">
+            <summary>
+            Title used in CreateWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.WebDescription">
+            <summary>
+            Description used in CreateWeb operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SolutionTitle">
+            <summary>
+            Title used in operations: ExportSolution and ExportWorkflowTemplate.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.SolutionDescription">
+            <summary>
+            Description used in operations: ExportSolution and ExportWorkflowTemplate.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.PostWebFormResponse">
+            <summary>
+            A string should be contained in the response when the uploaded web form which contains an input textbox is posted successfully.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.TimeOutInformationForSP2007AndSP2010">
+            <summary>
+            A string should be contained in the security validation error information for posting the web form has timed out on SharePoint Server 2007 and 2010.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.TimeOutInformationForSP2013AndSP2016">
+            <summary>
+            A string should be contained in the security validation error information for posting the web form has timed out on SharePoint Server 2013.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.ItemSpliter">
+            <summary>
+            The char value for item split.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Constants.KeySpliter">
+            <summary>
+            The char value for key and value split.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.Site">
+            <summary>
+            Represents information about the site collection.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Site.urlField">
+            <summary>
+            The absolute URL of the site collection.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Site.siteIdField">
+            <summary>
+            The site collection identifier of the site collection.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SITESS.Site.userCodeEnabledField">
+            <summary>
+            Specifies whether user code is enabled for the site collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Site.Url">
+            <summary>
+            Gets or sets the absolute URL of the site collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Site.Id">
+            <summary>
+            Gets or sets the site collection identifier of the site collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Site.UserCodeEnabled">
+            <summary>
+            Gets or sets the value of the userCodeEnabled field.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter">
+            <summary>
+            Provides means of interacting with proxy class, and implemented by MS_SITESSAdapter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.InitializeWebService(Microsoft.Protocols.TestSuites.MS_SITESS.UserAuthenticationOption)">
+            <summary>
+            This operation is used to initialize Sites this.Service with authority information.
+            </summary>
+            <param name="userAuthentication">This parameter used to assign the authentication information of web service.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.ExportSolution(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to export the content related to a site to the solution gallery.
+            </summary>
+            <param name="solutionFileName">The name of the solution file that will be created. </param>
+            <param name="title">The name of the solution.</param>
+            <param name="description">Detailed information that describes the solution.</param>
+            <param name="fullReuseExportMode">Specify the scope of data that needs to be exported. </param>
+            <param name="includeWebContent">Specify whether the solution needs to include the contents of all lists and document libraries in the site. </param>
+            <returns>The result of ExportSolution operation which contains the site-collection relative URL of the created solution file.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.ExportWeb(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            This operation is used to export the content related to a site into one or more content migration package files.
+            </summary>
+            <param name="jobName">Specifies the operation. </param>
+            <param name="webUrl">The URL of the site to export.</param>
+            <param name="dataPath">The full path of the location on the server where the content migration package file(s) are saved. </param>
+            <param name="includeSubwebs">Specifies whether to include the subsite. </param>
+            <param name="includeUserSecurity">Specifies whether to include access control list (ACL), security group and membership group information.</param>
+            <param name="overWrite">Specifies whether to overwrite the content migration package file(s) if they exist. </param>
+            <param name="cabSize">Indicates the suggested size in megabytes for the content migration package file(s). </param>
+            <returns>The result of ExportWeb operation that contains an error code which indicates whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.ExportWorkflowTemplate(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This operation is used to export a workflow template as a site solution to the specified document library.
+            </summary>
+            <param name="solutionFileName">The name of the solution file that will be created.</param>
+            <param name="title">The name of the solution.</param>
+            <param name="description">Detailed information that describes the solution.</param>
+            <param name="workflowTemplateName">The name of the workflow template that is to be exported.</param>
+            <param name="destinationListUrl">The server-relative URL of the document library in which the solution file needs to be created. </param>
+            <returns>The result of ExportWorkflowTemplate operation which contains the site-relative URL of the created solution file.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.GetSite(System.String)">
+            <summary>
+            This operation is used to retrieve information about the site collection.
+            </summary>
+            <param name="siteUrl">Specifies the absolute URL (Uniform Resource Locator) of a site collection or of a location within a site collection. </param>
+            <returns>The result of GetSite operation that represents information about the site collection. </returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.GetSiteTemplates(System.UInt32,Microsoft.Protocols.TestSuites.MS_SITESS.Template[]@)">
+            <summary>
+            This operation is used to retrieve information about the collection of available site templates.
+            </summary>
+            <param name="lcid">Specifies the language code identifier (LCID).</param>
+            <param name="templateList">SiteTemplates list.</param>
+            <returns>The result of GetSiteTemplates operation which contains an error code to indicate whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.GetUpdatedFormDigest">
+            <summary>
+            This operation is used to request renewal of an expired security validation, also known as a message digest. 
+            </summary>
+            <returns>The result of GetUpdatedFormDigest operation which contains a security validation token generated by the server.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.GetUpdatedFormDigestInformation(System.String)">
+            <summary>
+            This operation is used to request renewal of an expired security validation token, also known as a message digest, and the new security validation token’s expiration time.
+            </summary>
+            <param name="url">Specify a page URL with which the returned security validation token information is associated.</param>
+            <returns>The result of GetUpdatedFormDigestInformation operation that contains a security validation token generated by the protocol server, the security validation token’s expiration time in seconds, and other information.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.ImportWeb(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to import a site from one or more content migration package files to a specified URL.
+            </summary>
+            <param name="jobName">Specifies the operation.</param>
+            <param name="webUrl">The URL of the resulting Web site. </param>
+            <param name="dataFiles">The URLs of the content migration package files on the server that the server imports to create the resulting Web site.</param>
+            <param name="logPath">The URL where the server places files describing the progress or status of the operation. </param>
+            <param name="includeUserSecurity">Specifies whether or not to include ACL, security group and membership group information in the resulting Web site. </param>
+            <param name="overWrite">Specifies whether or not to overwrite existing files at the location specified by logPath. </param>
+            <returns>The result of ImportWeb operation that contains an error code which indicates whether the operation is succeed or an error type.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.CreateWeb(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            This operation is used to create a new subsite of the current site 
+            </summary>
+            <param name="url">The site-relative URL of the subsite to be created.</param>
+            <param name="title">The display name of the subsite to be created.</param>
+            <param name="description">Description of the subsite to be created.</param>
+            <param name="templateName">The name of an available site template to be used for the subsite to be created. </param>
+            <param name="language">An LCID that specifies the language of the user interface of the subsite to be created. </param>
+            <param name="languageSpecified">Whether language specified</param>
+            <param name="locale">An LCID that specifies the display format for numbers, dates, times, and currencies in the subsite to be created.</param>
+            <param name="localeSpecified">Whether locale specified.</param>
+            <param name="collationLocale">An LCID that specifies the collation order to use in the subsite to be created. </param>
+            <param name="collationLocaleSpecified">Whether collationLocale specified.</param>
+            <param name="uniquePermissions">Specifies whether the subsite to be created uses its own set of permissions or parent site.</param>
+            <param name="uniquePermissionsSpecified">Whether uniquePermissions specified.</param>
+            <param name="anonymous">Whether the anonymous authentication is to be allowed for the subsite to be created. </param>
+            <param name="anonymousSpecified">Whether anonymous specified.</param>
+            <param name="presence">Whether the online presence information is to be enabled for the subsite to be created.</param>
+            <param name="presenceSpecified">Whether presence specified.</param>
+            <returns>The result of CreateWeb operation that contains the fully qualified URL to the subsite which was successfully created.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.DeleteWeb(System.String)">
+            <summary>
+            Delete an existing subsite of the current site. 
+            </summary>
+            <param name="url">The site-relative URL of the subsite to be deleted.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSAdapter.IsScriptSafeUrl(System.String[])">
+            <summary>
+            This operation is used to validate whether the specified URLs are valid script safe URLs for the current site.
+            </summary>
+            <param name="urls">An array of string contains all URLs that need to be validated. </param>
+            <returns>An array of boolean contains results for validating the URLs </returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter">
+            <summary>
+            The SUT Control Adapter interface.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.EmptyDocumentLibrary(System.String,System.String,System.String)">
+            <summary>
+            Remove all files in a document library, which is used as the store location for the files exported by the ExportWeb or ExportWorkflowTemplate operation.
+            </summary>
+            <param name="siteName">Specify the site name portion in the document library Url, such as "http://.../(siteName)/(webName)/(documentLibraryName)", from where all files should be removed. This value is optional if the document library is created under the root site of the site collection.</param>
+            <param name="webName">Specify the web name portion in the document library Url, such as "http://.../(siteName)/(webName)/(documentLibraryName)", from where all files should be removed. This value is optional if the document library is created under the root site of the site collection.</param>
+            <param name="documentLibraryName">Specify the document library name from where all files should be removed. This value should be the same value as the ValidLibraryName property in PTFConfig file.</param>
+            <returns>A boolean value set to true if the operation to remove all files was successful, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.RemoveAllSolution(System.String,System.String,System.String)">
+            <summary>
+            Remove all files in solution gallery, which is the store location for the files exported by the ExportSolution operation.
+            </summary>
+            <param name="siteName">Specify the site name portion in the solution gallery Url, such as "http://.../(siteName)/(webName)/(solutiongalleryName)", from where solution files should be removed. This value is optional if the solution gallery is created under the root site of the site collection.</param>
+            <param name="webName">Specify the web name portion in the solution gallery Url, such as "http://.../(siteName)/(webName)/(solutiongalleryName)", from where solution files should be removed. This value is optional if the solution gallery is created under the root site of the site collection.</param>
+            <param name="solutionGalleryName">Specify the solution gallery name from where all solution files should be removed. This value should be the same value as the SolutionGalleryName property in PTFConfig file.</param>
+            <returns>A boolean value set to true if the operation to remove all solution files was successful, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.RemoveWeb(System.String)">
+            <summary>
+            Remove a web with the specified web name. 
+            </summary>
+            <param name="webName">Specify the name of the web that will be removed. This value should be the same value as the value of the SubsiteToBeImport property in PTFConfig file.</param>
+            <returns>A boolean value set to true if the operation to remove the web was successful, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.GetDocumentLibraryFileNames(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get specified content file names including extension name of a list on a web, which is chosen to store the exported files.
+            </summary>
+            <param name="siteName">Specify the site name portion in the list Url, such as "http://.../(siteName)/(webName)/(listName)". This value is optional if the list is created under the root site of the site collection.</param>
+            <param name="webName">Specify the web name portion in the list Url, such as "http://.../(siteName)/(webName)/(listName)". This value is optional if the list is created under the root site of the site collection.</param>
+            <param name="listName">Specify the name of the list from where the content file names should be got. This value should be the same value as the ValidLibraryName property in PTFConfig file when getting the files exported by the ExportWeb and ExportWorkflowTemplate operations, 
+            or the SolutionGalleryName property when getting the files exported by the ExportSolution operation.</param>
+            <param name="fileName">Specify the query condition, only the files in the list whose name contain the fileName will be returned. other files will be ignored.</param>
+            <returns>A string that contains the file names including extension name in the list contents in which each file name should be separated by ';', for example, "filename1;filename2".</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.GetWebProperties(System.String,System.String)">
+            <summary>
+            Get properties of the specified web which is created by the CreateWeb operation if it is not null, otherwise, the script will get the properties of the parent web.
+            </summary>
+            <param name="siteName">Specify the site name to which the created web belong. This value should be the same value as the SiteName property in PTFConfig file.</param>
+            <param name="webName">Specify the name of the web. This value should be the same value as the web name portion in the input parameter webUrl of the CreateWeb operation.</param>
+            <returns>A string that contains the related properties of the web, in which each property should be separated by ';', and the property name and value should be separated by ':'. The returned value should contain the following properties: language, locale, currentUser, permissions, defaultLanguage, anonymous, presence.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.GetSiteGuid">
+            <summary>
+            Get the site collection identifier, a Globally unique identifier (GUID) that identifies the site collection.
+            </summary>
+            <returns>A string in form of a GUID that specifies the site collection identifier of the site collection which name is preconfigured as the SiteCollectionName property in PTFConfig file.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.SetUserCodeEnabled(System.Boolean)">
+            <summary>
+            Set user code to be enabled or disabled on the site collection. User code is managed code that can be uploaded to a site by a site collection administrator.
+            </summary>
+            <param name="enable">Indicate whether user code will be enabled for the site collection.</param>
+            <returns>A boolean value set to true if the user code was enabled, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.SetFormDigestTimeout(System.Int32)">
+            <summary>
+            Set the time period in seconds after which the security validation (also named form digest) will expire, which is used to help prevent security attacks where a user unknowingly posts data to a server.
+            </summary>
+            <param name="timeout">Specify the timeout value of form digest to be set.</param>
+            <returns>An integer that specifies the form digest timeout value after this set operation.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.PostWebForm(System.String,System.String)">
+            <summary>
+            Get a form on a web page and Post the form with the digest value.
+            </summary>
+            <param name="digest">Specify the digest value received from server. This value should be the same digest string returned by the GetUpdatedFormDigest or GetUpdatedFormDigestInformation operation.</param>
+            <param name="webPageUrl">Specify the URL for an uploaded web page that contains a form to be posted. This value should be the same value as the WebPageUrl Property in PTFConfig file.</param>
+            <returns>A string that specifies the response returned by server, which should contain the keyword indicates whether the web form is posted successfully.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.IMS_SITESSSUTControlAdapter.GetStatusCode(System.String,System.String,System.String,System.String)">
+            <summary>
+            Fetch status code from the log file generated by the server for the ExportWeb and ImportWeb operations, which extension name is specified as SNT for SharePoint server.
+            </summary>
+            <param name="siteName">Specify the site name portion in the Url where the file stored, such as "http://.../(siteName)/(webName)/(listName)". This value is optional if the list is created under the root site of the site collection.</param>
+            <param name="webName">Specify the web name portion in the Url where the file stored, such as "http://.../(siteName)/(webName)/(listName)". This value is optional if the list is created under the root site of the site collection.</param>
+            <param name="listName">Specify the name of the list from where the file stored. This value should be the same value as the ValidLibraryName property in PTFConfig file.</param> 
+            <param name="fileName">Specify the file name of the log file. This value should be the same value as the input parameter jobName for ExportWeb or ImportWeb operation, with the extension name should be the same value as the constant string SntExtension, for example, "exportweb.snt".</param>
+            <returns>A non-empty string that indicates the success of the operation or an error code.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.CreateWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.DeleteWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteTemplatesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestInformationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.IsScriptSafeUrlCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ImportWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportSolutionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWorkflowTemplateCompleted">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.CreateWeb(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginCreateWeb(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndCreateWeb(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.CreateWebAsync(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.CreateWebAsync(System.String,System.String,System.String,System.String,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.UInt32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.DeleteWeb(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginDeleteWeb(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndDeleteWeb(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.DeleteWebAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.DeleteWebAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSite(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginGetSite(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndGetSite(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteTemplates(System.UInt32,Microsoft.Protocols.TestSuites.MS_SITESS.Template[]@)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginGetSiteTemplates(System.UInt32,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndGetSiteTemplates(System.IAsyncResult,Microsoft.Protocols.TestSuites.MS_SITESS.Template[]@)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteTemplatesAsync(System.UInt32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetSiteTemplatesAsync(System.UInt32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigest">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginGetUpdatedFormDigest(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndGetUpdatedFormDigest(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestInformation(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginGetUpdatedFormDigestInformation(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndGetUpdatedFormDigestInformation(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestInformationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.GetUpdatedFormDigestInformationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.IsScriptSafeUrl(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginIsScriptSafeUrl(System.String[],System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndIsScriptSafeUrl(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.IsScriptSafeUrlAsync(System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.IsScriptSafeUrlAsync(System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWeb(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginExportWeb(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndExportWeb(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWebAsync(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWebAsync(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ImportWeb(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginImportWeb(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndImportWeb(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ImportWebAsync(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ImportWebAsync(System.String,System.String,System.String[],System.String,System.Boolean,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportSolution(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginExportSolution(System.String,System.String,System.String,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndExportSolution(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportSolutionAsync(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportSolutionAsync(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWorkflowTemplate(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.BeginExportWorkflowTemplate(System.String,System.String,System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.EndExportWorkflowTemplate(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWorkflowTemplateAsync(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.ExportWorkflowTemplateAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SITESS.SitesSoap.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebResponseCreateWebResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebResponseCreateWebResult.CreateWeb">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebResponseCreateWebResultCreateWeb">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebResponseCreateWebResultCreateWeb.Url">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation.DigestValue">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation.TimeoutSeconds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation.WebFullUrl">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation.LibraryVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.FormDigestInformation.SupportedSchemaVersions">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.Template">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.ID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.Title">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.IsUnique">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.IsHidden">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.Description">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.ImageUrl">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.IsCustom">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.IsSubWebOnly">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.IsRootWebOnly">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.DisplayCategory">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.FilterCategories">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.Template.HasProvisionClass">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.CreateWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.DeleteWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteTemplatesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteTemplatesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteTemplatesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.GetSiteTemplatesCompletedEventArgs.TemplateList">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestInformationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestInformationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.GetUpdatedFormDigestInformationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.IsScriptSafeUrlCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.IsScriptSafeUrlCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.IsScriptSafeUrlCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ImportWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ImportWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.ImportWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportSolutionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportSolutionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.ExportSolutionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWorkflowTemplateCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWorkflowTemplateCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SITESS.ExportWorkflowTemplateCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

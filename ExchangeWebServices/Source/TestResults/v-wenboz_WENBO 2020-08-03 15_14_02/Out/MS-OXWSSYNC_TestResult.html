@@ -1,0 +1,5344 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Reporting</title>
+    <style type="text/css">
+      table
+      {
+      width: 100%;
+      background-color: #f8f8f8;
+      border: 1px solid #505050;
+      border-collapse: collapse;
+      }
+      tbody tr td
+      {
+      border: 1px solid #505050;
+      }
+      .TableCellHighlighted
+      {
+      font-size: 1.1em;
+      background-color: #e0e0e0;
+      border: 1px solid #909090;
+      }
+    .Unverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .Verified
+    {
+        background-color: green;
+        display: none;
+    }
+    .NotToVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .DerivedUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .DerivedVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .DerivedPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .FinalUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .FinalVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .FinalPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .RSExcluded
+    {
+        background-color: red;
+    }
+    </style>
+    <script type="text/javascript">   
+    function ToggleAll(className, parent, func)
+    {
+        var children = (parent !=null ? parent : document.body).getElementsByTagName('*');
+        var pattern = new RegExp("(^|\\s)" + className + "(\\s|$)");
+        for (var i = 0, length = children.length; i < length; i++)
+        {
+            var child = children[i];
+            var elementClassName = child.className;
+            if (elementClassName.length == 0)
+                continue;
+            if (elementClassName == className || elementClassName.match(pattern))
+                func(child);
+        }
+    }
+    function Toggle(item)
+    {
+        var visible = (item.style.display != "none");
+        if (visible)
+            item.style.display = "none";
+        else
+            item.style.display = "table-row";
+    }
+    function Show(item)
+    {
+        item.style.display = "table-row";
+    }
+    function Hide(item)
+    {
+        item.style.display = "none";
+    }
+    </script>
+</head>
+<body>
+    <noscript>Please enable Javascript to view the details</noscript>
+        <table>
+        <caption><h3>Report For Log ms-oxwssync_log.xml</h3></caption>
+        <tr>
+            <td>
+                Target Protocol: MS-OXWSSYNC;</td>
+            <td>
+                Log File: ms-oxwssync_log.xml
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFConfigProperties
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                CommonConfigurationFileName</td>
+            <td>
+                 ExchangeCommonConfiguration.deployment.ptfconfig</td>
+        </tr>
+        <tr>
+            <td>
+                User1Name</td>
+            <td>
+                 MSOXWSSYNC_User01</td>
+        </tr>
+        <tr>
+            <td>
+                User1Password</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                User2Name</td>
+            <td>
+                 MSOXWSSYNC_User02</td>
+        </tr>
+        <tr>
+            <td>
+                User2Password</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                MaxChanges</td>
+            <td>
+                 100</td>
+        </tr>
+        <tr>
+            <td>
+                MailboxCulture</td>
+            <td>
+                 en-US</td>
+        </tr>
+        <tr>
+            <td>
+                Domain</td>
+            <td>
+                 contoso.com</td>
+        </tr>
+        <tr>
+            <td>
+                SutComputerName</td>
+            <td>
+                 SUT01</td>
+        </tr>
+        <tr>
+            <td>
+                UserName</td>
+            <td>
+                 user01</td>
+        </tr>
+        <tr>
+            <td>
+                Password</td>
+            <td>
+                 OPs3Y2Q4+y5S)</td>
+        </tr>
+        <tr>
+            <td>
+                SutVersion</td>
+            <td>
+                 ExchangeServer2019</td>
+        </tr>
+        <tr>
+            <td>
+                ServiceUrl</td>
+            <td>
+                 [TransportType]://[SutComputerName].[Domain]/[AppendingURL]</td>
+        </tr>
+        <tr>
+            <td>
+                AppendingURL</td>
+            <td>
+                 EWS/Exchange.asmx</td>
+        </tr>
+        <tr>
+            <td>
+                TransportType</td>
+            <td>
+                 HTTP</td>
+        </tr>
+        <tr>
+            <td>
+                WaitTime</td>
+            <td>
+                 1000</td>
+        </tr>
+        <tr>
+            <td>
+                RetryCount</td>
+            <td>
+                 35</td>
+        </tr>
+        <tr>
+            <td>
+                R20003Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37809Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37811008Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37811Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37811002Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37811004Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R37811006Enabled</td>
+            <td>
+                 false</td>
+        </tr>
+        <tr>
+            <td>
+                R1752003Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R1752001Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                ClientName</td>
+            <td>
+                 WENBO</td>
+        </tr>
+        <tr>
+            <td>
+                ClientOS</td>
+            <td>
+                 Microsoft Windows NT 6.3.9600.0</td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFTestResult
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                TestsExecuted</td>
+            <td>
+                20 (100.00%)</td>
+        </tr>
+            <tr>
+                <td>
+                    TimeStamp</td>
+                <td>
+                    2020/8/3 9:11:19</td>
+            </tr>
+        <tr>
+            <td>
+                TestsPassed</td>
+            <td>
+                19 (95.00%)</td>
+        </tr>
+        <tr>
+            <td>
+                TestsInconclusive</td>
+            <td>
+                1 (5.00%)</td>
+        </tr>
+        <tr>
+            <td>
+                CoveredRequirements
+            </td>
+            <td>
+                153
+            </td>
+        </tr>
+    </table>
+<hr /><table cellpadding="2" cellspacing="2">
+    <caption><h3>Global Requirement Coverage Statistics<br/>
+                  <font color="#FF0000"><br />The following data might not be accurate due to inconsistencies found in the requirements, please see <a href='#jump-rsinconsistencyerrors'>Requirement Inconsistencies</a> for details.</font></h3>
+                  <h4><br/>This report is only for requirement with scope value = 'Server+Both'</h4></caption>
+    <col />
+    <thead><tr><th colspan="2">Requirement Type</th><th colspan="5">Count/Percent</th></tr></thead>
+    <col />
+    <tbody>
+    <tr>
+        <td colspan="7">
+        <h3>
+            Checked Requirements:  147 (87.50%)
+        </h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of normative, in-scope requirements
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Checkable requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            168
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Completely checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            146 (86.90%)
+            </a >
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Partially checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            1 (0.60%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Unchecked requirements
+        </td>
+        
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            21 (12.50%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of derived requirements
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            46
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Checked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            28 (60.87%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Unchecked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            18 (39.13%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td align="center" class="TableCellHighlighted" colspan="7">
+            <a name="jump-detail">Details:</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td style="width: 12%;">
+            Req ID
+        </td>
+        <td>
+            Description
+        </td>
+         <td>
+            Doc Sect
+        </td>
+	      <td>
+            Scope
+        </td>
+        <td style="width: 10%;">
+            Status
+        </td>
+        <td style="width: 13%;">
+            Time Stamp
+        </td>
+        <td style="width: 10%;">
+            Log Files
+        </td>
+    </tr>
+    
+    
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R257</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] [The FolderShape] specifies the properties that are returned in the response.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSCDATA_R59</td>
+            <td>
+                [In t:DefaultShapeNamesType Simple Type] The value &quot;AllProperties&quot; specifies all the properties that are defined for the item or folder.</td>
+            <td>
+                2.2.3.7</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSCDATA_R61</td>
+            <td>
+                [In t:DefaultShapeNamesType Simple Type] The value &quot;Default&quot; specifies a set of properties that are defined as the default for the item or folder.</td>
+            <td>
+                2.2.3.7</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R62</td>
+            <td>
+                [In t:DefaultShapeNamesType Simple Type] The value of &quot;IdOnly&quot; specifies only the item or folder ID.</td>
+            <td>
+                2.2.3.7</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1171</td>
+            <td>
+                [In t:FolderResponseShapeType Complex Type] The element &quot;AdditionalProperties&quot; with type &quot;t:NonEmptyArrayOfPathsToElementType&quot; specifies the identity of additional properties to be returned in a response.</td>
+            <td>
+                2.2.4.32</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1234</td>
+            <td>
+                [In t:NonEmptyArrayOfPathsToElementType Complex Type] The element &quot;t:Path&quot; with type &quot;t:Path&quot; specifies a property to be returned in a response.</td>
+            <td>
+                2.2.4.44</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R260</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncFolderId] is optional.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R263</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncState] is optional.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R195</td>
+            <td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] [The element IsRead] specifies a Boolean value that indicates whether the item has been read.</td>
+            <td>
+                3.1.4.2.3.5</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R67</td>
+            <td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The element IncludesLastItemInRange] specifies a Boolean value that indicates whether the last item to synchronize is included in the response.</td>
+            <td>
+                3.1.4.2.3.6</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R378</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [The element ItemShape] specifies the item properties that are returned in a response message.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSCDATA_R1188</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;IncludeMimeContent&quot;  is invalid for SyncFolderItems operation.</td>
+            <td>
+                2.2.4.38</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSCDATA_R1194</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] If this value [FilterHtmlContent] is set to true, script blocks and Web beacons MUST be removed from message bodies that are returned in a response.</td>
+            <td>
+                2.2.4.38</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1197</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;AdditionalProperties&quot; with type &quot;t:NonEmptyArrayOfPathsToElementType&quot; specifies a set of requested additional properties to return in a response.</td>
+            <td>
+                2.2.4.38</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R383</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncState] is optional.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R385</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [The element Ignore] specifies an array of items to skip for synchronization.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R386</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [Ignore] is optional.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalPartialVerify'>
+            <td>
+                MS-OXWSSYNC_R389</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [MaxChangesReturned] MUST be set between 1 and 512, inclusive.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Partial Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R392</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncScope] is optional. &lt;7&gt;</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R20002</td>
+            <td>
+                [In Transport]The protocol SHOULD use secure communications via HTTPS, as defined in [RFC2818]</td>
+            <td>
+                2.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R149902</td>
+            <td>
+                [In t:ItemResponseShapeType Complex Type] The element &quot;InlineImageUrlTemplate&quot; with type &quot;xs:string ([XMLSCHEMA2])&quot; specifies the name of the template for the inline image URL.&lt;248&gt;</td>
+            <td>
+                2.2.4.38</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R162</td>
+            <td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of DistributionList is t:DistributionListType ([MS-OXWSDLIST] section 2.2.4.1).</td>
+            <td>
+                3.1.4.2.3.3</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSDLIST_R37810</td>
+            <td>
+                [In Appendix B: Product Behavior] The information in this specification is applicable to the following Microsoft products or supplemental software. References to product versions include released service packs:
+ Microsoft&#174; Exchange Server 2010
+ Microsoft&#174; Exchange Server 2013</td>
+            <td>
+                7</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R87</td>
+            <td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] [The element Delete] specifies a folder that has been deleted from the server and has to be deleted from the client. &lt;1&gt;</td>
+            <td>
+                3.1.4.1.3.1</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R151</td>
+            <td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Item] . If a client creates or updates an item of this type, an item of t:MessageType type SHOULD&lt;2&gt; be returned.</td>
+            <td>
+                3.1.4.2.3.3</td>
+            <td>
+                Server</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752001</td>
+            <td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of  RoleMember is t:RoleMemberItemType ([MS-OXWSCORE] section 2.2.4.41)</td>
+            <td>
+                3.1.4.2.3.3</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752003</td>
+            <td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of  Network is t:NetworkItemType ([MS-OXWSCORE] section 2.2.4.29).</td>
+            <td>
+                3.1.4.2.3.3</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752006</td>
+            <td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Person] Specifies a person to create or update in the client message store.&lt;5&gt;</td>
+            <td>
+                3.1.4.2.3.3</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R3</td>
+           
+<td>
+                [In Transport] The SOAP version supported is SOAP 1.1.
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R20001</td>
+           
+<td>
+                [In Transport]The protocol MUST support SOAP over HTTP, as specified in [RFC2616].
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R503</td>
+           
+<td>
+                [In Abstract Data Model] If the optional SyncState element of the SyncFolderHierarchyType complex type (section 3.1.4.1.3.6) is included in a SyncFolderHierarchy operation (section 3.1.4.1) request, the server MUST return incremental synchronization information from the last synchronization request.
+            </td>
+<td>
+                3.1.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:54</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R504</td>
+           
+<td>
+                [In Abstract Data Model]  If the SyncState element of the SyncFolderItemsType complex type (section 3.1.4.2.3.8) is included in a SyncFolderItems operation (section 3.1.4.2), the server MUST return incremental synchronization information from the last synchronization request.
+            </td>
+<td>
+                3.1.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:26</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R457</td>
+           
+<td>
+                [In SyncFolderHierarchy] The following is the WSDL port type specification of the SyncFolderHierarchy operation.
+&lt;wsdl:operation name=&quot;SyncFolderHierarchy&quot;&gt;
+     &lt;wsdl:input message=&quot;tns:SyncFolderHierarchySoapIn&quot; /&gt;
+     &lt;wsdl:output message=&quot;tns:SyncFolderHierarchySoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R459</td>
+           
+<td>
+                [In SyncFolderHierarchy] The following is the WSDL binding specification of the SyncFolderHierarchy operation.
+&lt;wsdl:operation name=&quot;SyncFolderHierarchy&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/SyncFolderHierarchy&quot; /&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderHierarchySoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;&gt;&lt;/soap:header&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderHierarchySoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderHierarchySoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;SyncFolderHierarchyResult&quot; use=&quot;literal&quot; /&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderHierarchySoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R460</td>
+           
+<td>
+                [In SyncFolderHierarchy] The SyncFolderHierarchy operation MUST return one SyncFolderHierarchyResponseMessage element in the ResponseMessages element of the SyncFolderHierarchyResponse element (section 3.1.4.1.2.2).
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R238</td>
+           
+<td>
+                [In SyncFolderHierarchy] The ResponseMessages element is specified as an element of the BaseResponseMessageType complex type ([MS-OXWSCDATA] section 2.2.4.18).
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R299</td>
+           
+<td>
+                [In tns:SyncFolderHierarchySoapOut] The SyncFolderHiearchySoapOut WSDL message specifies the server responses to a SyncFolderHierarchy operation request to return synchronization information.
+&lt;wsdl:message name=&quot;SyncFolderHierarchySoapOut&quot;&gt;
+   &lt;wsdl:part name=&quot;SyncFolderHierarchyResult&quot; element=&quot;tns:SyncFolderHierarchyResponse&quot; /&gt;
+   &lt;wsdl:part name=&quot;ServerVersion&quot; element=&quot;t:ServerVersionInfo&quot;/&gt;
+&lt;/wsdl:message&gt;
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R306</td>
+           
+<td>
+                [In tns:SyncFolderHierarchySoapOut] The Element/Type of SyncFolderHierarchyResult is tns:SyncFolderHierarchyResponse (section 3.1.4.1.2.2).
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R307</td>
+           
+<td>
+                [In tns:SyncFolderHierarchySoapOut] [The part name syncFolderHierarchyResult] specifies the SOAP body of the response to a SyncFolderHiearchy operation request.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R308</td>
+           
+<td>
+                [In tns:SyncFolderHierarchySoapOut] The Element/Type of ServerVersion is t:ServerVersionInfo ([MS-OXWSCDATA] section 2.2.3.10).
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R309</td>
+           
+<td>
+                [In tns:SyncFolderHierarchySoapOut] [The part name ServerVersion] specifies a SOAP header that identifies the server version for the response to a SyncFolderHiearchy operation request.
+            </td>
+<td>
+                3.1.4.1.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R465</td>
+           
+<td>
+                [In SyncFolderHierarchyResponse Element] The SyncFolderHierarchyResponse element specifies the response message for a SyncFolderHierarchy operation (section 3.1.4.1).  &lt;xs:element name=&quot;SyncFolderHierarchyResponse&quot;
+  type=&quot;m:SyncFolderHierarchyResponseType&quot;
+ /&gt;
+            </td>
+<td>
+                3.1.4.1.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R447</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] The SyncFolderHierarchyChangesType complex type specifies a sequenced array of change types that describe the differences between the folders on the client and the folders on the server.
+&lt;xs:complexType name=&quot;SyncFolderHierarchyChangesType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:choice
+      maxOccurs=&quot;unbounded&quot;
+      minOccurs=&quot;0&quot;
+    &gt;
+      &lt;xs:element name=&quot;Create&quot;
+        type=&quot;t:SyncFolderHierarchyCreateOrUpdateType&quot;
+       /&gt;
+      &lt;xs:element name=&quot;Update&quot;
+        type=&quot;t:SyncFolderHierarchyCreateOrUpdateType&quot;
+       /&gt;
+      &lt;xs:element name=&quot;Delete&quot;
+        type=&quot;t:SyncFolderHierarchyDeleteType&quot;
+       /&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R83</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] The type of Create is t:SyncFolderHierarchyCreateOrUpdateType (section 3.1.4.1.3.2).
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:35</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R84</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] [The element Create] specifies a folder that has been created on the server and has to be created on the client.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:35</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R448</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] The type of Update is t:SyncFolderHierarchyCreateOrUpdateType.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:37</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R85</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] [The element Update] specifies a folder that has been changed on the server and has to be changed on the client.
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:37</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R86</td>
+           
+<td>
+                [In t:SyncFolderHierarchyChangesType Complex Type] The type of Delete is  t:SyncFolderHierarchyDeleteType (section 3.1.4.1.3.3).
+            </td>
+<td>
+                3.1.4.1.3.1
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R449</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The SyncFolderHierarchyCreateOrUpdateType complex type specifies a single folder to create or update in the client data store. 
+xs:complexType name=&quot;SyncFolderHierarchyCreateOrUpdateType&quot;&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:element name=&quot;Folder&quot;
+      type=&quot;t:FolderType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CalendarFolder&quot;
+      type=&quot;t:CalendarFolderType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ContactsFolder&quot;
+      type=&quot;t:ContactsFolderType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;SearchFolder&quot;
+      type=&quot;t:SearchFolderType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;TasksFolder&quot;
+      type=&quot;t:TasksFolderType&quot;
+     /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:35</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R99</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The type of Folder is t:FolderType ([MS-OXWSFOLD] section 2.2.4.12).
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:37</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R10010</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element Folder] specifies a regular folder to create in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:35</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R10020</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element Folder] specifies a regular folder to update in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:37</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R101</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The type of CalendarFolder element is t:CalendarFolderType ([MS-OXWSMTGS] section 2.2.4.5).
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:53</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1021</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element CalendarFolder] specifies a calendar folder to create in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:52</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1022</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element CalendarFolder] specifies a calendar folder to update in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:53</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R103</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The type of ContactsFolder is t:ContactsFolderType ([MS-OXWSCONT] section 3.1.4.1.1.6).
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:09</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1041</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element ContactsFolder] specifies a contacts folder to create in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:08</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1042</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element ContactsFolder] specifies a contacts folder to update in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:09</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R105</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The type of SearchFolder is t:SearchFolderType ([MS-OXWSSRCH] section 2.2.4.32).
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:40</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1061</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element SearchFolder] specifies a search folder to create in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:40</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1062</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element SearchFolder] specifies a search folder to update in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:41</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R107</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] The type of TasksFolder is  t:TasksFolderType ([MS-OXWSTASK] section 2.2.4.5).
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:24</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1081</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element TasksFolder] specifies a tasks folder to create in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:23</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1082</td>
+           
+<td>
+                [In t:SyncFolderHierarchyCreateOrUpdateType Complex Type] [The element TasksFolder] specifies a tasks folder to update in the client message store.
+            </td>
+<td>
+                3.1.4.1.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:24</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R450</td>
+           
+<td>
+                [In t:SyncFolderHierarchyDeleteType Complex Type] The SyncFolderHierarchyDeleteType complex type specifies a folder to delete from the client data store. 
+&lt;xs:complexType name=&quot;SyncFolderHierarchyDeleteType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;FolderId&quot;
+      type=&quot;t:FolderIdType&quot;
+     /&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R116</td>
+           
+<td>
+                [In t:SyncFolderHierarchyDeleteType Complex Type] The type of FolderId is t:FolderIdType ([MS-OXWSCDATA] section 2.2.4.36).
+            </td>
+<td>
+                3.1.4.1.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R117</td>
+           
+<td>
+                [In t:SyncFolderHierarchyDeleteType Complex Type] [The element FolderId] specifies the identifier of the folder to delete from the client message store.
+            </td>
+<td>
+                3.1.4.1.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:10</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R31</td>
+            
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] The SyncFolderHierarchyResponseMessageType complex type extends the ResponseMessageType complex type ([MS-OXWSCDATA] section 2.2.4.67).
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R441</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] [The schema of &quot;SyncFolderHierarchyResponseMessageType&quot; is:]
+&lt;xs:complexType name=&quot;SyncFolderHierarchyResponseMessageType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:ResponseMessageType&quot;
+    &gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;SyncState&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IncludesLastFolderInRange&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;Changes&quot;
+          type=&quot;t:SyncFolderHierarchyChangesType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R442</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] The type of SyncState is xs:string [XMLSCHEMA2]
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R44</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] [The element SyncState] specifies a form of the synchronization data, which is encoded with base64 encoding, that is used to identify the synchronization state.
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:26</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R443</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] The type of IncludesLastFolderInRange is xs:boolean [XMLSCHEMA2].
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R4601</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] [The element IncludesLastFolderInRange] If this element is included in the response, the value is always &quot;true&quot;.
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:09</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R48</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] The type of Changes is t:SyncFolderHierarchyChangesType (section 3.1.4.1.3.1).
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R49</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseMessageType Complex Type] [The element Changes] specifies the differences between the folders on the client and the folders on the server.
+            </td>
+<td>
+                3.1.4.1.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:23</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R265</td>
+            
+<td>
+                [In m:SyncFolderHierarchyResponseType Complex Type] The SyncFolderHierarchyResponseType complex type extends the BaseResponseMessageType complex type ([MS-OXWSCDATA] section 2.2.4.18).
+            </td>
+<td>
+                3.1.4.1.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R463</td>
+           
+<td>
+                [In m:SyncFolderHierarchyResponseType Complex Type] [The schema of &quot;SyncFolderHierarchyResponseType&quot; is:]
+&lt;xs:complexType name=&quot;SyncFolderHierarchyResponseType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:BaseResponseMessageType&quot;
+     /&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.1.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R259</td>
+           
+<td>
+                [In m:SyncFolderHierarchyType Complex Type] [The element SyncFolderId] specifies the target folder for the operation [SyncFolderHierarchy].
+            </td>
+<td>
+                3.1.4.1.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:41</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R262</td>
+           
+<td>
+                [In m:SyncFolderHierarchyType Complex Type] If this element [SyncState] is not specified, all items in their current state are returned as if the items have never been synchronized. 
+            </td>
+<td>
+                3.1.4.1.3.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:41</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R468</td>
+           
+<td>
+                [In SyncFolderItems] The following is the WSDL port type specification of the SyncFolderItems operation.
+&lt;wsdl:operation name=&quot;SyncFolderItems&quot;&gt;
+     &lt;wsdl:input message=&quot;tns:SyncFolderItemsSoapIn&quot; /&gt;
+     &lt;wsdl:output message=&quot;tns:SyncFolderItemsSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R469</td>
+           
+<td>
+                [In SyncFolderItems] The following is the WSDL binding specification of the SyncFolderItems operation.
+&lt;wsdl:operation name=&quot;SyncFolderItems&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/SyncFolderItems&quot; /&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderItemsSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;&gt;&lt;/soap:header&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderItemsSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderItemsSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot; /&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;SyncFolderItemsResult&quot; use=&quot;literal&quot; /&gt;
+      &lt;soap:header message=&quot;tns:SyncFolderItemsSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R480</td>
+           
+<td>
+                [In tns:SyncFolderItemsSoapOut] The SyncFolderItemsSoapOut WSDL message specifies the response from the SyncFoldersItems operation.
+&lt;wsdl:message name=&quot;SyncFolderItemsSoapOut&quot;&gt;
+   &lt;wsdl:part name=&quot;SyncFolderItemsResult&quot; element=&quot;tns:SyncFolderItemsResponse&quot; /&gt;
+   &lt;wsdl:part name=&quot;ServerVersion&quot; element=&quot;t:ServerVersionInfo&quot;/&gt;
+&lt;/wsdl:message&gt;
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R437</td>
+           
+<td>
+                [In tns:SyncFolderItemsSoapOut] The Element/type of SyncFolderItemsResult is tns:SyncFolderItemsResponse (section 3.1.4.2.2.2).
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R438</td>
+           
+<td>
+                [In tns:SyncFolderItemsSoapOut] [The part name SyncFolderItemsResult] specifies the SOAP body of the response to a SyncFolderItems operation request.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R439</td>
+           
+<td>
+                [In tns:SyncFolderItemsSoapOut] The Element/type of ServerVersion is t:ServerVersionInfo ([MS-OXWSCDATA] section 2.2.3.10).
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R440</td>
+           
+<td>
+                [In tns:SyncFolderItemsSoapOut] [The part name ServerVersion] specifies a SOAP header that identifies the server version for the response.
+            </td>
+<td>
+                3.1.4.2.1.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R477</td>
+           
+<td>
+                [In SyncFolderItemsResponse Element] The SyncFolderItemsResponse element specifies the response message for the SyncFolderItems operation. &lt;xs:element name=&quot;SyncFolderItemsResponse&quot;
+  type=&quot;m:SyncFolderItemsResponseType&quot;
+ /&gt;
+            </td>
+<td>
+                3.1.4.2.2.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R451</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] The SyncFolderItemsChangesType complex type specifies a sequenced array of change types that describe the differences between the items on the client and the items on the server.
+&lt;xs:complexType name=&quot;SyncFolderItemsChangesType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:choice
+      maxOccurs=&quot;unbounded&quot;
+      minOccurs=&quot;0&quot;
+    &gt;
+      &lt;xs:element name=&quot;Create&quot;
+        type=&quot;t:SyncFolderItemsCreateOrUpdateType&quot;
+       /&gt;
+      &lt;xs:element name=&quot;Update&quot;
+        type=&quot;t:SyncFolderItemsCreateOrUpdateType&quot;
+       /&gt;
+      &lt;xs:element name=&quot;Delete&quot;
+        type=&quot;t:SyncFolderItemsDeleteType&quot;
+       /&gt;
+      &lt;xs:element name=&quot;ReadFlagChange&quot;
+        type=&quot;t:SyncFolderItemsReadFlagType&quot;
+       /&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R130</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] The type of Create is t:SyncFolderItemsCreateOrUpdateType (section 3.1.4.2.3.3).
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R131</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] [The element Create] specifies an item that has been created on the server and has to be created on the client.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R452</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] The type of Update is t:SyncFolderItemsCreateOrUpdateType.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:58</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R132</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] [The element Update] specifies an item that has been changed on the server and has to be changed on the client.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:58</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R133</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] The type of Delete is t:SyncFolderItemsDeleteType (section 3.1.4.2.3.4).
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R134</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] [The element Delete] specifies an item that has been deleted on the server and has to be deleted on the client.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R135</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] The type of ReadFlagChange is t:SyncFolderItemsReadFlagType (section 3.1.4.2.3.5).
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R136</td>
+           
+<td>
+                [In t:SyncFolderItemsChangesType Complex Type] [The element ReadFlagChange] specifies an item that has been marked as read on the server and has to be marked as read on the client.
+            </td>
+<td>
+                3.1.4.2.3.2
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R453</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The SyncFolderItemsCreateOrUpdateType complex type specifies a single item to create or update in the client data store. 
+&lt;xs:complexType name=&quot;SyncFolderItemsCreateOrUpdateType&quot;&gt;
+  &lt;xs:choice&gt;
+    &lt;xs:element name=&quot;Item&quot;
+      type=&quot;t:ItemType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;Message&quot;
+      type=&quot;t:MessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CalendarItem&quot;
+      type=&quot;t:CalendarItemType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;Contact&quot;
+      type=&quot;t:ContactItemType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DistributionList&quot;
+      type=&quot;t:DistributionListType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MeetingMessage&quot;
+      type=&quot;t:MeetingMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MeetingRequest&quot;
+      type=&quot;t:MeetingRequestMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MeetingResponse&quot;
+      type=&quot;t:MeetingResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MeetingCancellation&quot;
+      type=&quot;t:MeetingCancellationMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;Task&quot;
+      type=&quot;t:TaskType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;PostItem&quot;
+      type=&quot;t:PostItemType&quot;
+     /&gt;
+&lt;xs:element name=&quot;RoleMember&quot; 
+       type=&quot;t:RoleMemberItemType&quot;
+      /&gt;
+     &lt;xs:element name=&quot;Network&quot; 
+       type=&quot;t:NetworkItemType&quot;
+      /&gt;
+     &lt;xs:element name=&quot;Person&quot; 
+       type=&quot;t:AbchPersonItemType&quot;
+      /&gt;
+     &lt;xs:element name=&quot;Booking&quot; 
+       type=&quot;t:BookingItemType&quot;
+      /&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R154</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of Item is t:ItemType ([MS-OXWSCORE] section 2.2.4.24).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R155</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Item] specifies an item to create or update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R150</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Item] This element SHOULD NOT be used. 
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R156</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of Message is t:MessageType ([MS-OXWSMSG] section 2.2.4.3).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1571</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Message] specifies a message to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1572</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Message] specifies a message to  update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:58</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R158</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type]  The type of CalendarItem is t:CalendarItemType ([MS-OXWSMTGS] section 2.2.4.6).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1591</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element CalendarItem] specifies a calendar item to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1592</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element CalendarItem] specifies a calendar item to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:08:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R160</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of Contact is t:ContactItemType ([MS-OXWSCONT] section 2.2.4.3).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:30</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1611</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Contact] specifies a contact to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:30</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1612</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Contact] specifies a contact to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:31</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1631</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element DistributionList] specifies a distribution list to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:08:13</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1632</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element DistributionList] specifies a distribution list to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:08:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R164</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of MeetingMessage is t:MeetingMessageType ([MS-OXWSMTGS] section 2.2.4.15).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:21</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R165</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingMessage] specifies a meeting message to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:21</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1651</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingMessage] specifies a meeting message to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:22</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R166</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of MeetingRequest is t:MeetingRequestMessageType ([MS-OXWSMTGS] section 2.2.4.17).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:21</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1671</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingRequest] specifies a meeting request message to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:21</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1672</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingRequest] specifies a meeting request message to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:22</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R168</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of MeetingResponse is t:MeetingResponseMessageType ([MS-OXWSMTGS] section 2.2.4.18).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1691</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingResponse] specifies a meeting response message to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1692</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element MeetingResponse] specifies a meeting response message to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:01</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R170</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of MeetingCancellation is t:MeetingCancellationMessageType ([MS-OXWSMTGS] section 2.2.4.14).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:43</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1711</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element MeetingCancellation] specifies a meeting cancellation message to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:43</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1712</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element MeetingCancellation] specifies a meeting cancellation message to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:44</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R172</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type]The type of Task is t:TaskType ([MS-OXWSTASK] section 2.2.4.6).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1731</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element Task] specifies a task to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1732</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type][The element Task] specifies a task to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:16</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R174</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of PostItem is t:PostItemType ([MS-OXWSPOST] section 2.2.4.1).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:45</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1751</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element PostItem] specifies a post item to create in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:45</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R1752</td>
+           
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element PostItem] specifies a post item to update in the client message store.
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:46</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752002</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element RoleMember] For internal use only.&lt;3&gt; 
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752004</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Network] For internal use only.&lt;4&gt; 
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752005</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of  Person is t:AbchPersonItemType ([MS-OXWSCONT] section 2.2.4.1)
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752007</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] The type of  Booking is t:BookingItemType ([MS-OXWSCDATA] section 2.2.4.20).
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R1752008</td>
+            
+<td>
+                [In t:SyncFolderItemsCreateOrUpdateType Complex Type] [The element Booking] For internal use only.&lt;6&gt;
+            </td>
+<td>
+                3.1.4.2.3.3
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R454</td>
+           
+<td>
+                [In t:SyncFolderItemsDeleteType Complex Type] The SyncFolderItemsDeleteType complex type specifies an item to delete from the client message store.
+&lt;xs:complexType name=&quot;SyncFolderItemsDeleteType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;ItemId&quot;
+      type=&quot;t:ItemIdType&quot;
+     /&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R183</td>
+           
+<td>
+                [In t:SyncFolderItemsDeleteType Complex Type] The type of ItemId is t:ItemIdType ([MS-OXWSCORE] section 2.2.4.25).
+            </td>
+<td>
+                3.1.4.2.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R184</td>
+           
+<td>
+                [In t:SyncFolderItemsDeleteType Complex Type] [The element ItemId] specifies the identifier of the item to delete from the client message store.
+            </td>
+<td>
+                3.1.4.2.3.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:26</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R455</td>
+           
+<td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] The SyncFolderItemsReadFlagType complex type specifies whether an item on the server has been read. 
+&lt;xs:complexType name=&quot;SyncFolderItemsReadFlagType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;ItemID&quot;
+      type=&quot;t:ItemIdType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;IsRead&quot;
+      type=&quot;xs:boolean&quot;
+     /&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R193</td>
+           
+<td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] The type of ItemID is t:ItemIdType ([MS-OXWSCORE] section 2.2.4.25).
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R194</td>
+           
+<td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] [The element ItemID] specifies the identifier of the read item.
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:45</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R456</td>
+           
+<td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] The type of  IsRead is xs:boolean ([XMLSCHEMA2]).
+            </td>
+<td>
+                3.1.4.2.3.5
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R51</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] The SyncFolderItemsResponseMessageType complex type specifies the status and results of a single call to the SyncFolderItems operation (section 3.1.4.2).
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R52</td>
+            
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] The SyncFolderItemsResponseMessageType complex type extends the ResponseMessageType complex type ([MS-OXWSCDATA] section 2.2.4.67).
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R444</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The schema of &quot;SyncFolderItemsResponseMessageType&quot; is:]
+&lt;xs:complexType name=&quot;SyncFolderItemsResponseMessageType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:ResponseMessageType&quot;
+    &gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;SyncState&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;IncludesLastItemInRange&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+        &lt;xs:element name=&quot;Changes&quot;
+          type=&quot;t:SyncFolderItemsChangesType&quot;
+          minOccurs=&quot;0&quot;
+         /&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R445</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] The type of SyncState is xs:string ([XMLSCHEMA2]).
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R65</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The element SyncState] specifies a form of the synchronization data, which is encoded with base64 encoding, that is used to identify the synchronization state.
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:06:04</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R446</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] The type of IncludesLastItemInRange is xs:boolean ([XMLSCHEMA2]).
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R69</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] The type of Changes is t:SyncFolderItemsChangesType (section 2.2.4.5).
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R70</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The element Changes] specifies the differences between the items on the client and the items on the server.
+            </td>
+<td>
+                3.1.4.2.3.6
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:56</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R354</td>
+            
+<td>
+                [In m:SyncFolderItemsResponseType Complex Type] The SyncFolderItemsResponseType complex type extends the BaseResponseMessageType complex type ([MS-OXWSCDATA] section 2.2.4.18).
+            </td>
+<td>
+                3.1.4.2.3.7
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R473</td>
+           
+<td>
+                [In m:SyncFolderItemsResponseType Complex Type] [The schema of &quot;SyncFolderItemsResponseType&quot; is:]
+&lt;xs:complexType name=&quot;SyncFolderItemsResponseType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;m:BaseResponseMessageType&quot;
+     /&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                3.1.4.2.3.7
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:55</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R380</td>
+           
+<td>
+                [In m:SyncFolderItemsType Complex Type] [The element SyncFolderId] specifies the identity of the folder that contains the items to synchronize.
+            </td>
+<td>
+                3.1.4.2.3.8
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:05:23</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R382</td>
+           
+<td>
+                [In m:SyncFolderItemsType Complex Type] If this element [SyncState] is not specified, If this element is not specified, all items in their current state are returned as if the items have never been synchronized. 
+            </td>
+<td>
+                3.1.4.2.3.8
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:31</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R388</td>
+           
+<td>
+                [In m:SyncFolderItemsType Complex Type] [The element MaxChangesReturned] specifies the maximum number of changes that can be returned in a synchronization response.
+            </td>
+<td>
+                3.1.4.2.3.8
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSSYNC_R347</td>
+           
+<td>
+                [In t:SyncFolderItemsScopeType Simple Type] [The value NormalItems] specifies that only items in the folder are returned.
+            </td>
+<td>
+                3.1.4.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSSYNC_R348</td>
+            
+<td>
+                [In t:SyncFolderItemsScopeType Simple Type] [The value NormalAndAssociatedItems] specifies that folder associated information is returned along with the items in the folder.
+            </td>
+<td>
+                3.1.4.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R197</td>
+           
+<td>
+                [In m:ResponseCodeType Simple Type] The type [ResponseCodeType] is defined as follow:
+&lt;xs:simpleType name=&quot;ResponseCodeType&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+        &lt;xs:enumeration value=&quot;NoError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccessModeSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAccountDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAddDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAddressSpaceNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADSessionFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorADUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAffectedTaskOccurrencesRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveFolderPathCreation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxNotEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorAvailabilityConfigNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorBatchProcessingStopped&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotMoveOrCopyOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUpdateDeletedItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUseIdForOccurrenceId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarCannotUseIdForRecurringMasterId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarDurationIsTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarEndDateIsEarlierThanStartDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarFolderIsInvalidForCalendarView&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidAttributeValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidDayForTimeChangePattern&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidDayForWeeklyRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidPropertyState&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidPropertyValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarInvalidTimeZone&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsCancelledForTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsDelegatedForTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsNotOrganizer&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForAccept&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForDecline&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForRemove&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarIsOrganizerForTentative&quot;/&gt;
+        &lt;xs:enumeration
+             value=&quot;ErrorCalendarOccurrenceIndexIsOutOfRecurrenceRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarOccurrenceIsDeletedFromRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarOutOfRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarMeetingRequestIsOutOfDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCalendarViewRangeTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCallerIsInvalidADAccount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveCalendarContactTaskFolderException&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveItemsInPublicFolders&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotArchiveItemsInArchiveMailbo&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateCalendarItemInNonCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateContactInNonContactFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreatePostItemInNonMailFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotCreateTaskInNonTaskFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDeleteObject&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDisableMandatoryExtension&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotGetSourceFolderPath&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotGetExternalEcpUrl&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotOpenFileAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotDeleteTaskOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotEmptyFolder&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorCannotSetCalendarPermissionOnNonCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorCannotSetNonCalendarPermissionOnCalendarFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotSetPermissionUnknownEntries&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotSpecifySearchFolderAsSourceFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotUseFolderIdForItemId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCannotUseItemIdForFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorChangeKeyRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorChangeKeyRequiredForWriteOperations&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientDisconnected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientIntentInvalidStateDefinition&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorClientIntentNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorConnectionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContainsFilterWrongType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContentConversionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorContentIndexingNotEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCorruptData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateItemAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateManagedFolderPartialCompletion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCreateSubfolderAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCrossMailboxMoveCopy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorCrossSiteRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDataSizeLimitExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDataSourceOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateCannotAddOwner&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateMissingConfiguration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateNoUser&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDelegateValidationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteDistinguishedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteItemsFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDeleteUnifiedMessagingPromptFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDistinguishedUserNotSupported&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDistributionListMemberNotExist&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateInputFolderNames&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateUserIdsSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorEmailAddressMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorEventNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededConnectionCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededSubscriptionCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExceededFindCountLimit&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExpiredSubscription&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorExtensionNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderCorrupt&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderPropertRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSave&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSaveFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderSavePropertyError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFolderExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFreeBusyGenerationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorGetServerSecurityDescriptorFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImContactLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImGroupDisplayNameAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImGroupLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonateUserDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonationDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorImpersonationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIncorrectSchemaVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIncorrectUpdatePropertyCount&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIndividualMailboxLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInsufficientResources&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInternalServerError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInternalServerTransientError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAccessLevel&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidArgument&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentSubfilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAttachmentSubfilterTextFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidAuthorizationContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidChangeKey&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidClientSecurityContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidCompleteDate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidContactEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidContactEmailIndex&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidCrossForestCredentials&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidDelegatePermission&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidDelegateUserId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExcludesRestriction&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExpressionTypeForSubFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExtendedProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExtendedPropertyValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFolderTypeForOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFractionalPagingParameters&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFreeBusyViewType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdEmpty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMalformed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMalformedEwsLegacyIdFormat&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdMonikerTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdNotAnItemAttachmentId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdReturnedByResolveNames&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdStoreObjectIdTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdTooManyAttachmentLevels&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIdXml&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImContactId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImDistributionGroupSmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidImGroupId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidIndexedPagingParameters&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidInternetHeaderChildNodes&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationArchiveItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCreateItemAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCreateItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationAcceptItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationDeclineItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationCancelItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationExpandDL&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationRemoveItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationSendItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidItemForOperationTentative&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidLogonType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderQuota&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagedFolderSize&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidMergedFreeBusyInterval&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidNameForNameResolution&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidNetworkServiceContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOofParameter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPagingMaxRows&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidParentFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPercentCompleteValue&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPermissionSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhoneCallId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhoneNumber&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserInfo&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyAppend&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyDelete&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyForExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyForOperation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertySet&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPropertyUpdateSentMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidProxySecurityContext&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPullSubscriptionId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPushSubscriptionUrl&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipients&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterComparison&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterOrder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRecipientSubfilterTextFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidReferenceItem&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRestriction&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagTypeMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagInvisible&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagIdGuid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRetentionTagInheritance&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidRoutingType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidScheduledOofDuration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSchemaVersionForMailboxVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSecurityDescriptor&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSendItemSaveSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSerializedAccessToken&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidServerVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSIPUri&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterTypeNotAttendeeType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubfilterTypeNotRecipientType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubscription&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSubscriptionRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSyncStateData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidTimeInterval&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserOofSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserPrincipalName&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserSid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidUserSidMissingUPN&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidValueForProperty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidWatermark&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIPGatewayNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorIrresolvableConflict&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemCorrupt&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemPropertyRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemSave&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorItemSavePropertyError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLegacyMailboxFreeBusyViewTypeNotMerged&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocalServerObjectNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLogonAsNetworkServiceFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxConfiguration&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxDataArrayEmpty&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxDataArrayTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxHoldNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxLogonFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxMoveInProgress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxStoreUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailRecipientNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailTipsDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFolderAlreadyExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorManagedFoldersRootFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMeetingSuggestionGenerationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageDispositionRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageSizeExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentConversionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentInvalid&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMimeContentInvalidBase64String&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingArgument&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingEmailAddressForManagedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationEmailAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationReferenceItemId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingItemForCreateItemAttachment&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingManagedFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingRecipients&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingUserIdInformation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoreThanOneAccessModeSpecified&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoveCopyFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMoveDistinguishedFolder&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMultiLegacyMailboxAccess&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionMultipleResults&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionNoMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNameResolutionNoResults&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoApplicableProxyCASServersAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoCalendar&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToKerberosRequirements&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToSSLRequirements&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoDestinationCASDueToVersionMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoFolderClassOverride&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoFreeBusyAccess&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNonExistentMailbox&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNonPrimarySmtpAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPropertyTagForCustomProperties&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPublicFolderReplicaAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoPublicFolderServerAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoRespondingCASInDestinationSite&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotDelegate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotEnoughMemory&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorObjectTypeChanged&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOccurrenceCrossingBoundary&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOccurrenceTimeSpanTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOperationNotAllowedWithPublicFolderRoot&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorParentFolderIdRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorParentFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPasswordChangeRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPasswordExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPhoneNumberNotDialable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPropertyUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPromptPublishingOperationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPropertyValidationFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxiedSubscriptionCallFailure&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyCallFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyGroupSidLimitExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyRequestNotAllowed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyRequestProcessingFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorProxyTokenExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderMailboxDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderOperationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderRequestProcessingFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderServerNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPublicFolderSyncException&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorQueryFilterTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorQuotaExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorReadEventsFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorReadReceiptNotPending&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecurrenceEndDateTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecurrenceHasNoOccurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRemoveDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequestAborted&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequestStreamTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRequiredPropertyMissing&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResolveNamesInvalidFolderType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResolveNamesOnlyOneContactsFolderAllowed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResponseSchemaValidation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRestrictionTooLong&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRestrictionTooComplex&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorResultSetTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExchangeImpersonationHeaderData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSavedItemFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSchemaValidation&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchFolderNotInitialized&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendAsDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendMeetingCancellationsRequired&quot;/&gt;
+        &lt;xs:enumeration 
+            value=&quot;ErrorSendMeetingInvitationsOrCancellationsRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSendMeetingInvitationsRequired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSentMeetingRequestUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSentTaskRequestUpdate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorServerBusy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorStaleObject&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubmissionQuotaExceeded&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionAccessDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionDelegateAccessNotSupported&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSubscriptionUnsubscribed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSyncFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotLinkedToSharePoint&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxUrlValidationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxNotAuthorizedOwner&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxActiveToPendingDelete&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxFailedSendingNotifications&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTeamMailboxErrorUnknown&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeIntervalTooBig&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeoutExpired&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTimeZone&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorToFolderNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorTokenSerializationDenied&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUpdatePropertyMismatch&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingDialPlanNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingReportDataNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingPromptNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnifiedMessagingServerNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnableToGetUserOofSettings&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnableToRemoveImContactFromGroup&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedSubFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedCulture&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedMapiPropertyType&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedMimeConversion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPathForQuery&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPathForSortGroup&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedPropertyDefinition&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedQueryFilter&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedRecurrence&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUnsupportedTypeForConversion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUpdateDelegatesFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserNotUnifiedMessagingEnabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorValueOutOfRange&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVoiceMailNotImplemented&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVirusDetected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorVirusMessageDeleted&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWebRequestInInvalidState&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWin32InteropError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWorkingHoursSaveFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWorkingHoursXmlMalformed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWrongServerVersion&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorWrongServerVersionDelegate&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissingInformationSharingFolderId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateSOAPHeader&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSharingSynchronizationFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSharingNoExternalEwsAvailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorFreeBusyDLLimitReached&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidGetSharingFolderRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotAllowedExternalSharingByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserNotAllowedByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorPermissionNotAllowedByPolicy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOrganizationNotFederated&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxFailover&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExternalSharingInitiator&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingPermanentError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingTransientError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMessageTrackingNoSuchDomain&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUserWithoutFederatedProxyAddress&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidOrganizationRelationshipForFreeBusy&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidFederatedOrganizationId&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidExternalSharingSubscriber&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSharingData&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidSharingMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNotSupportedSharingMessage&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorApplyConversationActionFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInboxRulesValidationError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorOutlookRuleBlobExists&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRulesOverQuota&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNewEventStreamConnectionOpened&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMissedNotificationEvents&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDuplicateLegacyDistinguishedName&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidClientAccessTokenRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorNoSpeechDetected&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorUMServerUnavailable&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecipientNotFound&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorRecognizerNotInstalled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSpeechGrammarError&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidManagementRoleHeader&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesDisabled&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesRequestTimedOut&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesRequestFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorLocationServicesInvalidRequest&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorMailboxScopeNotAllowedWithoutQueryString&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxSearchFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorArchiveMailboxServiceDiscoveryFailed&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorInvalidPhotoSize&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchQueryHasTooManyKeywords&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorSearchTooManyMailboxes&quot;/&gt;
+        &lt;xs:enumeration value=&quot;ErrorDiscoverySearchesDisabled&quot;/&gt;
+    &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+
+            </td>
+<td>
+                2.2.3.23
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R518</td>
+           
+<td>
+                [In m:ResponseCodeType Simple Type] [ErrorInvalidSyncStateData: ] This is returned by the SyncFolderItems method if the SyncState property data is invalid.
+            </td>
+<td>
+                2.2.3.23
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:07:44</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R5188</td>
+           
+<td>
+                [In m:ResponseCodeType Simple Type] [ErrorInvalidSyncStateData: ] This is returned by the SyncFolderHierarchy method if the SyncState property data is invalid.
+            </td>
+<td>
+                2.2.3.23
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:04:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1036</td>
+           
+<td>
+                [In m:ArrayOfResponseMessagesType Complex Type] The type [ArrayOfResponseMessagesType] is defined as follow:
+&lt;xs:complexType name=&quot;ArrayOfResponseMessagesType&quot;&gt;
+  &lt;xs:choice
+    maxOccurs=&quot;unbounded&quot;
+  &gt;
+    &lt;xs:element name=&quot;CreateItemResponseMessage&quot;
+      type=&quot;m:ItemInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DeleteItemResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetItemResponseMessage&quot;
+      type=&quot;m:ItemInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UpdateItemResponseMessage&quot;
+      type=&quot;m:UpdateItemResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UpdateItemInRecoverableItemsResponseMessage&quot; 
+     type=&quot;m:UpdateItemInRecoverableItemsResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;SendItemResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DeleteFolderResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;EmptyFolderResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CreateFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;FindFolderResponseMessage&quot;
+      type=&quot;m:FindFolderResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UpdateFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MoveFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CopyFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CreateFolderPathResponseMessage&quot; 
+     type=&quot;m:FolderInfoResponseMessageType&quot;
+    /&gt;
+    &lt;xs:element name=&quot;CreateAttachmentResponseMessage&quot;
+      type=&quot;m:AttachmentInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DeleteAttachmentResponseMessage&quot;
+      type=&quot;m:DeleteAttachmentResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetAttachmentResponseMessage&quot;
+      type=&quot;m:AttachmentInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UploadItemsResponseMessage&quot;
+      type=&quot;m:UploadItemsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ExportItemsResponseMessage&quot;
+      type=&quot;m:ExportItemsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MarkAllItemsAsReadResponseMessage&quot; 
+       type=&quot;m:ResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetClientAccessTokenResponseMessage&quot; 
+       type=&quot;m:GetClientAccessTokenResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetAppManifestsResponseMessage&quot; type=&quot;m:ResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetClientExtensionResponseMessage&quot; 
+       type=&quot;m:ResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;SetClientExtensionResponseMessage&quot; 
+       type=&quot;m:ResponseMessageType&quot;/&gt;
+
+    &lt;xs:element name=&quot;FindItemResponseMessage&quot;
+      type=&quot;m:FindItemResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;MoveItemResponseMessage&quot;
+      type=&quot;m:ItemInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ArchiveItemResponseMessage&quot; type=&quot;m:ItemInfoResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;CopyItemResponseMessage&quot;
+      type=&quot;m:ItemInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ResolveNamesResponseMessage&quot;
+      type=&quot;m:ResolveNamesResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ExpandDLResponseMessage&quot;
+      type=&quot;m:ExpandDLResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetServerTimeZonesResponseMessage&quot;
+      type=&quot;m:GetServerTimeZonesResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetEventsResponseMessage&quot;
+      type=&quot;m:GetEventsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetStreamingEventsResponseMessage&quot;
+      type=&quot;m:GetStreamingEventsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;SubscribeResponseMessage&quot;
+      type=&quot;m:SubscribeResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UnsubscribeResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;SendNotificationResponseMessage&quot;
+      type=&quot;m:SendNotificationResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;SyncFolderHierarchyResponseMessage&quot;
+      type=&quot;m:SyncFolderHierarchyResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;SyncFolderItemsResponseMessage&quot;
+      type=&quot;m:SyncFolderItemsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CreateManagedFolderResponseMessage&quot;
+      type=&quot;m:FolderInfoResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;ConvertIdResponseMessage&quot;
+      type=&quot;m:ConvertIdResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetSharingMetadataResponseMessage&quot;
+      type=&quot;m:GetSharingMetadataResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;RefreshSharingFolderResponseMessage&quot;
+      type=&quot;m:RefreshSharingFolderResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetSharingFolderResponseMessage&quot;
+      type=&quot;m:GetSharingFolderResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;CreateUserConfigurationResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DeleteUserConfigurationResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetUserConfigurationResponseMessage&quot;
+      type=&quot;m:GetUserConfigurationResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;UpdateUserConfigurationResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetRoomListsResponse&quot;
+      type=&quot;m:GetRoomListsResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;GetRoomsResponse&quot;
+      type=&quot;m:GetRoomsResponseMessageType&quot;
+     /&gt;
+      &lt;xs:element name=&quot;GetRemindersResponse&quot; 
+       type=&quot;m:GetRemindersResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;PerformReminderActionResponse&quot; 
+       type=&quot;m:PerformReminderActionResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;ApplyConversationActionResponseMessage&quot;
+      type=&quot;m:ResponseMessageType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;FindMailboxStatisticsByKeywordsResponseMessage&quot; type=&quot;m:FindMailboxStatisticsByKeywordsResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetSearchableMailboxesResponseMessage&quot; type=&quot;m:GetSearchableMailboxesResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;SearchMailboxesResponseMessage&quot; type=&quot;m:SearchMailboxesResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetDiscoverySearchConfigurationResponseMessage&quot; type=&quot;m:GetDiscoverySearchConfigurationResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;GetHoldOnMailboxesResponseMessage&quot; type=&quot;m:GetHoldOnMailboxesResponseMessageType&quot;/&gt;
+    &lt;xs:element name=&quot;SetHoldOnMailboxesResponseMessage&quot; type=&quot;m:SetHoldOnMailboxesResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;GetNonIndexableItemStatisticsResponseMessage&quot; type=&quot;m:GetNonIndexableItemStatisticsResponseMessageType&quot;/&gt;
+      &lt;!-- GetNonIndexableItemDetails response --&gt;
+      &lt;xs:element name=&quot;GetNonIndexableItemDetailsResponseMessage&quot; type=&quot;m:GetNonIndexableItemDetailsResponseMessageType&quot;/&gt;
+      &lt;!-- GetUserHoldSettings response --&gt;
+    &lt;xs:element name=&quot;FindPeopleResponseMessage&quot; type=&quot;m:FindPeopleResponseMessageType&quot;/&gt;
+
+    &lt;xs:element name=&quot;GetPasswordExpirationDateResponse&quot; type=&quot;m:GetPasswordExpirationDateResponseMessageType&quot;
+    /&gt;
+      &lt;xs:element name=&quot;GetPersonaResponseMessage&quot; type=&quot;m:GetPersonaResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;GetConversationItemsResponseMessage&quot; type=&quot;m:GetConversationItemsResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;GetUserRetentionPolicyTagsResponseMessage&quot; type=&quot;m:GetUserRetentionPolicyTagsResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;GetUserPhotoResponseMessage&quot; type=&quot;m:GetUserPhotoResponseMessageType&quot;/&gt;
+      &lt;xs:element name=&quot;MarkAsJunkResponseMessage&quot; type=&quot;m:MarkAsJunkResponseMessageType&quot;/&gt;
+  &lt;/xs:choice&gt;
+&lt;/xs:complexType&gt;
+
+            </td>
+<td>
+                2.2.4.10
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1091</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] The BaseResponseMessageType complex type MUST NOT be sent in a SOAP message because it is an abstract type.
+            </td>
+<td>
+                2.2.4.16
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1092</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] The type [BaseResponseMessageType] is defined as follow:
+&lt;xs:complexType name=&quot;BaseResponseMessageType&quot;&gt;
+ &lt;xs:sequence&gt;
+  &lt;xs:element name=&quot;ResponseMessages&quot;
+   type=&quot;m:ArrayOfResponseMessagesType&quot;
+   /&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.16
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1094</td>
+           
+<td>
+                [In m:BaseResponseMessageType Complex Type] There MUST be only one ResponseMessages element in a response.
+            </td>
+<td>
+                2.2.4.16
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1165</td>
+           
+<td>
+                [In t:FolderIdType Complex Type] The type [FolderIdType] is defined as follow:
+&lt;xs:complexType name=&quot;FolderIdType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:BaseFolderIdType&quot;
+  &gt;
+   &lt;xs:attribute name=&quot;Id&quot;
+    type=&quot;xs:string&quot;
+    use=&quot;required&quot;
+    /&gt;
+   &lt;xs:attribute name=&quot;ChangeKey&quot;
+    type=&quot;xs:string&quot;
+    use=&quot;optional&quot;
+    /&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.31
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1284</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] This attribute [ResponseClass] MUST be present.
+            </td>
+<td>
+                2.2.4.57
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1434</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] The type [ResponseMessageType] is defined as follow:
+&lt;xs:complexType name=&quot;ResponseMessageType&quot;&gt;
+ &lt;xs:sequence
+  minOccurs=&quot;0&quot;
+ &gt;
+  &lt;xs:element name=&quot;MessageText&quot;
+   type=&quot;xs:string&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;ResponseCode&quot;
+   type=&quot;m:ResponseCodeType&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;DescriptiveLinkKey&quot;
+   type=&quot;xs:int&quot;
+   minOccurs=&quot;0&quot;
+   /&gt;
+  &lt;xs:element name=&quot;MessageXml&quot;
+   minOccurs=&quot;0&quot;
+  &gt;
+   &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+     &lt;xs:any
+      process_contents=&quot;lax&quot;
+      minOccurs=&quot;0&quot;
+      maxOccurs=&quot;unbounded&quot;
+      /&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name=&quot;ResponseClass&quot;
+     type=&quot;t:ResponseClassType&quot;
+     use=&quot;required&quot;
+     /&gt;
+   &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.57
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1436</td>
+           
+<td>
+                [In m:ResponseMessageType Complex Type] [ResponseClass:] The following values are valid for this attribute: Success
+, Warning
+, Error.
+            </td>
+<td>
+                2.2.4.57
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1339</td>
+           
+<td>
+                [In t:ServerVersionInfo Element] &lt;xs:element name=&quot;t:ServerVersionInfo&quot;&gt;
+ &lt;xs:complexType&gt;
+  &lt;xs:attribute name=&quot;MajorVersion&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MinorVersion&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MajorBuildNumber&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;MinorBuildNumber&quot;
+   type=&quot;xs:int&quot;
+   use=&quot;optional&quot;
+   /&gt;
+  &lt;xs:attribute name=&quot;Version&quot;
+   type=&quot;xs:string&quot;
+   use=&quot;optional&quot;
+   /&gt;
+ &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;
+            </td>
+<td>
+                2.2.5.10
+            </td>
+<td>
+                Server
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:03:34</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R2571</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] FolderShape element BaseShape, value=AllProperties, specifies all the properties that are defined for the item or folder.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R2572</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] FolderShape element BaseShape, value=Default, specifies a set of properties that are defined as the default for the item or folder.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2573</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] FolderShape element BaseShape, value=IdOnly, specifies only the item or folder ID.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:03:53</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2574</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] FolderShape element AdditionalProperties, specifies the identity of additional properties to be returned in a response.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:24</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2575</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type]FolderShape element AdditionalProperties, element t:Path, Specifies a property to be returned in a response.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:24</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2601</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncFolderId] is present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:39</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2602</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncFolderId] is not present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:39</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2631</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncState] is present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:39</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R2632</td>
+            <td>
+                [In m:SyncFolderHierarchyType Complex Type] This element [SyncState] not present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.1.3.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:04:39</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R1951</td>
+            <td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] [The element IsRead] True if the item has been read.</td>
+            <td>
+                3.1.4.2.3.5</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:06:43</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R1952</td>
+            <td>
+                [In t:SyncFolderItemsReadFlagType Complex Type] [The element IsRead] False if the item hasn&#39;t been read.</td>
+            <td>
+                3.1.4.2.3.5</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:06:45</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R6701</td>
+            <td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The element IncludesLastItemInRange] True indicates the last item to synchronize is included in the response.</td>
+            <td>
+                3.1.4.2.3.6</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:46</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R6702</td>
+            <td>
+                [In m:SyncFolderItemsResponseMessageType Complex Type] [The element IncludesLastItemInRange] False indicates the last item to synchronize is not included in the response.</td>
+            <td>
+                3.1.4.2.3.6</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R3781</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] ItemShape element BaseShape, value=AllProperties, specifies all the properties that are defined for the item or folder.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R3782</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] ItemShape element BaseShape, value=Default, specifies a set of properties that are defined as the default for the item or folder.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3783</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] ItemShape element BaseShape, value=IdOnly, specifies only the item or folder ID.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:06:01</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R3787</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] ItemShape element IncludeMimeContent is included in the SyncFolderItems operation request,  ErrorInvalidPropertyForOperation response cod is returned in a response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37801</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [ItemShape element FilterHtmlContent] If this value [FilterHtmlContent] is set to true, script blocks and Web beacons MUST be removed from message bodies that are returned in a response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37802</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [ItemShape element FilterHtmlContent] If this value [FilterHtmlContent] is set to false, script blocks and Web beacons MUST NOT be removed from message bodies that are returned in a response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37814</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [ItemShape element AdditionalProperties] Specifies a set of requested additional properties to return in a response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37815</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] [ItemShape element AdditionalProperties, element t:Path] Specifies a property to be returned in a response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3831</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncState] is present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:06:00</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3832</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncState] not present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:05:50</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3851</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] If the item is in Ignore array, the synchronization is skipped.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:29</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3852</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] If the item is not in Ignore array, the synchronization is not skipped.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:30</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3861</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [Ignore] is present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:29</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3862</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [Ignore] is not present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:30</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R3891</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [MaxChangesReturned] is set between 1 and 512, inclusive, the correct changes number returned in a synchronization response.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R39223</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncScope] is present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R39224</td>
+            <td>
+                [In m:SyncFolderItemsType Complex Type] This element [SyncScope] is not present, server responses NO_ERROR.</td>
+            <td>
+                3.1.4.2.3.8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R20003</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support SOAP over HTTPS, as specified in [RFC2818]. (Exchange 2007 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37809</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does use the InlineImageUrlTemplate element. The InlineImageUrlTemplate element which is subelement of ItemShape specifies the name of the template for the inline image URL. (Exchange 2013 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:14</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37811</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support DistributionList with type t:DistributionListType ([MS-OXWSDLIST] section 2.2.4.3). (Exchange 2010 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:08:13</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811001</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not specify the Delete element. (&lt;1&gt; Section 3.1.4.1.3.1:  Microsoft Exchange Server 2007 Service Pack 3 (SP3) does not specify the Delete element. )</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37811002</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does include Delete element. (Exchange 2010 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:03:38</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811003</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does return the ItemType complex type. (&lt;2&gt; Section 3.1.4.2.3.3:  The initial release of Exchange 2007 returns the item of type t:ItemType. )</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37811004</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does return a MessageType complex type. (If a client creates an item of this type, a MessageType complex type is returned.)(Exchange Server 2007 Service Pack 1 (SP1) and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:08:28</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811009</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the RoleMember element. (&lt;3&gt; Section 3.1.4.2.3.3:  Exchange 2007, Exchange 2010, and Exchange 2013 do not support the RoleMember element.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811010</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support the RoleMember element. (Exchange 2016 follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811011</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the Network element. (&lt;4&gt; Section 3.1.4.2.3.3:  Exchange 2007, Exchange 2010, and Exchange 2013 do not support the Network element.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811012</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support the Network element. (Exchange 2016 follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811005</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the Person element. (&lt;5&gt; Section 3.1.4.2.3.3:  Exchange 2007, Exchange 2010. and Exchange 2013 do not support the Person element.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811006</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support the Person element. (Exchange 2016 follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSSYNC_R37811007</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not support the SyncScope element. (&lt;7&gt; Section 3.1.4.2.3.8:  Exchange 2007 does not support the SyncScope element.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSSYNC_R37811008</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support the SyncScope element. (Exchange 2010 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:07:59</td>
+            <td>
+                ms-oxwssync_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSCDATA_R2053</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not use the InlineImageUrlTemplate element. &lt;248&gt; Section 2.2.4.38: Exchange 2007 and Exchange 2010 do not use the InlineImageUrlTemplate element.</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+    </tbody>
+    </table><br />
+    <br/>
+          
+      <table cellpadding="2" cellspacing="2">
+      <col />
+      <thead>
+          <tr>
+              <td align="center" class="TableCellHighlighted" colspan="3">
+                  <h4>Requirement Inconsistencies</h4>
+              </td>
+          </tr>
+      </thead>
+      <col />
+      <tbody>
+          <tr>
+              <td colspan="2" style="width: 87%;">
+                  Inconsistency Errors
+              </td>
+              <td colspan="1" style="width: 13%;" title="click to see details" onclick="ToggleAll('RSInconsistencyError', this.offsetParent, Show);">
+                  <a href="#jump-rsinconsistencyerrors">
+                  2
+                  </a >
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2" style="width: 87%;">
+                  
+              </td>
+              <td colspan="1" style="width: 13%;" title="click to see details" onclick="ToggleAll('RSInconsistencyWarning', this.offsetParent, Show);">
+                  <a href="#jump-rsinconsistencywarnings">
+                  
+                  </a >
+              </td>
+          </tr>
+          
+         <tr>
+              <td class='TableCellHighlighted' colspan='3'>
+                  <a name='jump-rsinconsistencyerrors'>Errors:</a>
+              </td>
+          </tr>
+          <tr>
+              <th style='width: 12%;' colspan='1'>
+                  Req ID
+              </th>
+              <th style='width: 88%;' colspan='2'>
+                  Inconsistency type 
+              </th>
+          </tr>
+       <tr class='RSInconsistencyError'>
+            <td colspan='1'>
+            MS-OXWSSYNC_R39223</td>
+            <td colspan='2'>
+            Derived requirement can only be Test Case or Adapter.</td>
+        </tr>
+       <tr class='RSInconsistencyError'>
+            <td colspan='1'>
+            MS-OXWSSYNC_R39224</td>
+            <td colspan='2'>
+            Derived requirement can only be Test Case or Adapter.</td>
+        </tr>
+          
+      </tbody>
+      </table>
+    
+    <br/>
+    
+    <br/>
+    
+      </body>
+  </html>

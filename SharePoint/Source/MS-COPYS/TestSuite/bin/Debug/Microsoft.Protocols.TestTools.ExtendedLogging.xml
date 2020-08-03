@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Protocols.TestTools.ExtendedLogging</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestTools.ExtendedLogging.ExtendedLogger">
+            <summary>
+            Provides APIs for logging in Protocol Library and dumping message to ETW provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestTools.ExtendedLogging.ExtendedLogger.DumpMessage(System.String,Microsoft.Protocols.TestTools.ExtendedLogging.DumpLevel,System.String,System.Byte[])">
+            <summary>
+            Dumps network message to ETW provider.
+            </summary>
+            <param name="messageName">The Name of the Message. In format protocol:message</param>
+            <param name="dumpLevel">An enum indicating whether this message is a complete message on the wire or only part of the encrypted structure.</param>
+            <param name="comments">Some comments about the dumped message.</param>
+            <param name="payload">The byte array to dump.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestTools.ExtendedLogging.ExtendedLogger.DumpMessage(System.String,System.String,System.Byte[])">
+            <summary>
+            Dumps network message to ETW provider.
+            </summary>
+            <param name="messageName">The Name of the Message. In format protocol:message</param>
+            <param name="comments">Some comments about the dumped message.</param>
+            <param name="payload">The byte array to dump.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestTools.ExtendedLogging.ExtendedLogger.DumpMessage(System.String,System.Byte[])">
+            <summary>
+            Dumps network message to ETW provider.
+            </summary>
+            <param name="messageName">The Name of the Message. In format protocol:message</param>
+            <param name="payload">The byte array to dump.</param>
+        </member>
+        <member name="T:Microsoft.Protocols.TestTools.ExtendedLogging.DumpLevel">
+            <summary>
+            Dump level for the DumpMessage method
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestTools.ExtendedLogging.DumpLevel.WholeMessage">
+            <summary>
+            The message is a message on the wire.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestTools.ExtendedLogging.DumpLevel.PartialMessage">
+            <summary>
+            The message is part of the message on the wire.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestTools.ExtendedLogging.ExtendedLoggerConfig">
+            <summary>
+            This class is for internal use only.
+            </summary>
+        </member>
+    </members>
+</doc>

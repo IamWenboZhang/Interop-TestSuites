@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS-ADMINS_Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter">
+            <summary>
+            The capture requirement part of adapter's implementation
+            </summary>
+            <summary>
+            MS-ADMINS Adapter implementation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.VerifyTransportRelatedRequirements">
+            <summary>
+            Verify the requirements of the transport when the response is received successfully.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.VerifySoapFaultRequirements(System.Web.Services.Protocols.SoapException)">
+            <summary>
+            Verify the requirements of the SOAP fault when the SOAP fault is received.
+            </summary>
+            <param name="soapExp">The returned SOAP fault</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.ValidateCreateSiteResponseData(System.String)">
+            <summary>
+            Validate CreateSite's response data CreateSiteResult when the response is received successfully.
+            </summary>
+            <param name="createSiteResult">CreateSite's response data.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.ValidateDeleteSiteResponse">
+            <summary>
+            Validate DeleteSite's response when the response is received successfully.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.ValidateGetLanguagesResponseData(Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesResponseGetLanguagesResult)">
+            <summary>
+            Validate GetLanguages response data getLanguagesResult when the response is received successfully.
+            </summary>
+            <param name="getLanguagesResult">The return value of GetLanguages operation.</param>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.listCreatedSiteCollection">
+            <summary>
+            A list used to record all site collection created by test cases.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.adminService">
+            <summary>
+            An Administration Web Services instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.Url">
+            <summary>
+            Gets or sets the destination Url of web service operation.
+            </summary>
+            <value>Destination Url of web service operation.</value>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Overrides IAdapter's Initialize().
+            </summary>
+            <param name="testSite">A parameter represents an ITestSite instance.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.Reset">
+            <summary>
+            A method used to Clean up meetings added by test case.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.CreateSite(System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a Site collection.
+            </summary>
+            <param name="url">The absolute URL of the site collection.</param>
+            <param name="title">The display name of the site collection.</param>
+            <param name="description">A description of the site collection.</param>
+            <param name="lcid">The language that is used in the site collection.</param>
+            <param name="webTemplate">The name of the site template which is used when creating the site collection.</param>
+            <param name="ownerLogin">The user name of the site collection owner.</param>
+            <param name="ownerName">The display name of the owner.</param>
+            <param name="ownerEmail">The e-mail address of the owner.</param>
+            <param name="portalUrl">The URL of the portal site for the site collection.</param>
+            <param name="portalName">The name of the portal site for the site collection.</param>
+            <returns>The CreateSite result.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.DeleteSite(System.String)">
+            <summary>
+            Deletes the specified Site collection.
+            </summary>
+            <param name="url">The absolute URL of the site collection which is to be deleted.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.GetLanguages">
+            <summary>
+            Returns information about the languages which are used in the protocol server deployment.
+            </summary>
+            <returns>The GetLanguages result.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.MS_ADMINSAdapter.SetSoapVersion(Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap)">
+            <summary>
+            Set the SOAP version according to the SoapVersion property.
+            </summary>
+            <param name="adminProxy">set admin proxy</param>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.CreateSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.DeleteSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.GetLanguagesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.RefreshConfigCacheCompleted">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.CreateSite(System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.BeginCreateSite(System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.EndCreateSite(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.CreateSiteAsync(System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.CreateSiteAsync(System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.DeleteSite(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.BeginDeleteSite(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.EndDeleteSite(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.DeleteSiteAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.DeleteSiteAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.GetLanguages">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.BeginGetLanguages(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.EndGetLanguages(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.GetLanguagesAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.GetLanguagesAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.RefreshConfigCache(System.Guid,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.BeginRefreshConfigCache(System.Guid,System.Boolean,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.EndRefreshConfigCache(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.RefreshConfigCacheAsync(System.Guid,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.RefreshConfigCacheAsync(System.Guid,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.AdminSoap.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesResponseGetLanguagesResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesResponseGetLanguagesResult.Languages">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.CreateSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.CreateSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_ADMINS.CreateSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.DeleteSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_ADMINS.GetLanguagesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.RefreshConfigCacheCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSAdapter">
+            <summary>
+            MS-ADMINS adapter interface.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSAdapter.Url">
+            <summary>
+            Gets or sets the entry point Url of web service operation.
+            </summary>
+            <value>The service Url</value>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSAdapter.CreateSite(System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a Site collection.
+            </summary>
+            <param name="url">The absolute URL of the site collection.</param>
+            <param name="title">The display name of the site collection.</param>
+            <param name="description">A description of the site collection.</param>
+            <param name="lcid">The language that is used in the site collection.</param>
+            <param name="webTemplate">The name of the site template which is used when creating the site collection.</param>
+            <param name="ownerLogin">The user name of the site collection owner.</param>
+            <param name="ownerName">The display name of the owner.</param>
+            <param name="ownerEmail">The e-mail address of the owner.</param>
+            <param name="portalUrl">The URL of the portal site for the site collection.</param>
+            <param name="portalName">The name of the portal site for the site collection.</param>
+            <returns>The CreateSite result.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSAdapter.DeleteSite(System.String)">
+            <summary>
+            Deletes the specified Site collection.
+            </summary>
+            <param name="url">The absolute URL of the site collection which is to be deleted.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSAdapter.GetLanguages">
+            <summary>
+            Returns information about the languages which are used in the protocol server deployment.
+            </summary>
+            <returns>The GetLanguages result.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSSUTControlAdapter">
+            <summary>
+            The SUT adapter interface.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSSUTControlAdapter.GetSiteProperty(System.String,System.String)">
+            <summary>
+            Get the value of a property in the specified site collection.
+            </summary>
+            <param name="url">The url of the specified site collection.</param>
+            <param name="proName">The name of the property, the possible values are 
+            following: Title, Description, WebTemplate,  OwnerName, OwnerEmail, PortalUrl, PortalName.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_ADMINS.IMS_ADMINSSUTControlAdapter.SetUserProfileService(System.Boolean)">
+            <summary>
+            If user profile service is implemented by server, this method is used to disable or enable the user profile service in the server.
+            If user profile service is not implemented by server, this method always returns true.
+            </summary>
+            <param name="setDisabled">Input if the user profile service is set to Disabled. True represents setting the user profile service disabled and false represents setting it started.</param>
+            <returns>Returns if the method is succeed.</returns>
+        </member>
+    </members>
+</doc>

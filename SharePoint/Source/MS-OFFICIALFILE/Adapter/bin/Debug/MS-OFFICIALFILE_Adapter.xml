@@ -1,0 +1,747 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS-OFFICIALFILE_Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter">
+            <summary>
+            Class MS_OFFICIALFILEAdapter is used to verify adapter requirements.
+            </summary>
+            <summary>
+            MS-OFFICIALFILE protocol's adapter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyTransportRelatedRequirments">
+            <summary>
+            Verify underlying transport protocol related requirements. These requirements can be captured directly 
+            when the server returns a SOAP response successfully, which includes web service output message and soap fault.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyGetFinalRoutingDestinationFolderUrl">
+            <summary>
+            Verify the requirements of FinalRoutingDestinationFolderUrl in Adapter.
+            When the server returns a GetFinalRoutingDestinationFolderUrl response successfully, 
+            which includes web service output message and soap fault.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyGetRoutingInfo">
+            <summary>
+            Verify the requirements of GetRoutingInfo in Adapter When the server returns a GetRoutingInfo response successfully, 
+            which includes web service output message and soap fault.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyGetRoutingCollectionInfo">
+            <summary>
+            Verify the requirements of GetRoutingInfo When the server returns a GetRoutingInfo response successfully, 
+            which includes web service output message and soap fault.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyGetHoldsInfo">
+            <summary>
+            Verify the requirements of GetHoldsInfo When the server returns a GetHoldsInfo response successfully, 
+            which includes web service output message and soap fault.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyAndParseGetServerInfo(System.String)">
+            <summary>
+            Verify the requirements of GetServerInfo and parse the GetServerInfoResult from xml to class When the server returns a GetServerInfo response successfully. 
+            </summary>
+            <param name="serverInfo">The response of GetServerInfo.</param>
+            <returns>Return the GetServerInfoResult corresponding class instance.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.VerifyAndParseSubmitFile(System.String)">
+            <summary>
+            Verify the requirements of SubmitFile in Adapter.
+            When the server returns a SubmitFile response successfully, 
+            which includes web service output message and soap fault.
+            </summary>
+            <param name="result">The response of SubmitFile.</param>
+            <returns>Return the SubmitFileResult corresponding class instance.</returns>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.officialfileService">
+            <summary>
+            Specify Enum Represent Result of Validation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Overrides IAdapter's Initialize(), to set testSite.DefaultProtocolDocShortName.
+            </summary>
+            <param name="testSite">Transfer ITestSite into adapter,Make adapter can use ITestSite's function.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.IntializeService(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara)">
+            <summary>
+            Initialize the services of MS-OFFICIALFILE.
+            </summary>
+            <param name="paras">The TransportType object indicates which transport parameters are used.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.GetFinalRoutingDestinationFolderUrl(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String)">
+            <summary>
+            This operation is used to determine the storage location for the submission based on the rules in the repository and a suggested save location chosen by a user.
+            </summary>
+            <param name="properties">The properties of the file.</param>
+            <param name="contentTypeName">The file type.</param>
+            <param name="originalSaveLocation">The suggested save location chosen by a user.</param>
+            <returns>An implementation specific URL to the storage location and some results for the submission or SoapException thrown.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.GetServerInfo">
+            <summary>
+            This operation is used to retrieves data about the type, version of the repository and whether the repository is configured for routing.
+            </summary>
+            <returns>Data about the type, version of the repository and whether the repository is configured for routing or SoapException thrown.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.SubmitFile(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String)">
+            <summary>
+            This operation is used to submit a file and its associated properties to the repository.
+            </summary>
+            <param name="fileToSubmit">The contents of the file.</param>
+            <param name="properties"> The properties of the file.</param>
+            <param name="recordRouting">The file type.</param>
+            <param name="sourceUrl">The source URL of the file.</param>
+            <param name="userName">The name of the user submitting the file.</param>
+            <returns>The data of SubmitFileResult or SoapException thrown.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.GetHoldsInfo">
+            <summary>
+            This operation is called to retrieve information about the legal holds in a repository.
+            </summary>
+            <returns>A list of legal holds.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.GetRecordingRouting(System.String)">
+            <summary>
+            This method is used to retrieve the recording routing information.
+            </summary>
+            <param name="recordRouting">The file type.</param>
+            <returns>Recording routing information.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.GetRecordRoutingCollection">
+            <summary>
+            This method is used to retrieve the recording routing collection information.
+            </summary>
+            <returns>Implementation-specific result data</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.ParseGetServerInfoResult(System.String)">
+            <summary>
+            This method is used to parse the GetServerInfoResult from xml to class.
+            </summary>
+            <param name="serverInfo">A string indicates the serverInfo returned by the protocol server.</param>
+            <returns>A serverInfo parsed from the response.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.MS_OFFICIALFILEAdapter.ParseSubmitFileResult(System.String)">
+            <summary>
+            This method is used to parse the SubmitFileResult from xml to class.
+            </summary>
+            <param name="response">The value response from server.</param>
+            <returns>Enum value of SubmitFileResult.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper">
+            <summary>
+            Used to read configuration property from ptfconfig and capture requirements.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.testSite">
+            <summary>
+            A object provides logging, assertions, and SUT adapters for test code onto its execution context.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.Site">
+            <summary>
+            Gets or sets an object provides logging, assertions, and SUT adapters for test code onto its execution context.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+             Initialize this helper class with ITestSite used to read configuration property from ptfconfig and capture requirements.
+            </summary>
+            <param name="site">A object provides logging, assertions, and SUT adapters for test code onto its execution context.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.GetProperty(System.String)">
+            <summary>
+            Gets properties from ptfconfig.
+            </summary>
+            <param name="propertyName">Property name.</param>
+            <returns>Property value.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.AcceptAllCertificate">
+            <summary>
+            Case request Url include HTTPS prefix, use this function to avoid closing base connection.
+            Local client will accept all certificate after execute this function. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.ConfigureCredential(System.String,System.String,System.String)">
+            <summary>
+            Set the security credential for Web service client authentication.
+            </summary>
+            <param name="userName">This web service's user name.</param>
+            <param name="password">This web service's password.</param>
+            <param name="domainName">This web service's domain name.</param>
+            <returns>A security credential.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.EncodeToBase64(System.String)">
+            <summary>
+            Convert the binary input into Base64 output.
+            </summary>
+            <param name="toEncode">A string indicates the content of file submitted.</param>
+            <returns>A byte array indicates Base64 output.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.AdapterHelper.ValidateServerCertificate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            Verifies the remote Secure Sockets Layer (SSL) certificate used for authentication.
+            In our adapter, we make this method always return true, make client can communicate with server under HTTPS without a certification. 
+            </summary>
+            <param name="sender">An object that contains state information for this validation.</param>
+            <param name="certificate">The certificate used to authenticate the remote party.</param>
+            <param name="chain">The chain of certificate authorities associated with the remote certificate.</param>
+            <param name="sslPolicyErrors">One or more errors associated with the remote certificate.</param>
+            <returns>A Boolean value that determines whether the specified certificate is accepted for authentication.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.CustomProcessingResult">
+            <summary>
+            The result of custom processing of a legal hold.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.CustomProcessingResult.holdsProcessingResult">
+            <summary>
+            This property indicates the result of custom processing of a legal hold.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.CustomProcessingResult.HoldProcessingResult">
+            <summary>
+            Gets or sets the result of custom processing of a legal hold.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.TransportType">
+            <summary>
+            Used to specify the transport type for soap messages.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.TransportType.HTTP">
+            <summary>
+            Indicate the soap transport over http.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.TransportType.HTTPS">
+            <summary>
+            Indicate the soap message over https.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode">
+            <summary>
+            The result status code of a SubmitFile WSDL operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.Success">
+            <summary>
+             The operation is successful.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.MoreInformation">
+            <summary>
+             The operation is successful but further action is needed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.InvalidRouterConfiguration">
+            <summary>
+             The operation failed because of invalid configuration.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.InvalidArgument">
+            <summary>
+            The operation failed because of an invalid argument.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.InvalidUser">
+            <summary>
+            The operation failed because of an invalid user.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.NotFound">
+            <summary>
+            The operation failed because of a file not found. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.FileRejected">
+            <summary>
+            The operation failed because of a rejected file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResultCode.UnknownError">
+            <summary>
+            The operation failed because of an unknown error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldProcessingResult">
+            <summary>
+            The result of processing a legal hold.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldProcessingResult.Success">
+            <summary>
+            The processing of a legal hold is successful.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldProcessingResult.Failure">
+            <summary>
+            The processing of a legal hold failed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldProcessingResult.InDropOffZone">
+            <summary>
+            The file has been stored in the default storage location.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara">
+            <summary>
+            Parameters for InitializeService operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara.Url">
+            <summary>
+            Gets or sets the URL of official file service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara.UserName">
+            <summary>
+            Gets or sets the property name of user in configuration file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara.Password">
+            <summary>
+            Gets or sets the property name of password in configuration file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara.Domain">
+            <summary>
+            Gets or sets the property name of domain in configuration file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult">
+            <summary>
+            The detailed data result for the SubmitFile WSDL operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.resultCode">
+            <summary>
+            This property indicates the result status code of the SubmitFile WSDL operation. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.resultUrl">
+            <summary>
+            This property indicates the URL of the file after the SubmitFile WSDL operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.additionalInformation">
+            <summary>
+            This property indicates additional information returned by the SubmitFile operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.customProcessingResult">
+            <summary>
+            This property indicates the result of custom file processing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.ResultCode">
+            <summary>
+            Gets or sets the result status code of the SubmitFile WSDL operation. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.ResultUrl">
+            <summary>
+            Gets or sets the URL of the file after the SubmitFile WSDL operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.AdditionalInformation">
+            <summary>
+            Gets or sets additional information returned by the SubmitFile WSL operation. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileResult.CustomProcessingResult">
+            <summary>
+            Gets or sets the result of custom file processing. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter">
+            <summary>
+            The interface of MS-OFFICIALFILE adapter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.IntializeService(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.InitialPara)">
+            <summary>
+            Initialize the services of OFFICIALFILE.
+            </summary>
+            <param name="paras">The TransportType object indicates which transport parameters are used.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.GetServerInfo">
+            <summary>
+            This operation is used to retrieves data about the type, version of the repository and whether the repository is configured for routing.
+            </summary>
+            <returns>Data about the type, version of the repository and whether the repository is configured for routing or SoapException thrown.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.SubmitFile(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String)">
+            <summary>
+            This operation is used to submit a file and its associated properties to the repository.
+            </summary>
+            <param name="fileToSubmit">The contents of the file.</param>
+            <param name="properties"> The properties of the file.</param>
+            <param name="recordRouting">The file type</param>
+            <param name="sourceUrl">The source URL of the file.</param>
+            <param name="userName">The name of the user submitting the file.</param>
+            <returns>The data of SubmitFileResult or SoapException thrown.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.GetFinalRoutingDestinationFolderUrl(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String)">
+            <summary>
+            This operation is called to determine the storage location for the submission based on the rules in the repository and a suggested save location chosen by a user.
+            </summary>
+            <param name="properties">The properties of the file.</param>
+            <param name="contentTypeName">The file type.</param>
+            <param name="originalSaveLocation">The suggested save location chosen by a user.</param>
+            <returns>Data details about the result.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.GetHoldsInfo">
+            <summary>
+            This operation is called to retrieve information about the legal holds in a repository.
+            </summary>
+            <returns>A list of legal holds.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.GetRecordingRouting(System.String)">
+            <summary>
+            This method is used to retrieve the recording routing information.
+            </summary>
+            <param name="recordRouting">The file type.</param>
+            <returns>Recording routing information.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILEAdapter.GetRecordRoutingCollection">
+            <summary>
+            This method is used to retrieve the recording routing information.
+            </summary>
+            <returns>Implementation-specific result data</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetHoldsInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetFinalRoutingDestinationFolderUrlCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.SubmitFileCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetServerInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingCompleted">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetHoldsInfo">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginGetHoldsInfo(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndGetHoldsInfo(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetHoldsInfoAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetHoldsInfoAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetFinalRoutingDestinationFolderUrl(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginGetFinalRoutingDestinationFolderUrl(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndGetFinalRoutingDestinationFolderUrl(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetFinalRoutingDestinationFolderUrlAsync(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetFinalRoutingDestinationFolderUrlAsync(Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.SubmitFile(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginSubmitFile(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndSubmitFile(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.SubmitFileAsync(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.SubmitFileAsync(System.Byte[],Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty[],System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetServerInfo">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginGetServerInfo(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndGetServerInfo(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetServerInfoAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetServerInfoAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingCollection">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginGetRecordRoutingCollection(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndGetRecordRoutingCollection(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingCollectionAsync">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingCollectionAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRouting(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.BeginGetRecordRouting(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.EndGetRecordRouting(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.GetRecordRoutingAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.OfficialFileSoap.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.ServerInfo">
+            <summary>
+            The server information.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.ServerInfo.ServerType">
+            <summary>
+            The type information for the protocol server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.ServerInfo.ServerVersion">
+            <summary>
+            The version information for the protocol server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.ServerInfo.RoutingWeb">
+            <summary>
+            Whether the protocol server is configured for routing.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.Url">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.Title">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.Description">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.ManagedBy">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.RepositoryName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.DiscoveryQueries">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.Id">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.ListId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.HoldInfo.WebId">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResult.Url">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResult.ResultType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResult.CollisionSetting">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.Success">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.SuccessToDropOffLibrary">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.MissingRequiredProperties">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.NoMatchingRules">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.DocumentRoutingDisabled">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.PermissionDeniedAtDestination">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.ParsingDisabledAtDestination">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.OriginalSaveLocationIsDocumentSet">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.NoEnforcementAtOriginalSaveLocation">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingResultType.UnknownFailure">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingCollisionSetting">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingCollisionSetting.NoCollision">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingCollisionSetting.UseSharePointVersioning">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.DocumentRoutingCollisionSetting.AppendUniqueSuffixes">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty.DisplayName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty.Value">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.RecordsRepositoryProperty.Other">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetHoldsInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetHoldsInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetHoldsInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetFinalRoutingDestinationFolderUrlCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetFinalRoutingDestinationFolderUrlCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetFinalRoutingDestinationFolderUrlCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.SubmitFileCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetServerInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetServerInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetServerInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.GetRecordRoutingCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILESUTControlAdapter">
+            <summary>
+            The interface of SUT Control Adapter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILESUTControlAdapter.DeleteAllFiles(System.String,System.String)">
+            <summary>
+            This method is used to remove all the submitted files in the specified site and list library.
+            </summary>
+            <param name="siteUrl">The URL of the site which the submitted files will be deleted.</param>
+            <param name="listName">The name of the list library in which the submitted files will be deleted.</param>
+            <returns>Return true if remove operation succeeds, otherwise return false.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILESUTControlAdapter.UnholdFiles(System.String,System.String,System.String)">
+            <summary>
+            This method is used to un-hold all the items of the specified list library from the specified hold.
+            </summary>
+            <param name="siteUrl">The URL of the site which the items will needs un-hold.</param>
+            <param name="holdName">The name of the hold which hold the items.</param>
+            <param name="listName">The name of the list library in which the items needs un-hold.</param>
+            <returns>Return true if un-hold operation succeeds, otherwise return false.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_OFFICIALFILE.IMS_OFFICIALFILESUTControlAdapter.SwitchFileMetaDataParsingFeature(System.String,System.Boolean)">
+            <summary>
+            This method is used to switch on/off the file metadata parsing feature for the specified site.
+            </summary>
+            <param name="siteUrl">The URL of the site in which the file metadata parsing feature is switch on/off.</param>
+            <param name="isEnable">The value specifies whether enable the file metadata parsing feature. If true then enable, otherwise disable.</param>
+            <returns>Return true if the operation succeeds, otherwise return false.</returns>
+        </member>
+    </members>
+</doc>

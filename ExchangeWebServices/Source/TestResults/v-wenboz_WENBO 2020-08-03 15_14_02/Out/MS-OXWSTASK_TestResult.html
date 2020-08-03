@@ -1,0 +1,4048 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Reporting</title>
+    <style type="text/css">
+      table
+      {
+      width: 100%;
+      background-color: #f8f8f8;
+      border: 1px solid #505050;
+      border-collapse: collapse;
+      }
+      tbody tr td
+      {
+      border: 1px solid #505050;
+      }
+      .TableCellHighlighted
+      {
+      font-size: 1.1em;
+      background-color: #e0e0e0;
+      border: 1px solid #909090;
+      }
+    .Unverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .Verified
+    {
+        background-color: green;
+        display: none;
+    }
+    .NotToVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .DerivedUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .DerivedVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .DerivedPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .FinalUnverified 
+    {
+        background-color: silver;
+        display: none;
+    }
+    .FinalVerified
+    {
+        background-color: green;
+        display: none;
+    }
+    .FinalPartialVerify
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .InconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyError
+    {
+        background-color: red;
+        display: none;
+    }
+    .RSInconsistencyWarning
+    {
+        background-color: yellow;
+        display: none;
+    }
+    .RSExcluded
+    {
+        background-color: red;
+    }
+    </style>
+    <script type="text/javascript">   
+    function ToggleAll(className, parent, func)
+    {
+        var children = (parent !=null ? parent : document.body).getElementsByTagName('*');
+        var pattern = new RegExp("(^|\\s)" + className + "(\\s|$)");
+        for (var i = 0, length = children.length; i < length; i++)
+        {
+            var child = children[i];
+            var elementClassName = child.className;
+            if (elementClassName.length == 0)
+                continue;
+            if (elementClassName == className || elementClassName.match(pattern))
+                func(child);
+        }
+    }
+    function Toggle(item)
+    {
+        var visible = (item.style.display != "none");
+        if (visible)
+            item.style.display = "none";
+        else
+            item.style.display = "table-row";
+    }
+    function Show(item)
+    {
+        item.style.display = "table-row";
+    }
+    function Hide(item)
+    {
+        item.style.display = "none";
+    }
+    </script>
+</head>
+<body>
+    <noscript>Please enable Javascript to view the details</noscript>
+        <table>
+        <caption><h3>Report For Log ms-oxwstask_log.xml</h3></caption>
+        <tr>
+            <td>
+                Target Protocol: MS-OXWSTASK;</td>
+            <td>
+                Log File: ms-oxwstask_log.xml
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFConfigProperties
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                CommonConfigurationFileName</td>
+            <td>
+                 ExchangeCommonConfiguration.deployment.ptfconfig</td>
+        </tr>
+        <tr>
+            <td>
+                UserName</td>
+            <td>
+                 MSOXWSTASK_User01</td>
+        </tr>
+        <tr>
+            <td>
+                UserPassword</td>
+            <td>
+                 Ap6zF1#uP4l-+</td>
+        </tr>
+        <tr>
+            <td>
+                Domain</td>
+            <td>
+                 contoso.com</td>
+        </tr>
+        <tr>
+            <td>
+                SutComputerName</td>
+            <td>
+                 SUT01</td>
+        </tr>
+        <tr>
+            <td>
+                Password</td>
+            <td>
+                 OPs3Y2Q4+y5S)</td>
+        </tr>
+        <tr>
+            <td>
+                SutVersion</td>
+            <td>
+                 ExchangeServer2019</td>
+        </tr>
+        <tr>
+            <td>
+                ServiceUrl</td>
+            <td>
+                 [TransportType]://[SutComputerName].[Domain]/[AppendingURL]</td>
+        </tr>
+        <tr>
+            <td>
+                AppendingURL</td>
+            <td>
+                 EWS/Exchange.asmx</td>
+        </tr>
+        <tr>
+            <td>
+                TransportType</td>
+            <td>
+                 HTTP</td>
+        </tr>
+        <tr>
+            <td>
+                WaitTime</td>
+            <td>
+                 1000</td>
+        </tr>
+        <tr>
+            <td>
+                RetryCount</td>
+            <td>
+                 35</td>
+        </tr>
+        <tr>
+            <td>
+                R212Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R1489Enabled</td>
+            <td>
+                 false</td>
+        </tr>
+        <tr>
+            <td>
+                R4005Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                R212001Enabled</td>
+            <td>
+                 true</td>
+        </tr>
+        <tr>
+            <td>
+                ClientName</td>
+            <td>
+                 WENBO</td>
+        </tr>
+        <tr>
+            <td>
+                ClientOS</td>
+            <td>
+                 Microsoft Windows NT 6.3.9600.0</td>
+        </tr>
+        <tr>
+            <td align="center" class="TableCellHighlighted" colspan="2">
+                PTFTestResult
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                TestsExecuted</td>
+            <td>
+                21 (100.00%)</td>
+        </tr>
+            <tr>
+                <td>
+                    TimeStamp</td>
+                <td>
+                    2020/8/3 9:11:19</td>
+            </tr>
+        <tr>
+            <td>
+                TestsPassed</td>
+            <td>
+                21 (100.00%)</td>
+        </tr>
+        <tr>
+            <td>
+                CoveredRequirements
+            </td>
+            <td>
+                135
+            </td>
+        </tr>
+    </table>
+<hr /><table cellpadding="2" cellspacing="2">
+    <caption><h3>Global Requirement Coverage Statistics<br/>
+                  <font color="#FF0000"></font></h3>
+                  <h4><br/>This report is only for requirement with scope value = 'Server+Both'</h4></caption>
+    <col />
+    <thead><tr><th colspan="2">Requirement Type</th><th colspan="5">Count/Percent</th></tr></thead>
+    <col />
+    <tbody>
+    <tr>
+        <td colspan="7">
+        <h3>
+            Checked Requirements:  133 (84.18%)
+        </h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of normative, in-scope requirements
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Checkable requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            158
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Completely checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Show);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            133 (84.18%)
+            </a >
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            Partially checked requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Show);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            0 (0.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4">
+            Unchecked requirements
+        </td>
+        
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Show);">
+            <a href="#jump-detail">
+            25 (15.82%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="7" align="center">
+            Coverage of derived requirements
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            8
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Checked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Show);ToggleAll('DerivedPartialVerify', this.offsetParent, Show);ToggleAll('DerivedUnverified', this.offsetParent, Hide);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            6 (75.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr >
+        <td colspan="4">
+            Unchecked derived requirements
+        </td>
+        <td title="click to see details" colspan="3" onclick="ToggleAll('DerivedVerified', this.offsetParent, Hide);ToggleAll('DerivedPartialVerify', this.offsetParent, Hide);ToggleAll('DerivedUnverified', this.offsetParent, Show);ToggleAll('FinalVerified', this.offsetParent, Hide);ToggleAll('FinalPartialVerify', this.offsetParent, Hide);ToggleAll('FinalUnverified', this.offsetParent, Hide);">
+            <a href="#jump-detail">
+            2 (25.00%)
+            </a >
+        </td>
+    </tr>
+    
+    <tr>
+        <td align="center" class="TableCellHighlighted" colspan="7">
+            <a name="jump-detail">Details:</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td style="width: 12%;">
+            Req ID
+        </td>
+        <td>
+            Description
+        </td>
+         <td>
+            Doc Sect
+        </td>
+	      <td>
+            Scope
+        </td>
+        <td style="width: 10%;">
+            Status
+        </td>
+        <td style="width: 13%;">
+            Time Stamp
+        </td>
+        <td style="width: 10%;">
+            Log Files
+        </td>
+    </tr>
+    
+    
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R55</td>
+            <td>
+                [In t:TaskType Complex Type] IsComplete: Specifies a Boolean value that indicates whether a task has been completed.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R56</td>
+            <td>
+                [In t:TaskType Complex Type] IsRecurring: Specifies a Boolean value that indicates whether a task is part of a recurring task.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R4</td>
+            <td>
+                [In Transport] The protocol [MS-OXWSTASK] SHOULD use secure communications by means of HTTPS, as defined in [RFC2818].</td>
+            <td>
+                2.1</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R4001</td>
+            <td>
+                [In Transport] The protocol server SHOULD additionally support SOAP over HTTP, as specified in [RFC2616], as a transport means.</td>
+            <td>
+                2.1</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1309</td>
+            <td>
+                [In t:WeeklyRecurrencePatternType Complex Type] The element &quot;FirstDayOfWeek&quot; with type &quot;t:DayOfWeekType&quot; (section 2.2.3.5) ] Specifies the first day of the week.&lt;253&gt;</td>
+            <td>
+                2.2.4.64</td>
+            <td>
+                Both</td>
+            <td>
+                Verified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R1</td>
+           
+<td>
+                [In Transport] The SOAP version supported is SOAP 1.1. For details, see [SOAP1.1].
+            </td>
+<td>
+                2.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:30</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R70</td>
+           
+<td>
+                [In t:DailyRegeneratingPatternType Complex Type] The DailyRegeneratingPatternType complex type extends the RegeneratingPatternBaseType complex type, as specified in section 2.2.4.3.
+&lt;xs:complexType name=&quot;DailyRegeneratingPatternType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:RegeneratingPatternBaseType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R73</td>
+           
+<td>
+                [In t:MonthlyRegeneratingPatternType Complex Type] The MonthlyRegeneratingPatternType complex type extends the RegeneratingPatternBaseType complex type, as specified in section 2.2.4.3.
+&lt;xs:complexType name=&quot;MonthlyRegeneratingPatternType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:RegeneratingPatternBaseType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R209</td>
+           
+<td>
+                [In t:RegeneratingPatternBaseType Complex Type] The RegeneratingPatternBaseType complex type extends the IntervalRecurrencePatternBaseType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.42.
+&lt;xs:complexType name=&quot;RegeneratingPatternBaseType&quot;
+  abstract=&quot;true&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:IntervalRecurrencePatternBaseType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R29</td>
+           
+<td>
+                [In t:TaskRecurrenceType Complex Type] The TaskRecurrenceType complex type specifies the recurrence pattern for tasks.
+&lt;xs:complexType name=&quot;TaskRecurrenceType&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:group
+      ref=&quot;t:TaskRecurrencePatternTypes&quot;/&gt;
+    &lt;xs:group
+      ref=&quot;t:RecurrenceRangeTypes&quot;/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R37</td>
+            
+<td>
+                [In t:TasksFolderType Complex Type] The TasksFolderType complex type extends the FolderType complex type, as specified in [MS-OXWSFOLD] section 2.2.4.12.
+&lt;xs:complexType name=&quot;TasksFolderType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:FolderType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R39</td>
+           
+<td>
+                [In t:TaskType Complex Type] The TaskType complex type extends the ItemType complex type, as specified in [MS-OXWSCORE] section 2.2.4.24.
+&lt;xs:complexType name=&quot;TaskType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:ItemType&quot;&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name=&quot;ActualWork&quot;
+          type=&quot;xs:int&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;AssignedTime&quot;
+          type=&quot;xs:dateTime&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;BillingInformation&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;ChangeCount&quot;
+          type=&quot;xs:int&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Companies&quot;
+          type=&quot;t:ArrayOfStringsType&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;CompleteDate&quot;
+          type=&quot;xs:dateTime&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Contacts&quot;
+          type=&quot;t:ArrayOfStringsType&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;DelegationState&quot;
+          type=&quot;t:TaskDelegateStateType&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Delegator&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;DueDate&quot;
+          type=&quot;xs:dateTime&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;IsAssignmentEditable&quot;
+          type=&quot;xs:int&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;IsComplete&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;IsRecurring&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;IsTeamTask&quot;
+          type=&quot;xs:boolean&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Mileage&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Owner&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;PercentComplete&quot;
+          type=&quot;xs:double&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Recurrence&quot;
+          type=&quot;t:TaskRecurrenceType&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;StartDate&quot;
+          type=&quot;xs:dateTime&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;Status&quot;
+          type=&quot;t:TaskStatusType&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;StatusDescription&quot;
+          type=&quot;xs:string&quot;
+          minOccurs=&quot;0&quot;/&gt;
+        &lt;xs:element name=&quot;TotalWork&quot;
+          type=&quot;xs:int&quot;
+          minOccurs=&quot;0&quot;/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:30</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R213</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of ActualWork is xs:int [XMLSCHEMA2/2] section 3.3.17.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R42</td>
+           
+<td>
+                [In t:TaskType Complex Type] ActualWork: Specifies an integer value that specifies the actual amount of time that is spent on a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R214</td>
+            
+<td>
+                [In t:TaskType Complex Type] AssignedTime with xs:dateTime [XMLSCHEMA2/2] section 3.2.7 type specifies an instance of the DateTime structure that contains the time when a task is assigned to a contact.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R214001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [AssignedTime] is read-only for the  client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R215</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of BillingInformation is xs:string [XMLSCHEMA2/2] section 3.2.1.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R44</td>
+           
+<td>
+                [In t:TaskType Complex Type] BillingInformation: Specifies a string value that contains billing information for a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R216</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of ChangeCount is xs:int.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R45</td>
+           
+<td>
+                [In t:TaskType Complex Type] ChangeCount: Specifies an integer value that specifies the number of times the task has changed since it was created.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R45001</td>
+            
+<td>
+                [In t:TaskType Complex Type] ChangeCount: This element is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R217</td>
+           
+<td>
+                [In t:TaskType Complex Type]The type of Companies is t:ArrayOfStringsType ([MS-OXWSCDATA] section 2.2.4.13).
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R47</td>
+           
+<td>
+                [In t:TaskType Complex Type] Companies: Specifies an instance of an array of type string that represents a collection of companies that are associated with a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R218</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of CompleteDate is xs:dateTime.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:49</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R48</td>
+           
+<td>
+                [In t:TaskType Complex Type] CompleteDate: Specifies an instance of the DateTime structure that represents the date on which a task was completed.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R219</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of Contacts is t:ArrayOfStringsType.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R49</td>
+           
+<td>
+                [In t:TaskType Complex Type] Contacts: Specifies an instance of an array of type string that contains a list of contacts that are associated with a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R220</td>
+            
+<td>
+                [In t:TaskType Complex Type] DelegationState with t:TaskDelegateStateType (section 2.2.5.1) specifies one of the valid TaskDelegateStateType simple type  enumeration values that represent the status of a delegated task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R221</td>
+            
+<td>
+                [In t:TaskType Complex Type] Delegator with xs:string type specifies a string value that contains the name of the delegator who assigned a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R221001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [Delegator] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R222</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of DueDate is 
+xs:dateTime.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R53</td>
+           
+<td>
+                [In t:TaskType Complex Type] DueDate: Specifies an instance of the DateTime structure that represents the date when a task is due.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R223</td>
+            
+<td>
+                [In t:TaskType Complex Type] IsAssignmentEditable with xs:int type specifies an integer value that represents whether the assignment of the task is editable.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R223001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [IsAssignmentEditable] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R224</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of IsComplete is xs:boolean [XMLSCHEMA2/2] section 3.2.2.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R5556001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [[IsComplete] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R225</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of IsRecurring is xs:boolean.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R5667001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [IsRecurring] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R226</td>
+            
+<td>
+                [In t:TaskType Complex Type] IsTeamTask with xs:boolean type specifies a Boolean value that indicates whether a task is owned by a team.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R226001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [IsTeamTask] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R227</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of Mileage is xs:string.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R58</td>
+           
+<td>
+                [In t:TaskType Complex Type] Mileage: Specifies a string value that represents the mileage for a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R228</td>
+            
+<td>
+                [In t:TaskType Complex Type] Owner with xs:string type specifies a string value that represents the owner of a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R228001</td>
+            
+<td>
+                [In t:TaskType Complex Type] Once the task item is created, this property is read-only for the client.&lt;1&gt;
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R229</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of PercentComplete is xs:double [XMLSCHEMA2/2] section 3.2.5.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R60</td>
+           
+<td>
+                [In t:TaskType Complex Type] PercentComplete: Specifies a double value from 0 through 100 that describes the completion status of a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R230</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of Recurrence is t:TaskRecurrenceType (section 2.2.4.4).
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R231</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of StartDate is xs:dateTime.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R63</td>
+           
+<td>
+                [In t:TaskType Complex Type] StartDate: Specifies an instance of the DateTime structure that represents the start date of a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R232</td>
+           
+<td>
+                [In t:TaskType Complex Type] The Type of Status is 
+t:TaskStatusType (section 2.2.5.2).
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R65</td>
+           
+<td>
+                [In t:TaskType Complex Type] Status: Specifies one of the valid TaskStatusType simple type enumeration values that represent the status of a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R233</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of StatusDescription is xs:string.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R66001</td>
+            
+<td>
+                [In t:TaskType Complex Type] This element [StatusDescription] is read-only for the client.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R234</td>
+           
+<td>
+                [In t:TaskType Complex Type] The type of TotalWork is xs:int.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R67</td>
+           
+<td>
+                [In t:TaskType Complex Type] TotalWork: Specifies an integer value that represents the total amount of work that is associated with a task.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:08</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R67001</td>
+           
+<td>
+                [In t:TaskType Complex Type] Setting CompleteDate has the same effect as setting PercentComplete to 100 or Status to Completed.
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:53</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R67002</td>
+           
+<td>
+                [In t:TaskType Complex Type] In a request that sets at least two of these properties, the last processed property will determine the value that is set for these elements. 
+            </td>
+<td>
+                2.2.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:53</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R78</td>
+           
+<td>
+                [In t:WeeklyRegeneratingPatternType Complex Type] The WeeklyRegeneratingPatternType complex type extends the RegeneratingPatternBaseType complex type, as specified in section 2.2.4.3.
+&lt;xs:complexType name=&quot;WeeklyRegeneratingPatternType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:RegeneratingPatternBaseType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.7
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:35</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R81</td>
+           
+<td>
+                [In t:YearlyRegeneratingPatternType Complex Type] The YearlyRegeneratingPatternType complex type extends the RegeneratingPatternBaseType complex type, as specified in section 2.2.4.3.
+&lt;xs:complexType name=&quot;YearlyRegeneratingPatternType&quot;&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension
+      base=&quot;t:RegeneratingPatternBaseType&quot;/&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.8
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:37</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R85</td>
+           
+<td>
+                [In Simple Types] This enumeration [TaskDelegateStateType] is never set.
+            </td>
+<td>
+                2.2.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:47</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R88</td>
+           
+<td>
+                [In t:TaskDelegateStateType Simple Type] The values [Accepted, Declined, Max, NoMatch, Owned and OwnNew] for this simple type [t:TaskDelegateStateType Simple Type] are never set.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:47</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R89</td>
+           
+<td>
+                [In t:TaskDelegateStateType Simple Type] [t:TaskDelegateStateType Simple Type] is defined as  
+name=&quot;TaskDelegateStateType&quot;&gt;
+  &lt;xs:restriction
+    base=&quot;xs:string&quot;&gt;
+    &lt;xs:enumeration
+      value=&quot;Accepted&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;Declined&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;Max&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;NoMatch&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;Owned&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;OwnNew&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R91</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] Accepted: Specifies that the task has been accepted. This value cannot be in the simple type.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R92</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] Declined: Specifies that the task has been declined.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R93</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] Max: Not used.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R94</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] NoMatch: Not used.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R96</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] Owned: Specifies that this is a new task request that has been sent, but the delegate has not yet responded to the request.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R98</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] OwnNew: Specifies that this is not a delegated task [or that the task request has been created but not sent].
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R98001</td>
+            
+<td>
+                [In t:TaskDelegateStateType Simple Type] OwnNew: [Specifies that this is not a delegated task or] that the task request has been created but not sent.
+            </td>
+<td>
+                2.2.5.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R100</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type] The TaskStatusType simple type specifies the status of a task item.
+&lt;xs:simpleType name=&quot;TaskStatusType&quot;&gt;
+  &lt;xs:restriction
+    base=&quot;xs:string&quot;&gt;
+    &lt;xs:enumeration
+      value=&quot;Completed&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;Deferred&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;InProgress&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;NotStarted&quot;/&gt;
+    &lt;xs:enumeration
+      value=&quot;WaitingOnOthers&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R102</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type] Completed: Specifies that the task is completed.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:49</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R103</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type] Deferred: Specifies that the task is deferred.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:51</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R104</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type]  InProgress: Specifies that the task is in progress.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:50</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R105</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type] NotStarted: Specifies that the task is not started.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:48</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R106</td>
+           
+<td>
+                [In t:TaskStatusType Simple Type] WaitingOnOthers: Specifies that the task is waiting on other tasks.
+            </td>
+<td>
+                2.2.5.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:52</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R112</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The TaskRecurrencePatternTypes group specifies recurrence information for recurring tasks.
+&lt;xs:group name=&quot;TaskRecurrencePatternTypes&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:choice&gt;
+      &lt;xs:element name=&quot;RelativeYearlyRecurrence&quot;
+        type=&quot;t:RelativeYearlyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;AbsoluteYearlyRecurrence&quot;
+       type=&quot;t:AbsoluteYearlyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;RelativeMonthlyRecurrence&quot;
+    type=&quot;t:RelativeMonthlyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;AbsoluteMonthlyRecurrence&quot;
+  type=&quot;t:AbsoluteMonthlyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;WeeklyRecurrence&quot;
+        type=&quot;t:WeeklyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;DailyRecurrence&quot;
+        type=&quot;t:DailyRecurrencePatternType&quot;/&gt;
+      &lt;xs:element name=&quot;DailyRegeneration&quot;
+        type=&quot;t:DailyRegeneratingPatternType&quot;/&gt;
+      &lt;xs:element name=&quot;WeeklyRegeneration&quot;
+        type=&quot;t:WeeklyRegeneratingPatternType&quot;/&gt;
+      &lt;xs:element name=&quot;MonthlyRegeneration&quot;
+        type=&quot;t:MonthlyRegeneratingPatternType&quot;/&gt;
+      &lt;xs:element name=&quot;YearlyRegeneration&quot;
+        type=&quot;t:YearlyRegeneratingPatternType&quot;/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:group&gt;
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R235</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of RelativeYearlyRecurrence is t:RelativeYearlyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.63).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R115</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] RelativeYearlyRecurrence: Specifies a relative yearly recurrence pattern for a recurring task.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R236</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of AbsoluteYearlyRecurrence is t:AbsoluteYearlyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.2).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:40</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R117</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] AbsoluteYearlyRecurrence: Specifies a yearly recurrence pattern for a recurring task.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:40</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R237</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of RelativeMonthlyRecurrence is t:RelativeMonthlyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.62).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R119</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] RelativeMonthlyRecurrence:  Specifies a relative monthly recurrence pattern for a recurring task.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R238</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of AbsoluteMonthlyRecurrence is t:AbsoluteMonthlyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.1).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:42</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R121</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] AbsoluteMonthlyRecurrence: Specifies a monthly recurrence pattern for a recurring task.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:42</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R239</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of WeeklyRecurrence is t:WeeklyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.77).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R123</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] WeeklyRecurrence: Specifies the weekly interval at which and the days on which a task recurs.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R240</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of DailyRecurrence is t:DailyRecurrencePatternType ([MS-OXWSCDATA] section 2.2.4.24).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R125</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] DailyRecurrence: Specifies the interval, in days, at which a task recurs.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R241</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of DailyRegeneration is t:DailyRegeneratingPatternType (section 2.2.4.1).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R127</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] DailyRegeneration: Specifies how many days after the completion of the current task the next occurrence will happen.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R242</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of WeeklyRegeneration is t:WeeklyRegeneratingPatternType (section 2.2.4.7).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:35</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R129</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] WeeklyRegeneration: Specifies how many weeks after the completion of the current task the next occurrence will happen.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:35</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R243</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of MonthlyRegeneration is t:MonthlyRegeneratingPatternType (section 2.2.4.2).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R131</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] MonthlyRegeneration: Specifies how many months after the completion of the current task the next occurrence will happen.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R244</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] The type of YearlyRegeneration is t:YearlyRegeneratingPatternType (section 2.2.4.8).
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:37</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R133</td>
+           
+<td>
+                [In TaskRecurrencePatternTypes Group] YearlyRegeneration: Specifies how many years after the completion of the current task the next occurrence will happen.
+            </td>
+<td>
+                2.2.7.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:37</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R148</td>
+           
+<td>
+                [In CopyItem Operation] The following is the WSDL port type specification for the CopyItem operation. &lt;wsdl:operation name=&quot;CopyItem&quot;&gt;
+            &lt;wsdl:input message=&quot;tns:CopyItemSoapIn&quot; /&gt;
+            &lt;wsdl:output message=&quot;tns:CopyItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:59</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R150</td>
+           
+<td>
+                [In CopyItem Operation] The following is the WSDL binding specification for the CopyItem operation.&lt;wsdl:operation name=&quot;CopyItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/CopyItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CopyItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;CopyItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CopyItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:59</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R155</td>
+           
+<td>
+                [In CreateItem Operation] The following is the WSDL port type specification for the CreateItem operation.&lt;wsdl:operation name=&quot;CreateItem&quot;&gt;
+     &lt;wsdl:input message=&quot;tns:CreateItemSoapIn&quot; /&gt;
+     &lt;wsdl:output message=&quot;tns:CreateItemSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:30</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R157</td>
+           
+<td>
+                [In CreateItem Operation] The following is the WSDL binding specification for the CreateItem operation.&lt;wsdl:operation name=&quot;CreateItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/CreateItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CreateItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;CreateItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:CreateItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:30</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R162</td>
+           
+<td>
+                [In DeleteItem Operation] The following is the WSDL port type specification for the DeleteItem operation.&lt;wsdl:operation name=&quot;DeleteItem&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:DeleteItemSoapIn&quot; /&gt;
+   &lt;wsdl:output message=&quot;tns:DeleteItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R164</td>
+           
+<td>
+                [In DeleteItem Operation] The following is the WSDL binding specification for the DeleteItem operation. &lt;wsdl:operation name=&quot;DeleteItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/DeleteItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:DeleteItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;DeleteItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:DeleteItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.3
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R174</td>
+           
+<td>
+                [In t:AffectedTaskOccurrencesType Simple Type] AllOccurrences: Specifies that a DeleteItem operation request, as specified in [MS-OXWSCORE] section 3.1.4.3, deletes the master task and all recurring tasks that are associated with the master task.
+            </td>
+<td>
+                3.1.4.3.1.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:57</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R175</td>
+           
+<td>
+                [In t:AffectedTaskOccurrencesType Simple Type]  SpecifiedOccurrenceOnly: Specifies that a DeleteItem operation request, as specified in [MS-OXWSCORE] section 3.1.4.3, deletes only the current occurrence of a task.
+            </td>
+<td>
+                3.1.4.3.1.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:57</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R176</td>
+           
+<td>
+                [In GetItem Operation] The following is the WSDL port type specification for the GetItem operation. &lt;wsdl:operation name=&quot;GetItem&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:GetItemSoapIn&quot; /&gt;
+   &lt;wsdl:output message=&quot;tns:GetItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R178</td>
+           
+<td>
+                [In GetItem Operation] The following is the WSDL binding specification for the GetItem operation. &lt;wsdl:operation name=&quot;GetItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/GetItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:GetItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;GetItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:GetItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalUnverified'>
+            <td>
+                MS-OXWSTASK_R182</td>
+            
+<td>
+                [In GetItem Operation] [tns:GetItemSoapOut ([MS-OXWSCORE] section 3.1.4.4.1.2)] The server returns a  t:GetItemResponseType complex type element, which extends the BaseResponseMessageType complex type, as specified in [MS-OXWSCDATA] section 2.2.4.18, that contains properties associated with the task item.
+            </td>
+<td>
+                3.1.4.4
+            </td>
+<td>
+                Server
+            </td>
+            <td>Unverified</td>
+            <td>
+                --</td>
+            <td>
+                -- </td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R183</td>
+           
+<td>
+                [In MoveItem Operation] The following is the WSDL port type specification for the MoveItem operation. &lt;wsdl:operation name=&quot;MoveItem&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:MoveItemSoapIn&quot; /&gt;
+   &lt;wsdl:output message=&quot;tns:MoveItemSoapOut&quot; /&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:00</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R185</td>
+           
+<td>
+                [In MoveItem Operation] The following is the WSDL binding specification for the MoveItem operation. &lt;wsdl:operation name=&quot;MoveItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/MoveItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:MoveItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;MoveItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:MoveItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:11:00</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R191</td>
+           
+<td>
+                [In UpdateItem Operation] The following is the WSDL port type specification for the UpdateItem operation. &lt;wsdl:operation name=&quot;UpdateItem&quot;&gt;
+   &lt;wsdl:input message=&quot;tns:UpdateItemSoapIn&quot; /&gt;
+   &lt;wsdl:output message=&quot;tns:UpdateItemSoapOut&quot;/&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:55</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSTASK_R193</td>
+           
+<td>
+                [In UpdateItem Operation] The following is the WSDL binding specification for the UpdateItem operation. &lt;wsdl:operation name=&quot;UpdateItem&quot;&gt;
+   &lt;soap:operation soapAction=&quot;http://schemas.microsoft.com/exchange/services/2006/messages/UpdateItem&quot;/&gt;
+   &lt;wsdl:input&gt;
+      &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;Impersonation&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;MailboxCulture&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;RequestVersion&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:UpdateItemSoapIn&quot; part=&quot;TimeZoneContext&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:body parts=&quot;request&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:input&gt;
+   &lt;wsdl:output&gt;
+      &lt;soap:body parts=&quot;UpdateItemResult&quot; use=&quot;literal&quot;/&gt;
+      &lt;soap:header message=&quot;tns:UpdateItemSoapOut&quot; part=&quot;ServerVersion&quot; use=&quot;literal&quot;/&gt;
+   &lt;/wsdl:output&gt;
+&lt;/wsdl:operation&gt;
+            </td>
+<td>
+                3.1.4.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:55</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R25</td>
+           
+<td>
+                [In t:DayOfWeekIndexType Simple Type] The type [DayOfWeekIndexType] is defined as follow:
+ &lt;xs:simpleType name=&quot;DayOfWeekIndexType&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+    &lt;xs:enumeration value=&quot;First&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Fourth&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Last&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Second&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Third&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.3.4
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R33</td>
+           
+<td>
+                [In t:DayOfWeekType Simple Type] The type [DayOfWeekType] is defined as follow:
+&lt;xs:simpleType name=&quot;DayOfWeekType&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+    &lt;xs:enumeration value=&quot;Day&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Friday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Monday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Saturday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Sunday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Thursday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Tuesday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Wednesday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;Weekday&quot;/&gt;
+    &lt;xs:enumeration value=&quot;WeekendDay&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1491</td>
+           
+<td>
+                [In t:DayOfWeekType Simple Type] This value MUST NOT be used in the t:RelativeYearlyRecurrencePatternType (section 2.2.4.53) complex types.
+            </td>
+<td>
+                2.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R2110</td>
+           
+<td>
+                [In t:DayOfWeekType Simple Type] This value MUST NOT be used in the t:WeeklyRecurrencePatternType (section 2.2.4.64) complex types.
+            </td>
+<td>
+                2.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1492</td>
+           
+<td>
+                [In t:DayOfWeekType Simple Type] This value MUST NOT be used in the t:RelativeYearlyRecurrencePatternType complex types.
+            </td>
+<td>
+                2.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1493</td>
+           
+<td>
+                [In t:DayOfWeekType Simple Type] This value MUST NOT be used in the t:RelativeYearlyRecurrencePatternType complex types.
+            </td>
+<td>
+                2.2.3.5
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R52</td>
+           
+<td>
+                [In t:DaysOfWeekType Simple Type] The type [DaysOfWeekType] is defined as follow:&lt;xs:simpleType name=&quot;DaysOfWeekType&quot;&gt;
+  &lt;xs:list&gt;
+    &lt;xs:itemType name=&quot;t:DayOfWeekType&quot;/&gt;
+  &lt;/xs:list&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.3.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R55</td>
+           
+<td>
+                [In t:DaysOfWeekType Simple Type] The syntax [DaysOfWeekType] is defined as follow:
+&lt;xs:simpleType name=&quot;DaysOfWeekType&quot;&gt;
+  &lt;xs:list itemType=&quot;t:DayOfWeekType&quot;/&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.3.6
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R174</td>
+           
+<td>
+                [In t:MonthNamesType Simple Type] The type [MonthNamesType] is defined as follow: 
+&lt;xs:simpleType name=&quot;MonthNamesType&quot;&gt;
+ &lt;xs:restriction
+  base=&quot;xs:string&quot;
+ &gt;
+  &lt;xs:enumeration
+   value=&quot;January&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;February&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;March&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;April&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;May&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;June&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;July&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;August&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;September&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;October&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;November&quot;
+   /&gt;
+  &lt;xs:enumeration
+   value=&quot;December&quot;
+   /&gt;
+ &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+            </td>
+<td>
+                2.2.3.19
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R995</td>
+           
+<td>
+                [In t:AbsoluteMonthlyRecurrencePatternType Complex Type] The type [AbsoluteMonthlyRecurrencePatternType] is defined as follow:
+&lt;xs:complexType name=&quot;AbsoluteMonthlyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:IntervalRecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;DayOfMonth&quot;
+     type=&quot;xs:int&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:42</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R997</td>
+           
+<td>
+                [In t:AbsoluteMonthlyRecurrencePatternType Complex Type] This property [DayOfMonth] MUST be present.
+            </td>
+<td>
+                2.2.4.1
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:42</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R999</td>
+           
+<td>
+                [In t:AbsoluteYearlyRecurrencePatternType Complex Type] The type [AbsoluteYearlyRecurrencePatternType] is defined as follow:
+&lt;xs:complexType name=&quot;AbsoluteYearlyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;DayOfMonth&quot;
+     type=&quot;xs:int&quot;
+     /&gt;
+    &lt;xs:element name=&quot;Month&quot;
+     type=&quot;t:MonthNamesType&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:40</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1001</td>
+           
+<td>
+                [In t:AbsoluteYearlyRecurrencePatternType Complex Type] This property [DayOfMonth] MUST be present.
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:40</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1003</td>
+           
+<td>
+                [In t:AbsoluteYearlyRecurrencePatternType Complex Type] This property [Month] MUST be present.
+            </td>
+<td>
+                2.2.4.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:40</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1081</td>
+           
+<td>
+                [In t:ArrayOfStringsType Complex Type] The type [ArrayOfStringsType] is defined as follow:
+&lt;xs:complexType name=&quot;ArrayOfStringsType&quot;&gt;
+ &lt;xs:sequence&gt;
+  &lt;xs:element name=&quot;String&quot;
+   type=&quot;xs:string&quot;
+   minOccurs=&quot;0&quot;
+   maxOccurs=&quot;unbounded&quot;
+   /&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.11
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1109</td>
+           
+<td>
+                [In t:DailyRecurrencePatternType Complex Type] The type [DailyRecurrencePatternType] is defined as follow:
+ &lt;xs:complexType name=&quot;DailyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:IntervalRecurrencePatternBaseType&quot;
+   /&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.21
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1152</td>
+           
+<td>
+                [In t:EndDateRecurrenceRangeType Complex Type] The type [EndDateRecurrenceRangeType] is defined as follow:
+ &lt;xs:complexType name=&quot;EndDateRecurrenceRangeType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrenceRangeBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;EndDate&quot;
+     type=&quot;xs:date&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.28
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1431</td>
+           
+<td>
+                [In t:IntervalRecurrencePatternBaseType Complex Type] The type [IntervalRecurrencePatternBaseType] is defined as follow:
+&lt;xs:complexType name=&quot;IntervalRecurrencePatternBaseType&quot;
+ abstract=&quot;true&quot;
+&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;Interval&quot;
+     type=&quot;xs:int&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.36
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1632</td>
+           
+<td>
+                [In t:IntervalRecurrencePatternBaseType Complex Type] The element &quot;Interval&quot; is &quot;xs:int&quot; type ([XMLSCHEMA2]).
+            </td>
+<td>
+                2.2.4.36
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1179</td>
+           
+<td>
+                [In t:IntervalRecurrencePatternBaseType Complex Type] The element &quot;Interval&quot; with type &quot;xs:int&quot; specifies the interval between two consecutive recurring items.
+            </td>
+<td>
+                2.2.4.36
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1203</td>
+           
+<td>
+                [In t:NoEndRecurrenceRangeType Complex Type] The type [NoEndRecurrenceRangeType] is defined as follow:
+&lt;xs:complexType name=&quot;NoEndRecurrenceRangeType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrenceRangeBaseType&quot;
+   /&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.41
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1236</td>
+           
+<td>
+                [In t:NumberedRecurrenceRangeType Complex Type] The type [NumberedRecurrenceRangeType] is defined as follow:
+&lt;xs:complexType name=&quot;NumberedRecurrenceRangeType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrenceRangeBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;NumberOfOccurrences&quot;
+     type=&quot;xs:int&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.46
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1255</td>
+           
+<td>
+                [In t:RelativeMonthlyRecurrencePatternType Complex Type] The type [RelativeMonthlyRecurrencePatternType] is defined as follow:
+&lt;xs:complexType name=&quot;RelativeMonthlyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:IntervalRecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;DaysOfWeek&quot;
+     type=&quot;t:DayOfWeekType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DayOfWeekIndex&quot;
+     type=&quot;t:DayOfWeekIndexType&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.52
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1638</td>
+           
+<td>
+                [In t:RelativeMonthlyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; is &quot;t:DayOfWeekType&quot; type (section 2.2.3.5).
+            </td>
+<td>
+                2.2.4.52
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1256</td>
+           
+<td>
+                [In t:RelativeMonthlyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; with type &quot;t:DayOfWeekType&quot; specifies the days of the week that are used in a relative monthly recurrence pattern.
+            </td>
+<td>
+                2.2.4.52
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1639</td>
+           
+<td>
+                [In t:RelativeMonthlyRecurrencePatternType Complex Type] The element &quot;DayOfWeekIndex&quot; is &quot;t:DayOfWeekIndexType&quot; type(section 2.2.3.4).
+            </td>
+<td>
+                2.2.4.52
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1257</td>
+           
+<td>
+                [In t:RelativeMonthlyRecurrencePatternType Complex Type] The element &quot;DayOfWeekIndex&quot; with type &quot;t:DayOfWeekIndexType&quot; specifies the week that is used in a relative monthly recurrence pattern.
+            </td>
+<td>
+                2.2.4.52
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:41</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1259</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The type [RelativeYearlyRecurrencePatternType] is defined as follow:
+&lt;xs:complexType name=&quot;RelativeYearlyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:RecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;DaysOfWeek&quot;
+     type=&quot;t:DayOfWeekType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;DayOfWeekIndex&quot;
+     type=&quot;t:DayOfWeekIndexType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;Month&quot;
+     type=&quot;t:MonthNamesType&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1640</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; is &quot;t:DayOfWeekType&quot; type.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1260</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; with type &quot;t:DayOfWeekType&quot; specifies the days of the week that are used in a relative yearly recurrence pattern. 
+            </td>
+<td>
+                2.2.4.63
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1261</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] This element [DaysOfWeek] MUST be present.
+            </td>
+<td>
+                2.2.4.63
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1641</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;DayOfWeekIndex&quot; is &quot;t:DayOfWeekIndexType&quot; type.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1262</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;DayOfWeekIndex&quot; with type &quot;t:DayOfWeekIndexType&quot; specifies the week that is used in a relative yearly recurrence pattern.
+            </td>
+<td>
+                2.2.4.63
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1263</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] This element [DayOfWeekIndex] MUST be present.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1642</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;Month&quot; is &quot;t:MonthNamesType&quot; type.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1264</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] The element &quot;Month&quot; with type &quot;t:MonthNamesType&quot; specifies the month when a yearly recurring item occurs.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1265</td>
+           
+<td>
+                [In t:RelativeYearlyRecurrencePatternType Complex Type] This element [Month] MUST be present.
+            </td>
+<td>
+                2.2.4.53
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:38</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1307</td>
+           
+<td>
+                [In t:WeeklyRecurrencePatternType Complex Type] The type [WeeklyRecurrencePatternType] is defined as follow:
+&lt;xs:complexType name=&quot;WeeklyRecurrencePatternType&quot;&gt;
+ &lt;xs:complexContent&gt;
+  &lt;xs:extension
+   base=&quot;t:IntervalRecurrencePatternBaseType&quot;
+  &gt;
+   &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;DaysOfWeek&quot;
+     type=&quot;t:DaysOfWeekType&quot;
+     /&gt;
+    &lt;xs:element name=&quot;FirstDayOfWeek&quot;
+     type=&quot;t:DayOfWeekType&quot;
+     minOccurs=&quot;0&quot;
+     /&gt;
+   &lt;/xs:sequence&gt;
+  &lt;/xs:extension&gt;
+ &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+            </td>
+<td>
+                2.2.4.64
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1653</td>
+           
+<td>
+                [In t:WeeklyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; is &quot;t:DaysOfWeekType&quot; type (section 2.2.3.6).
+            </td>
+<td>
+                2.2.4.64
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1308</td>
+           
+<td>
+                [In t:WeeklyRecurrencePatternType Complex Type] The element &quot;DaysOfWeek&quot; with type &quot;t:DaysOfWeekType&quot; specifies the days of the week that are in the weekly recurrence pattern.
+            </td>
+<td>
+                2.2.4.64
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1351</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The group [t:RecurrenceRangeTypes] is defined as follow:
+&lt;xs:group name=&quot;t:RecurrenceRangeTypes&quot;&gt;
+ &lt;xs:sequence&gt;
+  &lt;xs:choice&gt;
+   &lt;xs:element name=&quot;NoEndRecurrence&quot;
+    type=&quot;t:NoEndRecurrenceRangeType&quot;
+    /&gt;
+   &lt;xs:element name=&quot;EndDateRecurrence&quot;
+    type=&quot;t:EndDateRecurrenceRangeType&quot;
+    /&gt;
+   &lt;xs:element name=&quot;NumberedRecurrence&quot;
+    type=&quot;t:NumberedRecurrenceRangeType&quot;
+    /&gt;
+  &lt;/xs:choice&gt;
+ &lt;/xs:sequence&gt;
+&lt;/xs:group&gt;
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1660</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;NoEndRecurrence&quot; is &quot;t:NoEndRecurrenceRangeType&quot; type (section 2.2.4.41).
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1352</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;NoEndRecurrence&quot; with type &quot;t:NoEndRecurrenceRangeType&quot; specifies a recurrence pattern that does not have a defined end date.
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:34</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1661</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;EndDateRecurrence&quot; is &quot;t:EndDateRecurrenceRangeType&quot; type (section 2.2.4.28).
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1353</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;EndDateRecurrence&quot; with type &quot;t:EndDateRecurrenceRangeType&quot; specifies the start date and the end date of an item recurrence pattern.
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:32</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1662</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;NumberedRecurrence&quot; is&quot;t:NumberedRecurrenceRangeType&quot; type (section 2.2.4.46).
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='FinalVerified'>
+            <td>
+                MS-OXWSCDATA_R1354</td>
+           
+<td>
+                [In t:RecurrenceRangeTypes Group] The element &quot;NumberedRecurrence&quot; with type &quot;t:NumberedRecurrenceRangeType&quot; specifies the start date and the number of occurrences of a recurring item.
+            </td>
+<td>
+                2.2.7.2
+            </td>
+<td>
+                Both
+            </td>
+            <td>Verified</td>
+            <td>
+                2020/8/3 9:10:31</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSTASK_R5555</td>
+            <td>
+                [In t:TaskType Complex Type] [IsComplete is] True, indicates a task has been completed.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:11:10</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSTASK_R5556</td>
+            <td>
+                [In t:TaskType Complex Type] [IsComplete is] False, indicates a task has not been completed.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:11:11</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSTASK_R5666</td>
+            <td>
+                [In t:TaskType Complex Type] [IsRecurring is] True, indicates a task is part of a recurring task.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:11:13</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSTASK_R5667</td>
+            <td>
+                [In t:TaskType Complex Type] [IsRecurring is] False, indicates a task is not part of a recurring task.</td>
+            <td>
+                2.2.4.6</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:11:13</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSTASK_R212</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does use secure communications by means of HTTPS, as defined in [RFC2818]. (Exchange Server 2007 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSTASK_R212001</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does support SOAP over HTTP, as specified in [RFC2616], as a transport means. (Exchange Server 2007 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Both</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:10:30</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+        <tr class='DerivedUnverified'>
+            <td>
+                MS-OXWSCDATA_R1489</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does not include the FirstDayOfWeek element. (&lt;253&gt; Section 2.2.4.64: Exchange 2007 do not include the FirstDayOfWeek element.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Unverified</td>
+            <td>
+                --</td>
+            <td>
+                --</td>
+        </tr>
+        <tr class='DerivedVerified'>
+            <td>
+                MS-OXWSCDATA_R4005</td>
+            <td>
+                [In Appendix C: Product Behavior] Implementation does include the element &quot;FirstDayOfWeek&quot; with type &quot;t:DayOfWeekType (section 2.2.3.5)&quot; which specifies the first day of the week. (Exchange Server 2013 and above follow this behavior.)</td>
+            <td>
+                8</td>
+            <td>
+                Server</td>
+            <td>
+                Complete Verified</td>
+            <td>
+                2020/8/3 9:10:44</td>
+            <td>
+                ms-oxwstask_log.xml</td>
+        </tr>
+    </tbody>
+    </table><br />
+    <br/>
+    
+    <br/>
+    
+    <br/>
+    
+      </body>
+  </html>

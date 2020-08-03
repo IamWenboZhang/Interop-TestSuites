@@ -6,11 +6,11 @@
     <!-- The Domain property specifies the domain name. -->
     <Property name="Domain" value="contoso.com" />
     <!-- The SUTComputerName property specifies the name of the SUT. -->
-    <Property name="SutComputerName" value="sut01" />
+    <Property name="SutComputerName" value="SUT01" />
     <!-- The SUTComputerName property specifies the login name of the SUT. -->
-    <Property name="UserName" value="plugdevuser01" />
+    <Property name="UserName" value="user01" />
     <!-- The SUTComputerName property specifies the password of the SUT. -->
-    <Property name="Password" value="901aYa7-Q94SO" />
+    <Property name="Password" value="OPs3Y2Q4+y5S)" />
     <!-- The SutVersion property specifies the version of the SUT. If the product version that you want is not listed, enter the value corresponding to the closest version of the product. 
          The supported values are:
          "ExchangeServer2007" (Microsoft® Exchange Server 2007 Service Pack 3 (SP3))
@@ -33,7 +33,7 @@
            The supported values are:
            "HTTP", the transport is HTTP;
            "HTTPS", the transport is HTTPS. -->
-    <Property name="TransportType" value="HTTPS" />
+    <Property name="TransportType" value="HTTP" />
     <!-- The WaitTime property specifies the time interval (in milliseconds) to find a message item after it has been created. Depending on your hardware environment, you may need to increase the value to avoid intermittent failures. -->
     <Property name="WaitTime" value="1000" />
     <!-- The RetryCount property specifies the maximum count to retry finding the message item  if the item cannot be found. -->

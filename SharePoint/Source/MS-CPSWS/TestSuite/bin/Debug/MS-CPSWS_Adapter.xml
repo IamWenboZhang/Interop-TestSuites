@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS-CPSWS_Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter">
+            <summary>
+            This class use to verify every request with the adapter when get a response. 
+            </summary>
+            <summary>
+            Adapter class of MS-CPSWS.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidArrayOfStringComplexType">
+            <summary>
+            A method used to validate the ArrayOfString complex type. 
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateClaimTypesResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to validate the ClaimTypes response. 
+            </summary>
+            <param name="claimTypesResult">A parameter represents the ClaimTypes result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateClaimValueTypesResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to validate the ClaimValueTypes response. 
+            </summary>
+            <param name="claimValueTypesResult">A parameter represents the ClaimValueTypes result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateEntityTypesResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to validate the EntityTypes response. 
+            </summary>
+            <param name="entityTypesResult">A parameter represents the EntityTypes result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateGetHierarchyResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree)">
+            <summary>
+            A method used to validate the GetHierarchy response. 
+            </summary>
+            <param name="getHierarchyResult">A parameter represents the GetHierarchy result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateGetHierarchyAllResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <summary>
+            A method used to validate the GetHierarchyAll response. 
+            </summary>
+            <param name="getHierarchyAllResult">A parameter represents the GetHierarchyAll result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateResolveResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <summary>
+            A method used to validate the resolve operation response. 
+            </summary>
+            <param name="resolveResult">A parameter represents the Resolve operation result.</param>       
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateResolveClaimResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <summary>
+            A method used to validate the resolve claim response. 
+            </summary>
+            <param name="resolveClaimResult">A parameter represents the resolve claim result.</param>       
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateResolveMultipleResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <summary>
+            A method used to validate the resolve multiple response. 
+            </summary>
+            <param name="resolveMultipleResult">A parameter represents the resolve multiple result.</param>       
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateResolveMultipleClaimResponseData(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <summary>
+            A method used to validate the resolve multiple claim response. 
+            </summary>
+            <param name="resolveMultipleClaimResult">A parameter represents the resolve multiple claim result.</param>       
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateArrayOfAnyTypeComplexType">
+            <summary>
+            A method used to validate ArrayOfAnyType complex type.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateArrayOfPairComplexType">
+            <summary>
+            A method used to validate ArrayOfPair complex type.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateArrayOfPickerEntityComplexType">
+            <summary>
+            A method used to validate ArrayOfPickerEntity complex type.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidatePairComplexType">
+            <summary>
+            A method used to validate Pair complex type.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidatePickerEntityComplexType">
+            <summary>
+            A method used to validate PickerEntity complex type.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifySPProviderHierarchyTreeComplexType(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree)">
+            <summary>
+            A method used to verify the SPProviderHierarchyTree complex type.
+            </summary>
+            <param name="providerHierarchyTree">A parameter represents an instance of SPProviderHierarchyTree.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifyArrayOfSPProviderHierarchyTreeComplexType(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <summary>
+            A method used to verify the ArrayOfSPProviderHierarchyTree complex type.
+            </summary>
+            <param name="providerHierarchyTreeArray">A parameter represents a list of the SPProviderHierarchyTree.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifySPProviderSchemaComplexType(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema)">
+            <summary>
+            A method used to verify the SPProviderSchema complex type.
+            </summary>
+            <param name="providerSchema">A parameter represents an instance of the SPProviderSchema complex type.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifySPSchemaElementComplexType(System.Boolean)">
+            <summary>
+            A method used to verify the SPSchemaElement complex type.
+            </summary>
+            <param name="isResponseValid">A parameter represents whether the server response passed XML validation.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifyHierarchyProviderSchema(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema)">
+            <summary>
+            A method used to verify the HierarchyProviderSchema response. 
+            </summary>
+            <param name="hierarchyProviderSchemaResult">A parameter represents the HierarchyProviderSchema result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifyProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema[])">
+            <summary>
+            A method used to verify the ProviderSchemas response. 
+            </summary>
+            <param name="providerSchemasResult">A parameter represents the ProviderSchemas result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifySearch(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <summary>
+            A method used to verify the Search response. 
+            </summary>
+            <param name="searchResult">A parameter represents the Search result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.VerifySearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <summary>
+            A method used to verify the SearchAll response. 
+            </summary>
+            <param name="searchAllResult">A parameter represents the SearchAll result.</param> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ResponseExists(System.Xml.XmlElement,System.String)">
+            <summary>
+            This method is used to validate whether there is an element named as responseName in xmlElement.
+            </summary>
+            <param name="xmlElement">A XmlElement object which is the raw XML response from server.</param>
+            <param name="responseName">The name of the response element.</param>
+            <returns>A Boolean value indicates whether there is an element named as responseName.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.CaptureTransportRelatedRequirements">
+            <summary>
+            Capture underlying transport protocol related requirements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ValidateAndCaptureSOAPFaultRequirement(System.ServiceModel.FaultException)">
+            <summary>
+            Validate server fault returned by FaultException and capture related requirements.
+            </summary>
+            <param name="exception">The FaultException thrown which contains the SOAP fault.</param>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.cpswsClient">
+            <summary>
+            The proxy class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Overrides IAdapter's Initialize(), to set default protocol short name of the testSite.
+            </summary>
+            <param name="testSite">Transfer ITestSite into Adapter,Make adapter can use ITestSite's function.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ClaimTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the claim types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the claim types.</param>
+            <returns>A return value represents a list of claim types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ClaimValueTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the claim value types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the claim value types.</param>
+            <returns>A return value represents a list of claim value types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.EntityTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the entity types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the entity types.</param>
+            <returns>A return value represents a list of entity types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.GetHierarchy(System.String,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <summary>
+            A method used to retrieve a claims provider hierarchy tree from a claims provider.
+            </summary>
+            <param name="providerName">A parameter represents a provider name.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="hierarchyNodeID">A parameter represents the identifier of the node to be used as root of the returned claims provider hierarchy tree.</param>
+            <param name="numberOfLevels">A parameter represents the maximum number of levels that can be returned by the protocol server in any of the output claims provider hierarchy tree.</param>
+            <returns>A return value represents a claims provider hierarchy tree.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.GetHierarchyAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.Int32)">
+            <summary>
+            A method used to retrieve a list of claims provider hierarchy trees from a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="numberOfLevels">A parameter represents the maximum number of levels that can be returned by the protocol server in any of the output claims provider hierarchy tree.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.HierarchyProviderSchema">
+            <summary>
+            A method used to retrieve schema for the current hierarchy provider.
+            </summary>
+            <returns>A return value represents the hierarchy claims provider schema.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to retrieve a list of claims provider schemas from a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <returns>A return value represents a list of claims provider schemas</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.Resolve(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <summary>
+            A method used to resolve an input string to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents the input to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ResolveClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim)">
+            <summary>
+            A method used to resolve an input claim to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result</param>
+            <param name="resolveInput">A parameter represents the SPClaim to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ResolveMultiple(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to resolve a list of strings to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents a list of input strings to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.ResolveMultipleClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim[])">
+            <summary>
+            A method used to resolve a list of claims to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents a list of claims to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.Search(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments[],Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <summary>
+            A method used to perform a search for entities on a list of claims providers.
+            </summary>
+            <param name="providerSearchArguments">A parameter represents the search arguments.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="searchPattern">A parameter represents the search string.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.SearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <summary>
+            A method used to perform a search for entities on a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="searchPattern">A parameter represents the search string.</param>
+            <param name="maxCount">A parameter represents the maximum number of matched entities to be returned in total across all the output claims provider hierarchy trees.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.LoadCommonConfiguration">
+            <summary>
+            A method used to load Common Configuration
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.MS_CPSWSAdapter.GetClaimProviderWebServiceClient">
+            <summary>
+            A method used to get the claim provider web service client
+            </summary>
+            <returns>A return value represents the claim provider web service client.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter">
+            <summary>
+            The interface of MS-CPSWS adapter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ClaimTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the claim types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the claim types.</param>
+            <returns>A return value represents a list of claim types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ClaimValueTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the claim value types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the claim value types.</param>
+            <returns>A return value represents a list of claim value types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.EntityTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to get the entity types.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names which are used to retrieve the entity types.</param>
+            <returns>A return value represents a list of entity types.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.GetHierarchy(System.String,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <summary>
+            A method used to retrieve a claims provider hierarchy tree from a claims provider.
+            </summary>
+            <param name="providerName">A parameter represents a provider name.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="hierarchyNodeID">A parameter represents the identifier of the node to be used as root of the returned claims provider hierarchy tree.</param>
+            <param name="numberOfLevels">A parameter represents the maximum number of levels that can be returned by the protocol server in any of the output claims provider hierarchy tree.</param>
+            <returns>A return value represents a claims provider hierarchy tree.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.GetHierarchyAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.Int32)">
+            <summary>
+            A method used to retrieve a list of claims provider hierarchy trees from a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="numberOfLevels">A parameter represents the maximum number of levels that can be returned by the protocol server in any of the output claims provider hierarchy tree.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.HierarchyProviderSchema">
+            <summary>
+            A method used to retrieve schema for the current hierarchy provider.
+            </summary>
+            <returns>A return value represents the hierarchy claims provider schema.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to retrieve a list of claims provider schemas from a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <returns>A return value represents a list of claims provider schemas</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.Resolve(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <summary>
+            A method used to resolve an input string to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents the input to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ResolveClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim)">
+            <summary>
+            A method used to resolve an input claim to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result</param>
+            <param name="resolveInput">A parameter represents the SPClaim to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ResolveMultiple(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <summary>
+            A method used to resolve a list of strings to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents a list of input strings to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.ResolveMultipleClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim[])">
+            <summary>
+            A method used to resolve a list of claims to picker entities using a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the result.</param>
+            <param name="resolveInput">A parameter represents a list of claims to be resolved.</param>
+            <returns>A return value represents a list of picker entities.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.Search(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments[],Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <summary>
+            A method used to perform a search for entities on a list of claims providers.
+            </summary>
+            <param name="providerSearchArguments">A parameter represents the search arguments.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="searchPattern">A parameter represents the search string.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSAdapter.SearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <summary>
+            A method used to perform a search for entities on a list of claims providers.
+            </summary>
+            <param name="providerNames">A parameter represents a list of provider names.</param>
+            <param name="principalType">A parameter represents which type of picker entities to be included in the output claims provider hierarchy tree.</param>
+            <param name="searchPattern">A parameter represents the search string.</param>
+            <param name="maxCount">A parameter represents the maximum number of matched entities to be returned in total across all the output claims provider hierarchy trees.</param>
+            <returns>A return value represents a list of claims provider hierarchy trees.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema.DisplayName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema.ProviderName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema.ProviderSchema">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema.SupportsHierarchy">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElement">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElement.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElement.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElement.DisplayName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElement.Type">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElementType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElementType.None">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElementType.TableViewOnly">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElementType.DetailViewOnly">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPSchemaElementType.Both">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.None">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.User">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.DistributionList">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.SecurityGroup">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.SharePointGroup">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType.All">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree.IsRoot">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.Nm">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.ProviderName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.HierarchyNodeID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.IsLeaf">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.Children">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.EntityData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyElement.Count">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyNode">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.Key">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.DisplayText">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.IsResolved">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.Description">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.EntityType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.EntityGroupName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.HierarchyIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.EntityDataElements">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.MultipleMatches">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.ProviderName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity.ProviderDisplayName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.Pair">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.Pair.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.Pair.First">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.Pair.Second">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfAnyType">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments.ProviderName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments.HierarchyNodeID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments.MaxCount">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim.ExtensionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim.ClaimType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim.Value">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim.ValueType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim.OriginalIssuer">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ClaimTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ClaimValueTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.EntityTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.HierarchyProviderSchema(Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.GetHierarchyAll(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.GetHierarchy(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.SearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.Search(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.Resolve(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ResolveClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ResolveMultiple(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebService.ResolveMultipleClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponseBody.ClaimTypesResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponseBody.ClaimValueTypesResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponseBody.EntityTypesResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponseBody.ProviderSchemasResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequestBody">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponseBody.HierarchyProviderSchemaResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSchema)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody.numberOfLevels">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponseBody.GetHierarchyAllResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.providerName">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.hierarchyNodeID">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.numberOfLevels">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequestBody.#ctor(System.String,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponseBody.GetHierarchyResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.searchPattern">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.maxCount">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponseBody.SearchAllResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody.providerSearchArguments">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody.searchPattern">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments[],Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponseBody.SearchResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.SearchResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderHierarchyTree[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody.resolveInput">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponseBody.ResolveResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody.resolveInput">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponseBody.ResolveClaimResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody.resolveInput">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponseBody.ResolveMultipleResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody.providerNames">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody.principalType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody.resolveInput">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequestBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponse">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponse.Body">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponse.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponse.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponseBody)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponseBody">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponseBody.ResolveMultipleClaimResult">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponseBody.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimResponseBody.#ctor(Microsoft.Protocols.TestSuites.MS_CPSWS.PickerEntity[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.IClaimProviderWebServiceChannel">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.#ctor(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.#ctor(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.#ctor(System.String,System.ServiceModel.EndpointAddress)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ClaimTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ClaimTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ClaimValueTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimValueTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ClaimValueTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#EntityTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.EntityTypesRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.EntityTypes(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.ProviderSchemasRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ProviderSchemas(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#HierarchyProviderSchema(Microsoft.Protocols.TestSuites.MS_CPSWS.HierarchyProviderSchemaRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.HierarchyProviderSchema">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#GetHierarchyAll(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyAllRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.GetHierarchyAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#GetHierarchy(Microsoft.Protocols.TestSuites.MS_CPSWS.GetHierarchyRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.GetHierarchy(System.String,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#SearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchAllRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.SearchAll(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#Search(Microsoft.Protocols.TestSuites.MS_CPSWS.SearchRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Search(Microsoft.Protocols.TestSuites.MS_CPSWS.SPProviderSearchArguments[],Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#Resolve(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Resolve(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ResolveClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveClaimRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ResolveClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ResolveMultiple(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ResolveMultiple(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.Microsoft#Protocols#TestSuites#MS_CPSWS#IClaimProviderWebService#ResolveMultipleClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ResolveMultipleClaimRequest)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.ClaimProviderWebServiceClient.ResolveMultipleClaim(Microsoft.Protocols.TestSuites.MS_CPSWS.ArrayOfString,Microsoft.Protocols.TestSuites.MS_CPSWS.SPPrincipalType,Microsoft.Protocols.TestSuites.MS_CPSWS.SPClaim[])">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSSUTControlAdapter">
+            <summary>
+            The SUTControlAdapter's implementation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSSUTControlAdapter.GetClaimTypesInSPProvider(System.String)">
+            <summary>
+            A method used to get claim types.
+            </summary>
+            <param name="inputClaimProviderNames">A group of provider names that are separated by commas ','.</param>
+            <returns>A string contained one or more claim types, which are separated by commas ','.</returns> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSSUTControlAdapter.GetClaimValueTypesInSPProvider(System.String)">
+            <summary>
+            A method used to get claim value types.
+            </summary>
+            <param name="inputClaimProviderNames">A group of provider names that are separated by commas ','.</param>
+            <returns>A string contained one or more claim value types, which are separated by commas ','.</returns> 
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_CPSWS.IMS_CPSWSSUTControlAdapter.GetEntityTypesInSPProvider(System.String)">
+            <summary>
+            A method used to get entity types.
+            </summary>
+            <param name="inputClaimProviderNames">A group of provider names that are separated by commas ','.</param>
+            <returns>The return is empty or a string that contains one or more entity types, which are separated by commas ','.</returns> 
+        </member>
+    </members>
+</doc>

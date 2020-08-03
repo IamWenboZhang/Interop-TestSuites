@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS-SHDACCWS_Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IMS_SHDACCWSAdapter">
+            <summary>
+            This adapter interface definition of MS-SHDACCWS 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IMS_SHDACCWSAdapter.IsOnlyClient(System.Guid)">
+            <summary>
+            Specifies whether a co-authoring transition request was made for a document.
+            </summary>
+            <param name="id">The identifier(Guid) of the document in the server.</param>
+            <returns>Whether a co-authoring transition request was made for a document.</returns>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.IsOnlyClientCompleted">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.IsOnlyClient(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.BeginIsOnlyClient(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.EndIsOnlyClient(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.IsOnlyClientAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.IsOnlyClientAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.SharedAccessSoap.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IsOnlyClientCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IsOnlyClientCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IsOnlyClientCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter">
+            <summary>
+            This is the adapter implementation class of IMS_SHDACCWSAdapter 
+            </summary>
+            <summary>
+            This adapter class of MS-SHDACCWS 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.service">
+            <summary>
+            Web service proxy generated from the full WSDL of MS-SHDACCWS protocol
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.Initialize(Microsoft.Protocols.TestTools.ITestSite)">
+            <summary>
+            Overrides IAdapter's Initialize method, to set default protocol short name of the testSite.
+            </summary>
+            <param name="testSite">A parameter represents a ITestSite instance which is used to get/operate current test suite context.</param>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.IsOnlyClient(System.Guid)">
+            <summary>
+            Specifies whether a co-authoring transition request was made for a document.
+            </summary>
+            <param name="id">The identifier(Guid) of the document in the server.</param>
+            <returns>Whether a co-authoring transition request was made for a document.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.SetSoapVersion">
+            <summary>
+            Set the SOAP version according to the SoapVersion property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.GetTargetServiceUrl">
+            <summary>
+            A method used to get target service fully qualified URL, it indicates which site the test suite will run on.
+            </summary>
+            <returns>A return value represents the target service fully qualified URL</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.VerifySchemaOfIsOnlyClientOperation">
+            <summary>
+            The method is used to capture requirements about schema of IsOnlyClient Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.MS_SHDACCWSAdapter.VerifyTransportProtocol">
+            <summary>
+            The method is used to capture HTTP/HTTPS SOAP requirements.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IMS_SHDACCWSSUTControlAdapter">
+            <summary>
+            The SUTControlAdapter's implementation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IMS_SHDACCWSSUTControlAdapter.SUTSetCoAuthoringStatus">
+            <summary>
+            Set the Co-authoring status for the specified file under the specified Document LibraryName list. 
+            The specified file is identified by the property "FileIdOfCoAuthoring".
+            </summary>
+            <returns>True if the operation success, otherwise false.</returns>
+        </member>
+        <member name="M:Microsoft.Protocols.TestSuites.MS_SHDACCWS.IMS_SHDACCWSSUTControlAdapter.SUTSetExclusiveLock">
+            <summary>
+            Set status of exclusive lock to the specified file which is identified by the property "FileIdOfLock".
+            </summary>
+            <returns>True if the operation success, otherwise false.</returns>
+        </member>
+    </members>
+</doc>

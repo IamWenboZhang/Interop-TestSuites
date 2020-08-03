@@ -1,0 +1,17 @@
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Common.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Common.pdb
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.ExtendedLogging.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.SpecExplorer.Runtime.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Xrt.Runtime.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.pdb
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.xml
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.ExtendedLogging.pdb
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Protocols.TestTools.ExtendedLogging.xml
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.SpecExplorer.Runtime.xml
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\bin\x86\Debug\Microsoft.Xrt.Runtime.xml
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\obj\x86\Debug\Common.csproj.CopyComplete
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\obj\x86\Debug\Common.dll
+C:\Users\v-wenboz\Source\Repos\Interop-TestSuites\ExchangeWebServices\Source\Common\obj\x86\Debug\Common.pdb
